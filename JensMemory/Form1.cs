@@ -47,7 +47,7 @@ namespace JensMemory
 
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
-        private Image[] coverVector = { Properties.Resources.cover };
+        private Image[] coverVector = { Properties.Resources.newpokemon2, Properties.Resources.newpokemon, Properties.Resources.newpokeball };
         public static List<Player> players = new List<Player>(); // Lista som håller spelarna
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
@@ -60,7 +60,7 @@ namespace JensMemory
         int totalPoints;
         int endGame;
 
-        private int rows = 4, columns = 4; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+        private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {

@@ -130,6 +130,9 @@
     <Content Include="Resources\card7.gif" />
     <Content Include="Resources\card8.gif" />
     <Content Include="Resources\cover.gif" />
+    <None Include="Resources\newpokemon2.jpg" />
+    <None Include="Resources\newpokemon.jpg" />
+    <None Include="Resources\newpokeball.jpg" />
     <None Include="Resources\pic12.jpg" />
     <None Include="Resources\pic11.jpg" />
     <None Include="Resources\pic10.jpg" />
