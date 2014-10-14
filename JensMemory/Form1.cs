@@ -69,7 +69,7 @@ namespace JensMemory
             if (columns == rows)
             {
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
-                this.pnlCardHolder.Location = new System.Drawing.Point(290, 60);
+                this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
             }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
