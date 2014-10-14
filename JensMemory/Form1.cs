@@ -168,6 +168,7 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
+            canisares();
         }
 
 
