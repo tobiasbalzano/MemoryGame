@@ -128,6 +128,11 @@ namespace JensMemory
             }
         }
 
+        private void canisares()
+        {
+            int bajs = 5;
+            bajs = 5 + 5;
+        }
 
         private void card_Click(object sender, EventArgs e) // Metoden som skall köras när man klickar på korten
         {
