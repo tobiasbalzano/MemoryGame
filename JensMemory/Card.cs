@@ -30,6 +30,7 @@ namespace JensMemory
             Size = new System.Drawing.Size(width, height);
             TabIndex = 0;
             Enabled = false;
+            this.SizeMode = PictureBoxSizeMode.StretchImage;
             this.Click += new System.EventHandler(eventHandler); //lägger till klickmetoden
         }
     }
