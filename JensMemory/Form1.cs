@@ -12,11 +12,6 @@ namespace JensMemory
 {
     public partial class GameWindow : Form
     {
-        // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
-        //private Image[] picVector = { Properties.Resources.card1, Properties.Resources.card2,
-        //                              Properties.Resources.card3, Properties.Resources.card4,
-        //                              Properties.Resources.card5, Properties.Resources.card6,
-        //                              Properties.Resources.card7, Properties.Resources.card8};
         #region // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
         private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic1,
                                       Properties.Resources.pic2, Properties.Resources.pic3,
@@ -72,14 +67,15 @@ namespace JensMemory
             InitializeComponent();
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < columns; i++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < rows; j++)
                 {
-                    Card card = new Card(j, i, card_Click);
+                    Card card = new Card(i, j, (pnlCardHolder.Width / columns - 5), (pnlCardHolder.Height / rows - 5), card_Click);
                     cards.Add(card);
                     this.pnlCardHolder.Controls.Add(card);
                 }
+
             }
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             endGame = cards.Count() / 2;
@@ -250,13 +246,13 @@ namespace JensMemory
             bool winner = false;
 
             //winnerList = players;
-            foreach(Player p in players)
+            foreach (Player p in players)
             {
                 winnerList.Add(p);
             }
-            while (winnerList.Count>1)
+            while (winnerList.Count > 1)
             {
-                if(winnerList[0].points==winnerList[1].points)
+                if (winnerList[0].points == winnerList[1].points)
                 {
                     drawPlayer = winnerList[0].points;
                     winnerList.Remove(winnerList[0]);
@@ -269,13 +265,13 @@ namespace JensMemory
                 {
                     winnerList.Remove(winnerList[1]);
                 }
-                
+
             }
             if (winnerList[0].points > drawPlayer)
             {
                 winner = true;
             }
-            
+
 
 
             return winner;
@@ -326,7 +322,7 @@ namespace JensMemory
                     timerEndGame.Start();
                 }
             }
-                //min hemliga kommentar av Tobias
+            //min hemliga kommentar av Tobias
             else
             {
                 //timerCompare.Enabled = true;

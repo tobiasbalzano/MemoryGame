@@ -41,9 +41,9 @@
             // 
             // pnlCardHolder
             // 
-            this.pnlCardHolder.Location = new System.Drawing.Point(12, 60);
+            this.pnlCardHolder.Location = new System.Drawing.Point(150, 60);
             this.pnlCardHolder.Name = "pnlCardHolder";
-            this.pnlCardHolder.Size = new System.Drawing.Size(400, 400);
+            this.pnlCardHolder.Size = new System.Drawing.Size(800, 600);
             this.pnlCardHolder.TabIndex = 0;
             // 
             // btnStart

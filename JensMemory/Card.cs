@@ -18,10 +18,10 @@ namespace JensMemory
         public bool flipped;
 
         // props för bredd och höjd. Kommer senare anpassas beroende på användarens val av spelplan
-        private int width = 95, height = 95;
+      
 
         //Konstruktor för nya kort. tar 3st parametrar. 
-        public Card(int posX, int posY, cardEvent eventHandler)
+        public Card(int posX, int posY, int width, int height, cardEvent eventHandler)
         {
             // Här sätts kortets placering med formel som separerar alla kort
             // med dess bredd och höjd + 5 pixlar samt beroende av värden för x och y som tagits emot.
