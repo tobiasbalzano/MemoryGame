@@ -13,10 +13,43 @@ namespace JensMemory
     public partial class GameWindow : Form
     {
         // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
-        private Image[] picVector = { Properties.Resources.card1, Properties.Resources.card2,
-                                      Properties.Resources.card3, Properties.Resources.card4,
-                                      Properties.Resources.card5, Properties.Resources.card6,
-                                      Properties.Resources.card7, Properties.Resources.card8};
+        //private Image[] picVector = { Properties.Resources.card1, Properties.Resources.card2,
+        //                              Properties.Resources.card3, Properties.Resources.card4,
+        //                              Properties.Resources.card5, Properties.Resources.card6,
+        //                              Properties.Resources.card7, Properties.Resources.card8};
+        #region // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
+        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic1,
+                                      Properties.Resources.pic2, Properties.Resources.pic3,
+                                      Properties.Resources.pic4, Properties.Resources.pic5,
+                                      Properties.Resources.pic6, Properties.Resources.pic7,
+                                      Properties.Resources.pic8, Properties.Resources.pic9,
+                                      Properties.Resources.pic10, Properties.Resources.pic11,
+                                      Properties.Resources.pic12, Properties.Resources.pic13,
+                                      Properties.Resources.pic14, Properties.Resources.pic15,
+                                      Properties.Resources.pic16, Properties.Resources.pic17,
+                                      Properties.Resources.pic18, Properties.Resources.pic19,
+                                      Properties.Resources.pic20, Properties.Resources.pic21,
+                                      Properties.Resources.pic22, Properties.Resources.pic23,
+                                      Properties.Resources.pic24, Properties.Resources.pic25,
+                                      Properties.Resources.pic26, Properties.Resources.pic27,
+                                      Properties.Resources.pic28, Properties.Resources.pic29,
+                                      Properties.Resources.pic30, Properties.Resources.pic31,
+                                      Properties.Resources.pic32, Properties.Resources.pic33,
+                                      Properties.Resources.pic34, Properties.Resources.pic35,
+                                      Properties.Resources.pic36, Properties.Resources.pic37,
+                                      Properties.Resources.pic38, Properties.Resources.pic39,
+                                      Properties.Resources.pic40, Properties.Resources.pic41,
+                                      Properties.Resources.pic42, Properties.Resources.pic43,
+                                      Properties.Resources.pic44, Properties.Resources.pic45,
+                                      Properties.Resources.pic46, Properties.Resources.pic47,
+                                      Properties.Resources.pic48, Properties.Resources.pic49,
+                                      Properties.Resources.pic50, Properties.Resources.pic51,
+                                      Properties.Resources.pic52, Properties.Resources.pic53,
+                                      Properties.Resources.pic54, Properties.Resources.pic55,
+                                      Properties.Resources.pic56, Properties.Resources.pic57,
+                                      Properties.Resources.pic58, Properties.Resources.pic59};
+        #endregion
+
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
         private Image[] coverVector = { Properties.Resources.cover };
