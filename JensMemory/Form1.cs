@@ -341,9 +341,5 @@ namespace JensMemory
             }
         }
 
-        public void TestMethod()
-        { }
-        public void TestMethod2()
-        { }
     }
 }
