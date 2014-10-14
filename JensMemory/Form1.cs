@@ -36,6 +36,7 @@ namespace JensMemory
 
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
+            //Jens kommentar!!!!!!!!!!!!!!!!!!!!!!!!!
             InitializeComponent();
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
