@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(415, 37);
+            this.label2.Location = new System.Drawing.Point(994, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 4;
@@ -89,7 +89,7 @@
             // tbxInfo
             // 
             this.tbxInfo.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxInfo.Location = new System.Drawing.Point(418, 60);
+            this.tbxInfo.Location = new System.Drawing.Point(997, 60);
             this.tbxInfo.Multiline = true;
             this.tbxInfo.Name = "tbxInfo";
             this.tbxInfo.Size = new System.Drawing.Size(140, 400);
