@@ -51,6 +51,7 @@ namespace JensMemory
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             endGame = cards.Count() / 2;
             totalPoints = 0;
+            //lägger till testkommentar här
         }
 
         private void randomizeIdInCardList(int numberOfCards) //metod för att blanda kortens id
