@@ -59,7 +59,6 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
-        int bajs;
         int rymdBanan;
 
         private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
