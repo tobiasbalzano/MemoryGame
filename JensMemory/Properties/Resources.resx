@@ -307,4 +307,40 @@
   <data name="pic59" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trainer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer1S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer1S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer2S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer2S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer3S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer3S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer4S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer4S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer5S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer5S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer6S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer6S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
