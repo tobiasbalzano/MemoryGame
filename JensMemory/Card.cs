@@ -16,7 +16,7 @@ namespace JensMemory
         // Properties:
         public int id;
         public bool flipped;
-
+        int hej;
         // props för bredd och höjd. Kommer senare anpassas beroende på användarens val av spelplan
       
 
