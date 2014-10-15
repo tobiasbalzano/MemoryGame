@@ -147,6 +147,7 @@
             // 
             // LeftArrow
             // 
+            this.LeftArrow.Image = global::JensMemory.Properties.Resources.LeftArrow;
             this.LeftArrow.Location = new System.Drawing.Point(12, 38);
             this.LeftArrow.Name = "LeftArrow";
             this.LeftArrow.Size = new System.Drawing.Size(100, 50);
@@ -174,6 +175,7 @@
             this.Name = "ChooseCharacter";
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Black;
+            this.Load += new System.EventHandler(this.ChooseCharacter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();

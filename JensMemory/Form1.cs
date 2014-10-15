@@ -61,6 +61,7 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
+        ChooseCharacter CHAR = new ChooseCharacter();
         BakGrundPopUp BG = new BakGrundPopUp();
         PopUpBoardSize boardSize = new PopUpBoardSize();
 
@@ -70,6 +71,7 @@ namespace JensMemory
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
+            CHAR.ShowDialog();
             boardSize.ShowDialog();
             BG.ShowDialog();
 
@@ -402,6 +404,11 @@ namespace JensMemory
         {
             ComputerThinks.Stop();
             ComputerPlay();
+        }
+
+        private void GameWindow_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
