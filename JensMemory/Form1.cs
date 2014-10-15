@@ -59,8 +59,8 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
-        int bajs;
-
+        //int cardWidth = 75;    //fråga adam
+        //int cardHeight = 45;      //fråga adam
         private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
@@ -165,6 +165,12 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
+            if (activePlayer.computer == true)
+            {
+                ComputerPlay();
+                ComputerThinks.Start();
+            }
+
         }
 
 
@@ -186,9 +192,9 @@ namespace JensMemory
         }
 
 
-        public static void CreatePlayer(string name)
+        public static void CreatePlayer(string name, bool computer)
         {
-            Player player = new Player(name);
+            Player player = new Player(name, computer);
             players.Add(player);
             playerTurn.Add(player);
 
@@ -336,6 +342,51 @@ namespace JensMemory
                 timerCompare.Start();
             }
         }
+        public void ComputerPlay()
+        {
+            //object sender = new Object();
+            EventArgs e = new EventArgs();
+            
+            Random computerRandom = new Random();
 
+            int cardIndex = computerRandom.Next(0, cards.Count);
+
+            foreach (Card c in cards)
+            {
+
+                if (cardIndex == cards.IndexOf(c))
+                {
+                    card_Click(c, e);
+                }
+
+            }
+
+
+
+            //foreach (Player p in players)    fråga adam
+            //{
+
+
+            //        p.computerChoice1 = computerRandom.Next(0, rows);
+            //        p.computerChoice2 = computerRandom.Next(0, columns);
+
+            //        Point Location = new System.Drawing.Point(p.computerChoice1 * (cardWidth + 5), p.computerChoice2 * (cardHeight + 5));
+
+            //        foreach (Card c in cards)
+            //        {
+            //            if (Location == c.Location)
+            //            {
+            //                card_Click(c,e);
+            //            }
+            //        }
+
+            //}
+        }
+
+        private void ComputerThinks_Tick(object sender, EventArgs e)
+        {
+            ComputerThinks.Stop();
+            ComputerPlay();
+        }
     }
 }
