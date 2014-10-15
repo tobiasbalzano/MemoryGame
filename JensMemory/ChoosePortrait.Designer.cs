@@ -147,6 +147,7 @@
             // 
             // LeftArrow
             // 
+            this.LeftArrow.Image = global::JensMemory.Properties.Resources.LeftArrow;
             this.LeftArrow.Location = new System.Drawing.Point(12, 38);
             this.LeftArrow.Name = "LeftArrow";
             this.LeftArrow.Size = new System.Drawing.Size(100, 50);

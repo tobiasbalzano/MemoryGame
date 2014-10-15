@@ -105,7 +105,7 @@
     <EmbeddedResource Include="BakGrundPopUp.resx">
       <DependentUpon>BakGrundPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseCharacter.resx">
+    <EmbeddedResource Include="ChoosePortrait.resx">
       <DependentUpon>ChoosePortrait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
