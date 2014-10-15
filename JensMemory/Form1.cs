@@ -55,6 +55,7 @@ namespace JensMemory
         private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
         int drawPlayer = 0;
         Random rand = new Random();
         int chooseTurn;
@@ -67,7 +68,7 @@ namespace JensMemory
 
         private int columns = 12, rows = 10;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
-        
+
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -80,7 +81,7 @@ namespace JensMemory
             }
             else
             {
-                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows +5)* columns,600);
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows + 5) * columns, 600);
             }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
@@ -179,7 +180,7 @@ namespace JensMemory
             {
                 ComputerPlay();
                 ComputerThinks.Start();
-        }
+            }
 
         }
 
@@ -302,7 +303,11 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
-            if (card.flipped == false)
+            if (card.flipped == true && activePlayer.computer==true)
+            {
+                ComputerPlay();
+            }
+            else if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
@@ -325,11 +330,16 @@ namespace JensMemory
             if (flippedCards[0].id == flippedCards[1].id)
             {
                 // gör korten klickbara igen
+
                 foreach (Card c in cards)
                 {
                     c.Enabled = true;
-                }
+                    if (c.id == flippedCards[0].id)
+                    {
+                        dontFlipAI.Add(c);
+                    }
 
+                }
                 // Tömmer listan för jämförelse
                 flippedCards.Clear();
 
@@ -337,10 +347,16 @@ namespace JensMemory
                 activePlayer.points++;
                 totalPoints++;
 
+                if (activePlayer.computer == true)
+                {
+                    ComputerPlay();
+                    ComputerThinks.Start();
+
+                }
                 //poäng skrivs ut
                 GetInfo();
 
-                if (totalPoints >= endGame)
+                if (totalPoints == endGame)
                 {
                     timerEndGame.Start();
                 }
@@ -361,10 +377,19 @@ namespace JensMemory
         {
             //object sender = new Object();
             EventArgs e = new EventArgs();
-            
-            Random computerRandom = new Random();
 
+            Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
+
+           // foreach (Card ca in dontFlipAI)
+           // {
+            //    if (cardIndex == dontFlipAI.IndexOf(ca))
+            //    {
+
+            //    }
+            //}
+
+
 
             foreach (Card c in cards)
             {
@@ -372,9 +397,10 @@ namespace JensMemory
                 if (cardIndex == cards.IndexOf(c))
                 {
                     card_Click(c, e);
+
                 }
 
-    }
+            }
 
 
 
@@ -398,7 +424,7 @@ namespace JensMemory
             //}
         }
 
-        private void ComputerThinks_Tick(object sender, EventArgs e)
+        public void ComputerThinks_Tick(object sender, EventArgs e)
         {
             ComputerThinks.Stop();
             ComputerPlay();
