@@ -47,7 +47,7 @@ namespace JensMemory
 
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
-        private Image[] coverVector = { Properties.Resources.newpokemon2, Properties.Resources.newpokemon, Properties.Resources.newpokeball };
+        private Image[] coverVector = { Properties.Resources.newpokeball, Properties.Resources.newpokemon, Properties.Resources.newpokemon2 };
         public static List<Player> players = new List<Player>(); // Lista som håller spelarna
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
@@ -59,12 +59,17 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
+        
+
+        BakGrundPopUp BG = new BakGrundPopUp();
 
         private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
-
+        
+        
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
+            BG.ShowDialog();
 
             if (columns == rows)
             {
@@ -105,7 +110,7 @@ namespace JensMemory
                 // id delas ut till korten i listan cards
                 cards[i].id = shuffledIntList[i];
                 //  Här kan man stoppa in bildreferens i Card:
-                cards[i].Image = coverVector[0];
+                cards[i].Image = coverVector[BG.coverChoice];
             }
         }
 
