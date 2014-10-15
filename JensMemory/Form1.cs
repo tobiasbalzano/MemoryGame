@@ -63,7 +63,7 @@ namespace JensMemory
 
         BakGrundPopUp BG = new BakGrundPopUp();
 
-        private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+        private int columns = 6, rows = 5;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
         
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
