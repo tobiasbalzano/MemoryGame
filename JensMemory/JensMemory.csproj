@@ -116,19 +116,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="JensMemory_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -139,6 +139,66 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pic59.png" />
+    <None Include="Resources\pic58.png" />
+    <None Include="Resources\pic57.png" />
+    <None Include="Resources\pic56.png" />
+    <None Include="Resources\pic55.png" />
+    <None Include="Resources\pic54.png" />
+    <None Include="Resources\pic53.png" />
+    <None Include="Resources\pic52.png" />
+    <None Include="Resources\pic51.png" />
+    <None Include="Resources\pic50.png" />
+    <None Include="Resources\pic49.png" />
+    <None Include="Resources\pic48.png" />
+    <None Include="Resources\pic47.png" />
+    <None Include="Resources\pic46.png" />
+    <None Include="Resources\pic45.png" />
+    <None Include="Resources\pic44.png" />
+    <None Include="Resources\pic43.png" />
+    <None Include="Resources\pic42.png" />
+    <None Include="Resources\pic41.png" />
+    <None Include="Resources\pic40.png" />
+    <None Include="Resources\pic39.png" />
+    <None Include="Resources\pic38.png" />
+    <None Include="Resources\pic37.png" />
+    <None Include="Resources\pic36.png" />
+    <None Include="Resources\pic35.png" />
+    <None Include="Resources\pic34.png" />
+    <None Include="Resources\pic33.png" />
+    <None Include="Resources\pic32.png" />
+    <None Include="Resources\pic31.png" />
+    <None Include="Resources\pic30.png" />
+    <None Include="Resources\pic29.png" />
+    <None Include="Resources\pic28.png" />
+    <None Include="Resources\pic27.png" />
+    <None Include="Resources\pic26.png" />
+    <None Include="Resources\pic25.png" />
+    <None Include="Resources\pic24.png" />
+    <None Include="Resources\pic23.png" />
+    <None Include="Resources\pic22.png" />
+    <None Include="Resources\pic21.png" />
+    <None Include="Resources\pic20.png" />
+    <None Include="Resources\pic19.png" />
+    <None Include="Resources\pic18.png" />
+    <None Include="Resources\pic17.png" />
+    <None Include="Resources\pic16.png" />
+    <None Include="Resources\pic15.png" />
+    <None Include="Resources\pic14.png" />
+    <None Include="Resources\pic13.png" />
+    <None Include="Resources\pic12.png" />
+    <None Include="Resources\pic11.png" />
+    <None Include="Resources\pic10.png" />
+    <None Include="Resources\pic09.png" />
+    <None Include="Resources\pic08.png" />
+    <None Include="Resources\pic07.png" />
+    <None Include="Resources\pic06.png" />
+    <None Include="Resources\pic05.png" />
+    <None Include="Resources\pic04.png" />
+    <None Include="Resources\pic03.png" />
+    <None Include="Resources\pic02.png" />
+    <None Include="Resources\pic0.png" />
+    <None Include="Resources\01.png" />
     <Content Include="Resources\card1.gif" />
     <Content Include="Resources\card2.gif" />
     <Content Include="Resources\card3.gif" />
@@ -151,66 +211,6 @@
     <None Include="Resources\newpokemon2.jpg" />
     <None Include="Resources\newpokemon.jpg" />
     <None Include="Resources\newpokeball.jpg" />
-    <None Include="Resources\pic12.jpg" />
-    <None Include="Resources\pic11.jpg" />
-    <None Include="Resources\pic10.jpg" />
-    <None Include="Resources\pic9.jpg" />
-    <None Include="Resources\pic8.jpg" />
-    <None Include="Resources\pic7.jpg" />
-    <None Include="Resources\pic6.jpg" />
-    <None Include="Resources\pic5.jpg" />
-    <None Include="Resources\pic4.jpg" />
-    <None Include="Resources\pic3.jpg" />
-    <None Include="Resources\pic2.jpg" />
-    <None Include="Resources\pic1.jpg" />
-    <None Include="Resources\pic0.jpg" />
-    <None Include="Resources\pic59.jpg" />
-    <None Include="Resources\pic58.jpg" />
-    <None Include="Resources\pic57.jpg" />
-    <None Include="Resources\pic56.jpg" />
-    <None Include="Resources\pic55.jpg" />
-    <None Include="Resources\pic54.jpg" />
-    <None Include="Resources\pic53.jpg" />
-    <None Include="Resources\pic52.jpg" />
-    <None Include="Resources\pic51.jpg" />
-    <None Include="Resources\pic50.jpg" />
-    <None Include="Resources\pic49.jpg" />
-    <None Include="Resources\pic48.jpg" />
-    <None Include="Resources\pic47.jpg" />
-    <None Include="Resources\pic46.jpg" />
-    <None Include="Resources\pic45.jpg" />
-    <None Include="Resources\pic44.jpg" />
-    <None Include="Resources\pic43.jpg" />
-    <None Include="Resources\pic42.jpg" />
-    <None Include="Resources\pic41.jpg" />
-    <None Include="Resources\pic40.jpg" />
-    <None Include="Resources\pic39.jpg" />
-    <None Include="Resources\pic38.jpg" />
-    <None Include="Resources\pic37.jpg" />
-    <None Include="Resources\pic36.jpg" />
-    <None Include="Resources\pic35.jpg" />
-    <None Include="Resources\pic34.jpg" />
-    <None Include="Resources\pic33.jpg" />
-    <None Include="Resources\pic32.jpg" />
-    <None Include="Resources\pic31.jpg" />
-    <None Include="Resources\pic30.jpg" />
-    <None Include="Resources\pic29.jpg" />
-    <None Include="Resources\pic28.jpg" />
-    <None Include="Resources\pic27.jpg" />
-    <None Include="Resources\pic26.jpg" />
-    <None Include="Resources\pic25.jpg" />
-    <None Include="Resources\pic24.jpg" />
-    <None Include="Resources\pic23.jpg" />
-    <None Include="Resources\pic22.jpg" />
-    <None Include="Resources\pic21.jpg" />
-    <None Include="Resources\pic20.jpg" />
-    <None Include="Resources\pic19.jpg" />
-    <None Include="Resources\pic18.jpg" />
-    <None Include="Resources\pic17.jpg" />
-    <None Include="Resources\pic16.jpg" />
-    <None Include="Resources\pic15.jpg" />
-    <None Include="Resources\pic14.jpg" />
-    <None Include="Resources\pic13.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
