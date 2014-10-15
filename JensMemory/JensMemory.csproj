@@ -100,6 +100,12 @@
     <Compile Include="PopUp.Designer.cs">
       <DependentUpon>PopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUpBoardSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpBoardSize.Designer.cs">
+      <DependentUpon>PopUpBoardSize.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BakGrundPopUp.resx">
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp.resx">
       <DependentUpon>PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpBoardSize.resx">
+      <DependentUpon>PopUpBoardSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +148,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\boardSz4x4.png" />
+    <None Include="Resources\boardSz5x4.png" />
+    <None Include="Resources\boardSz6x5.png" />
+    <None Include="Resources\boardSz6x6.png" />
+    <None Include="Resources\boardSz8x6.png" />
+    <None Include="Resources\boardSz8x8.png" />
+    <None Include="Resources\boardSz10x8.png" />
+    <None Include="Resources\boardSz10x10.png" />
+    <None Include="Resources\boardSz12x10.png" />
     <Content Include="Resources\card1.gif" />
     <Content Include="Resources\card2.gif" />
     <Content Include="Resources\card3.gif" />
@@ -148,6 +166,9 @@
     <Content Include="Resources\card7.gif" />
     <Content Include="Resources\card8.gif" />
     <Content Include="Resources\cover.gif" />
+    <None Include="Resources\smallBoardButton.png" />
+    <None Include="Resources\mediumBoardButton.png" />
+    <None Include="Resources\largeBoardButton.png" />
     <None Include="Resources\newpokemon2.jpg" />
     <None Include="Resources\newpokemon.jpg" />
     <None Include="Resources\newpokeball.jpg" />
