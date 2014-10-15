@@ -47,7 +47,7 @@ namespace JensMemory
 
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
-        private Image[] coverVector = { Properties.Resources.newpokemon2, Properties.Resources.newpokemon, Properties.Resources.newpokeball };
+        private Image[] coverVector = { Properties.Resources.newpokeball, Properties.Resources.newpokemon, Properties.Resources.newpokemon2 };
         public static List<Player> players = new List<Player>(); // Lista som håller spelarna
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
@@ -59,19 +59,26 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
-        
-        
+
+
+        BakGrundPopUp BG = new BakGrundPopUp();
 
         private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
+        
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
+            BG.ShowDialog();
 
             if (columns == rows)
             {
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
                 this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
+            }
+            else
+            {
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows +5)* columns,600);
             }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
@@ -79,7 +86,7 @@ namespace JensMemory
             {
                 for (int j = 0; j < rows; j++)
                 {
-                    Card card = new Card(i, j, (pnlCardHolder.Width / columns - 5), (pnlCardHolder.Height / rows - 5), card_Click);
+                    Card card = new Card(i, j, (pnlCardHolder.Height / rows - 5), card_Click);
                     cards.Add(card);
                     this.pnlCardHolder.Controls.Add(card);
                 }
@@ -107,7 +114,7 @@ namespace JensMemory
                 // id delas ut till korten i listan cards
                 cards[i].id = shuffledIntList[i];
                 //  Här kan man stoppa in bildreferens i Card:
-                cards[i].Image = coverVector[0];
+                cards[i].Image = coverVector[BG.coverChoice];
             }
         }
 
@@ -146,7 +153,7 @@ namespace JensMemory
             foreach (Card flippedcard in flippedCards.ToList())
             {
                 // vid olida ändras kortens bild till baksida och listan töms
-                flippedcard.Image = coverVector[0];
+                flippedcard.Image = coverVector[BG.coverChoice];
                 flippedcard.flipped = false;
                 flippedCards.Remove(flippedcard);
             }
@@ -336,6 +343,11 @@ namespace JensMemory
                 //timerCompare.Enabled = true;
                 timerCompare.Start();
             }
+        }
+
+        private void GameWindow_Load(object sender, EventArgs e)
+        {
+
         }
 
     }
