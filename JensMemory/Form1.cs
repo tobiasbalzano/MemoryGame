@@ -149,7 +149,7 @@ namespace JensMemory
             foreach (Card flippedcard in flippedCards.ToList())
             {
                 // vid olida ändras kortens bild till baksida och listan töms
-                flippedcard.Image = coverVector[0];
+                flippedcard.Image = coverVector[BG.coverChoice];
                 flippedcard.flipped = false;
                 flippedCards.Remove(flippedcard);
             }
