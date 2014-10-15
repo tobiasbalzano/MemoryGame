@@ -13,11 +13,11 @@ namespace JensMemory
     public partial class GameWindow : Form
     {
         #region // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
-        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic1,
-                                      Properties.Resources.pic2, Properties.Resources.pic3,
-                                      Properties.Resources.pic4, Properties.Resources.pic5,
-                                      Properties.Resources.pic6, Properties.Resources.pic7,
-                                      Properties.Resources.pic8, Properties.Resources.pic9,
+        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic01,
+                                      Properties.Resources.pic02, Properties.Resources.pic03,
+                                      Properties.Resources.pic04, Properties.Resources.pic05,
+                                      Properties.Resources.pic06, Properties.Resources.pic07,
+                                      Properties.Resources.pic08, Properties.Resources.pic09,
                                       Properties.Resources.pic10, Properties.Resources.pic11,
                                       Properties.Resources.pic12, Properties.Resources.pic13,
                                       Properties.Resources.pic14, Properties.Resources.pic15,
@@ -61,12 +61,12 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
-        
+
 
         BakGrundPopUp BG = new BakGrundPopUp();
 
-        private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
-        
+        private int columns = 6, rows = 5;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+
         
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
@@ -78,13 +78,17 @@ namespace JensMemory
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
                 this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
             }
+            else
+            {
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows +5)* columns,600);
+            }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
             for (int i = 0; i < columns; i++)
             {
                 for (int j = 0; j < rows; j++)
                 {
-                    Card card = new Card(i, j, (pnlCardHolder.Width / columns - 5), (pnlCardHolder.Height / rows - 5), card_Click);
+                    Card card = new Card(i, j, (pnlCardHolder.Height / rows - 5), card_Click);
                     cards.Add(card);
                     this.pnlCardHolder.Controls.Add(card);
                 }
