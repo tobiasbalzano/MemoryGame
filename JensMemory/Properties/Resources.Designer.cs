@@ -155,7 +155,7 @@ namespace JensMemory.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap card1 {
             get {
-                object obj = ResourceManager.GetObject("card1", resourceCulture);
+                object obj = ResourceManager.GetObject("newpokeball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card2 {
+        internal static System.Drawing.Bitmap newpokemon {
             get {
-                object obj = ResourceManager.GetObject("card2", resourceCulture);
+                object obj = ResourceManager.GetObject("newpokemon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card3 {
+        internal static System.Drawing.Bitmap newpokemon2 {
             get {
-                object obj = ResourceManager.GetObject("card3", resourceCulture);
+                object obj = ResourceManager.GetObject("newpokemon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card4 {
+        internal static System.Drawing.Bitmap pic0 {
             get {
-                object obj = ResourceManager.GetObject("card4", resourceCulture);
+                object obj = ResourceManager.GetObject("pic0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card5 {
+        internal static System.Drawing.Bitmap pic01 {
             get {
-                object obj = ResourceManager.GetObject("card5", resourceCulture);
+                object obj = ResourceManager.GetObject("pic01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card6 {
+        internal static System.Drawing.Bitmap pic02 {
             get {
-                object obj = ResourceManager.GetObject("card6", resourceCulture);
+                object obj = ResourceManager.GetObject("pic02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card7 {
+        internal static System.Drawing.Bitmap pic03 {
             get {
-                object obj = ResourceManager.GetObject("card7", resourceCulture);
+                object obj = ResourceManager.GetObject("pic03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap card8 {
+        internal static System.Drawing.Bitmap pic04 {
             get {
-                object obj = ResourceManager.GetObject("card8", resourceCulture);
+                object obj = ResourceManager.GetObject("pic04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cover {
+        internal static System.Drawing.Bitmap pic05 {
             get {
-                object obj = ResourceManager.GetObject("cover", resourceCulture);
+                object obj = ResourceManager.GetObject("pic05", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -285,7 +285,7 @@ namespace JensMemory.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap newpokemon {
             get {
-                object obj = ResourceManager.GetObject("newpokemon", resourceCulture);
+                object obj = ResourceManager.GetObject("pic06", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap newpokemon2 {
+        internal static System.Drawing.Bitmap pic07 {
             get {
-                object obj = ResourceManager.GetObject("newpokemon2", resourceCulture);
+                object obj = ResourceManager.GetObject("pic07", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +303,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pic0 {
+        internal static System.Drawing.Bitmap pic08 {
             get {
-                object obj = ResourceManager.GetObject("pic0", resourceCulture);
+                object obj = ResourceManager.GetObject("pic08", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +313,9 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pic1 {
+        internal static System.Drawing.Bitmap pic09 {
             get {
-                object obj = ResourceManager.GetObject("pic1", resourceCulture);
+                object obj = ResourceManager.GetObject("pic09", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -636,16 +636,6 @@ namespace JensMemory.Properties {
         internal static System.Drawing.Bitmap pic39 {
             get {
                 object obj = ResourceManager.GetObject("pic39", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pic4 {
-            get {
-                object obj = ResourceManager.GetObject("pic4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -32,6 +32,7 @@
             this.lblGiveName = new System.Windows.Forms.Label();
             this.btnCreatePlayer = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
+            this.checkBoxAi = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbxName
@@ -72,11 +73,22 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
+            // checkBoxAi
+            // 
+            this.checkBoxAi.AutoSize = true;
+            this.checkBoxAi.Location = new System.Drawing.Point(110, 112);
+            this.checkBoxAi.Name = "checkBoxAi";
+            this.checkBoxAi.Size = new System.Drawing.Size(36, 17);
+            this.checkBoxAi.TabIndex = 4;
+            this.checkBoxAi.Text = "AI";
+            this.checkBoxAi.UseVisualStyleBackColor = true;
+            // 
             // PopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(234, 151);
+            this.Controls.Add(this.checkBoxAi);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnCreatePlayer);
             this.Controls.Add(this.lblGiveName);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Label lblGiveName;
         private System.Windows.Forms.Button btnCreatePlayer;
         private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.CheckBox checkBoxAi;
     }
 }

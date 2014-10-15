@@ -13,11 +13,11 @@ namespace JensMemory
     public partial class GameWindow : Form
     {
         #region // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
-        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic1,
-                                      Properties.Resources.pic2, Properties.Resources.pic3,
-                                      Properties.Resources.pic4, Properties.Resources.pic5,
-                                      Properties.Resources.pic6, Properties.Resources.pic7,
-                                      Properties.Resources.pic8, Properties.Resources.pic9,
+        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic01,
+                                      Properties.Resources.pic02, Properties.Resources.pic03,
+                                      Properties.Resources.pic04, Properties.Resources.pic05,
+                                      Properties.Resources.pic06, Properties.Resources.pic07,
+                                      Properties.Resources.pic08, Properties.Resources.pic09,
                                       Properties.Resources.pic10, Properties.Resources.pic11,
                                       Properties.Resources.pic12, Properties.Resources.pic13,
                                       Properties.Resources.pic14, Properties.Resources.pic15,
@@ -48,6 +48,8 @@ namespace JensMemory
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
         private Image[] coverVector = { Properties.Resources.newpokeball, Properties.Resources.newpokemon, Properties.Resources.newpokemon2 };
+        private Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
+        private Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
         public static List<Player> players = new List<Player>(); // Lista som håller spelarna
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
@@ -59,13 +61,13 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
-        
+
 
         BakGrundPopUp BG = new BakGrundPopUp();
 
-        private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
-        
-        
+        private int columns = 6, rows = 5;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+
+
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -76,13 +78,17 @@ namespace JensMemory
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
                 this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
             }
+            else
+            {
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows +5)* columns,600);
+            }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
             for (int i = 0; i < columns; i++)
             {
                 for (int j = 0; j < rows; j++)
                 {
-                    Card card = new Card(i, j, (pnlCardHolder.Width / columns - 5), (pnlCardHolder.Height / rows - 5), card_Click);
+                    Card card = new Card(i, j, (pnlCardHolder.Height / rows - 5), card_Click);
                     cards.Add(card);
                     this.pnlCardHolder.Controls.Add(card);
                 }
@@ -169,6 +175,12 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
+            if (activePlayer.computer == true)
+            {
+                ComputerPlay();
+                ComputerThinks.Start();
+        }
+
         }
 
 
@@ -190,9 +202,9 @@ namespace JensMemory
         }
 
 
-        public static void CreatePlayer(string name)
+        public static void CreatePlayer(string name, bool computer)
         {
-            Player player = new Player(name);
+            Player player = new Player(name, computer);
             players.Add(player);
             playerTurn.Add(player);
 
@@ -345,6 +357,51 @@ namespace JensMemory
         {
 
         }
+        public void ComputerPlay()
+        {
+            //object sender = new Object();
+            EventArgs e = new EventArgs();
+            
+            Random computerRandom = new Random();
 
+            int cardIndex = computerRandom.Next(0, cards.Count);
+
+            foreach (Card c in cards)
+            {
+
+                if (cardIndex == cards.IndexOf(c))
+                {
+                    card_Click(c, e);
+                }
+
+    }
+
+
+
+            //foreach (Player p in players)    fråga adam
+            //{
+
+
+            //        p.computerChoice1 = computerRandom.Next(0, rows);
+            //        p.computerChoice2 = computerRandom.Next(0, columns);
+
+            //        Point Location = new System.Drawing.Point(p.computerChoice1 * (cardWidth + 5), p.computerChoice2 * (cardHeight + 5));
+
+            //        foreach (Card c in cards)
+            //        {
+            //            if (Location == c.Location)
+            //            {
+            //                card_Click(c,e);
+            //            }
+            //        }
+
+            //}
+        }
+
+        private void ComputerThinks_Tick(object sender, EventArgs e)
+        {
+            ComputerThinks.Stop();
+            ComputerPlay();
+        }
     }
 }

@@ -20,13 +20,13 @@ namespace JensMemory
       
 
         //Konstruktor för nya kort. tar 3st parametrar. 
-        public Card(int posX, int posY, int width, int height, cardEvent eventHandler)
+        public Card(int posX, int posY, int size, cardEvent eventHandler)
         {
             // Här sätts kortets placering med formel som separerar alla kort
             // med dess bredd och höjd + 5 pixlar samt beroende av värden för x och y som tagits emot.
-            Location = new System.Drawing.Point(posX * (width + 5), posY * (height + 5));
+            Location = new System.Drawing.Point(posX * (size + 5), posY * (size + 5));
             Name = "card" + posX + "," + posY;
-            Size = new System.Drawing.Size(width, height);
+            Size = new System.Drawing.Size(size, size);
             TabIndex = 0;
             Enabled = false;
             this.SizeMode = PictureBoxSizeMode.StretchImage;

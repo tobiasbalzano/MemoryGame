@@ -37,6 +37,7 @@
             this.tbxInfo = new System.Windows.Forms.TextBox();
             this.timerCompare = new System.Windows.Forms.Timer(this.components);
             this.timerEndGame = new System.Windows.Forms.Timer(this.components);
+            this.ComputerThinks = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlCardHolder
@@ -105,6 +106,11 @@
             this.timerEndGame.Interval = 500;
             this.timerEndGame.Tick += new System.EventHandler(this.timerEndGame_Tick);
             // 
+            // ComputerThinks
+            // 
+            this.ComputerThinks.Interval = 500;
+            this.ComputerThinks.Tick += new System.EventHandler(this.ComputerThinks_Tick);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,7 +125,7 @@
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory";
-            this.Load += new System.EventHandler(this.GameWindow_Load);
+            //this.Load += new System.EventHandler(this.GameWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +141,7 @@
         private System.Windows.Forms.TextBox tbxInfo;
         private System.Windows.Forms.Timer timerCompare;
         private System.Windows.Forms.Timer timerEndGame;
+        private System.Windows.Forms.Timer ComputerThinks;
     }
 }
 

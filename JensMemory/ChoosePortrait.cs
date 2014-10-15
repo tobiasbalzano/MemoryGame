@@ -16,5 +16,20 @@ namespace JensMemory
         {
             InitializeComponent();
         }
+
+        private void LeftArrow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Portrait_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RightArrow_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
