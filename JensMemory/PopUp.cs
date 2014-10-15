@@ -23,23 +23,30 @@ namespace JensMemory
         {
             if (tbxName.Text != "")
             {
-                GameWindow.CreatePlayer(tbxName.Text);
+                if (checkBoxAi.Checked==true)
+                {
+                    GameWindow.CreatePlayer(tbxName.Text, true);
+                }
+                else
+                {
+                    GameWindow.CreatePlayer(tbxName.Text, false);
+                }
                 tbxName.Text = "";
                 lblGiveName.Text = "Ge namn till spelare " + (GameWindow.players.Count + 1) + "\noch tryck skapa ny:";
                 this.ActiveControl = tbxName;
-                
+
             }
             else
             {
                 lblGiveName.Text = "Du måste ange ett namn";
                 this.ActiveControl = tbxName;
             }
-            if(GameWindow.players.Count>1)
+            if (GameWindow.players.Count > 1)
             {
                 btnDone.DialogResult = DialogResult.OK;
-                
+
             }
-                      
+
 
         }
 
@@ -49,7 +56,7 @@ namespace JensMemory
             {
                 lblGiveName.Text = "Du måste skapa minst 2st spelare";
             }
-            
+
         }
 
 

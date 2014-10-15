@@ -81,11 +81,11 @@
     <Compile Include="Card.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ChooseCharacter.cs">
+    <Compile Include="ChoosePortrait.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChooseCharacter.Designer.cs">
-      <DependentUpon>ChooseCharacter.cs</DependentUpon>
+    <Compile Include="ChoosePortrait.Designer.cs">
+      <DependentUpon>ChoosePortrait.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -106,7 +106,7 @@
       <DependentUpon>BakGrundPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChooseCharacter.resx">
-      <DependentUpon>ChooseCharacter.cs</DependentUpon>
+      <DependentUpon>ChoosePortrait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -208,6 +208,18 @@
     <Content Include="Resources\card7.gif" />
     <Content Include="Resources\card8.gif" />
     <Content Include="Resources\cover.gif" />
+    <None Include="Resources\trainer6S.png" />
+    <None Include="Resources\trainer6.png" />
+    <None Include="Resources\trainer5S.png" />
+    <None Include="Resources\trainer5.png" />
+    <None Include="Resources\trainer4S.png" />
+    <None Include="Resources\trainer4.png" />
+    <None Include="Resources\trainer3S.png" />
+    <None Include="Resources\trainer3.png" />
+    <None Include="Resources\trainer2S.png" />
+    <None Include="Resources\trainer2.png" />
+    <None Include="Resources\trainer1S.png" />
+    <None Include="Resources\trainer1.png" />
     <None Include="Resources\newpokemon2.jpg" />
     <None Include="Resources\newpokemon.jpg" />
     <None Include="Resources\newpokeball.jpg" />
