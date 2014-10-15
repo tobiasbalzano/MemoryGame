@@ -199,6 +199,15 @@
     <None Include="Resources\pic02.png" />
     <None Include="Resources\pic0.png" />
     <None Include="Resources\01.png" />
+    <None Include="Resources\boardSz4x4.png" />
+    <None Include="Resources\boardSz5x4.png" />
+    <None Include="Resources\boardSz6x5.png" />
+    <None Include="Resources\boardSz6x6.png" />
+    <None Include="Resources\boardSz8x6.png" />
+    <None Include="Resources\boardSz8x8.png" />
+    <None Include="Resources\boardSz10x8.png" />
+    <None Include="Resources\boardSz10x10.png" />
+    <None Include="Resources\boardSz12x10.png" />
     <Content Include="Resources\card1.gif" />
     <Content Include="Resources\card2.gif" />
     <Content Include="Resources\card3.gif" />
