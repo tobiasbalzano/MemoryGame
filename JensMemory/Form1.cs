@@ -13,11 +13,11 @@ namespace JensMemory
     public partial class GameWindow : Form
     {
         #region // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
-        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic1,
-                                      Properties.Resources.pic2, Properties.Resources.pic3,
-                                      Properties.Resources.pic4, Properties.Resources.pic5,
-                                      Properties.Resources.pic6, Properties.Resources.pic7,
-                                      Properties.Resources.pic8, Properties.Resources.pic9,
+        private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic01,
+                                      Properties.Resources.pic02, Properties.Resources.pic03,
+                                      Properties.Resources.pic04, Properties.Resources.pic05,
+                                      Properties.Resources.pic06, Properties.Resources.pic07,
+                                      Properties.Resources.pic08, Properties.Resources.pic09,
                                       Properties.Resources.pic10, Properties.Resources.pic11,
                                       Properties.Resources.pic12, Properties.Resources.pic13,
                                       Properties.Resources.pic14, Properties.Resources.pic15,
