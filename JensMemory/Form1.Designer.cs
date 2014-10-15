@@ -60,10 +60,10 @@
             // lblWhosTurn
             // 
             this.lblWhosTurn.AutoSize = true;
-            this.lblWhosTurn.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWhosTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWhosTurn.Location = new System.Drawing.Point(127, 25);
             this.lblWhosTurn.Name = "lblWhosTurn";
-            this.lblWhosTurn.Size = new System.Drawing.Size(0, 24);
+            this.lblWhosTurn.Size = new System.Drawing.Size(0, 25);
             this.lblWhosTurn.TabIndex = 2;
             // 
             // label1
@@ -119,6 +119,7 @@
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory";
+            this.Load += new System.EventHandler(this.GameWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
