@@ -62,16 +62,18 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
-
-
+        ChooseCharacter CHAR = new ChooseCharacter();
         BakGrundPopUp BG = new BakGrundPopUp();
+        PopUpBoardSize boardSize = new PopUpBoardSize();
 
-        private int columns = 12, rows = 10;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+        public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
 
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
+            CHAR.ShowDialog();
+            boardSize.ShowDialog();
             BG.ShowDialog();
 
             if (columns == rows)
@@ -428,6 +430,11 @@ namespace JensMemory
         {
             ComputerThinks.Stop();
             ComputerPlay();
+        }
+
+        private void GameWindow_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

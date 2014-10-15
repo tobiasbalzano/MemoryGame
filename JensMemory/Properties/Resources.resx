@@ -145,8 +145,20 @@
   <data name="boardSz8x8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boardSz8x8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Character.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChooseButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChooseButton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choiceRing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choiceRing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="largeBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\largeBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftArrow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mediumBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mediumBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,6 +171,9 @@
   </data>
   <data name="newpokemon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newpokemon2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PC.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -339,6 +354,9 @@
   </data>
   <data name="pic59" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightArrow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="smallBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smallBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

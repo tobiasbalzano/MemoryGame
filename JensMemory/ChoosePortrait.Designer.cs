@@ -120,7 +120,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(204, 134);
+            this.pictureBox4.Location = new System.Drawing.Point(210, 118);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(100, 50);
             this.pictureBox4.TabIndex = 3;
@@ -128,6 +128,7 @@
             // 
             // RightArrow
             // 
+            this.RightArrow.Image = global::JensMemory.Properties.Resources.RightArrow;
             this.RightArrow.Location = new System.Drawing.Point(415, 38);
             this.RightArrow.Name = "RightArrow";
             this.RightArrow.Size = new System.Drawing.Size(100, 50);
@@ -137,16 +138,18 @@
             // 
             // Portrait
             // 
+            this.Portrait.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Portrait.InitialImage = null;
-            this.Portrait.Location = new System.Drawing.Point(204, 38);
+            this.Portrait.Location = new System.Drawing.Point(204, 26);
             this.Portrait.Name = "Portrait";
-            this.Portrait.Size = new System.Drawing.Size(100, 50);
+            this.Portrait.Size = new System.Drawing.Size(106, 48);
             this.Portrait.TabIndex = 1;
             this.Portrait.TabStop = false;
             this.Portrait.Click += new System.EventHandler(this.Portrait_Click);
             // 
             // LeftArrow
             // 
+            this.LeftArrow.Image = global::JensMemory.Properties.Resources.LeftArrow;
             this.LeftArrow.Location = new System.Drawing.Point(12, 38);
             this.LeftArrow.Name = "LeftArrow";
             this.LeftArrow.Size = new System.Drawing.Size(100, 50);
@@ -174,6 +177,7 @@
             this.Name = "ChooseCharacter";
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Black;
+            this.Load += new System.EventHandler(this.ChooseCharacter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();

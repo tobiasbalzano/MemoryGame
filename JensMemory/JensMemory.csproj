@@ -100,12 +100,18 @@
     <Compile Include="PopUp.Designer.cs">
       <DependentUpon>PopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopUpBoardSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpBoardSize.Designer.cs">
+      <DependentUpon>PopUpBoardSize.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BakGrundPopUp.resx">
       <DependentUpon>BakGrundPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseCharacter.resx">
+    <EmbeddedResource Include="ChoosePortrait.resx">
       <DependentUpon>ChoosePortrait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp.resx">
       <DependentUpon>PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpBoardSize.resx">
+      <DependentUpon>PopUpBoardSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +148,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\LeftArrow.jpg" />
+    <None Include="Resources\RightArrow.jpg" />
+    <None Include="Resources\PC.jpg" />
     <None Include="Resources\pic59.png" />
     <None Include="Resources\pic58.png" />
     <None Include="Resources\pic57.png" />
@@ -216,6 +228,8 @@
     <Content Include="Resources\card6.gif" />
     <Content Include="Resources\card7.gif" />
     <Content Include="Resources\card8.gif" />
+    <None Include="Resources\Character.jpg" />
+    <None Include="Resources\ChooseButton.jpg" />
     <Content Include="Resources\cover.gif" />
     <None Include="Resources\trainer6S.png" />
     <None Include="Resources\trainer6.png" />
