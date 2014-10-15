@@ -72,8 +72,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BakGrundPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakGrundPopUp.Designer.cs">
+      <DependentUpon>BakGrundPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Card.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChooseCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseCharacter.Designer.cs">
+      <DependentUpon>ChooseCharacter.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BakGrundPopUp.resx">
+      <DependentUpon>BakGrundPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseCharacter.resx">
+      <DependentUpon>ChooseCharacter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
