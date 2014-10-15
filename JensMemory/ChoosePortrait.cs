@@ -19,13 +19,13 @@ namespace JensMemory
         }
 
         int i = 0;
-        private Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
-        private Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
-
+        private static Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
+        private static Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
+        int EndRange = Portraits.Count() - 1;
 
         private void LeftArrow_Click(object sender, EventArgs e)
         {
-            if ( i == 5)
+            if (i == EndRange)
             {
                 i = 0;
             }
@@ -44,6 +44,19 @@ namespace JensMemory
         }
 
         private void RightArrow_Click(object sender, EventArgs e)
+        {
+            if (i == 0)
+            {
+                i = EndRange;
+            }
+            else
+            {
+                i++;
+            }
+            LeftArrow.Image = Portraits[i];
+        }
+
+        private void ChooseCharacter_Load(object sender, EventArgs e)
         {
 
         }

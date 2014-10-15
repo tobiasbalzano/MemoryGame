@@ -174,6 +174,7 @@
             this.Name = "ChooseCharacter";
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Black;
+            this.Load += new System.EventHandler(this.ChooseCharacter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
