@@ -60,7 +60,7 @@ namespace JensMemory
         int totalPoints;
         int endGame;
 
-        private int rows = 12, columns = 10; //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+        private int columns = 5, rows = 4;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
@@ -71,13 +71,17 @@ namespace JensMemory
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
                 this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
             }
+            else
+            {
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows +5)* columns,600);
+            }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
             for (int i = 0; i < columns; i++)
             {
                 for (int j = 0; j < rows; j++)
                 {
-                    Card card = new Card(i, j, (pnlCardHolder.Width / columns - 5), (pnlCardHolder.Height / rows - 5), card_Click);
+                    Card card = new Card(i, j, (pnlCardHolder.Height / rows - 5), card_Click);
                     cards.Add(card);
                     this.pnlCardHolder.Controls.Add(card);
                 }
