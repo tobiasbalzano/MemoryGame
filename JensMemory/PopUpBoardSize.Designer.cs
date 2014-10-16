@@ -103,6 +103,7 @@
             // 
             // confirmBtn
             // 
+            this.confirmBtn.Enabled = false;
             this.confirmBtn.Image = global::JensMemory.Properties.Resources.largeBoardButton;
             this.confirmBtn.Location = new System.Drawing.Point(281, 461);
             this.confirmBtn.Name = "confirmBtn";
@@ -125,6 +126,7 @@
             this.Controls.Add(this.pbSmallBtn);
             this.Name = "PopUpBoardSize";
             this.Text = "PopUpBoardSize";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PopUpBoardSize_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLargeBtn)).EndInit();
