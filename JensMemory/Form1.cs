@@ -305,7 +305,7 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
-            if (card.flipped == true && activePlayer.computer==true)
+            if (card.flipped == true && activePlayer.computer == true)
             {
                 ComputerPlay();
             }
@@ -336,11 +336,7 @@ namespace JensMemory
                 foreach (Card c in cards)
                 {
                     c.Enabled = true;
-                    if (c.id == flippedCards[0].id)
-                    {
-                        dontFlipAI.Add(c);
-                    }
-
+                    
                 }
                 // Tömmer listan för jämförelse
                 flippedCards.Clear();
@@ -348,6 +344,11 @@ namespace JensMemory
                 // poäng delas ut
                 activePlayer.points++;
                 totalPoints++;
+
+                if (totalPoints == endGame)
+                {
+                    timerEndGame.Start();
+                }
 
                 if (activePlayer.computer == true)
                 {
@@ -358,10 +359,7 @@ namespace JensMemory
                 //poäng skrivs ut
                 GetInfo();
 
-                if (totalPoints == endGame)
-                {
-                    timerEndGame.Start();
-                }
+
             }
             //min hemliga kommentar av Tobias
             else
@@ -383,14 +381,15 @@ namespace JensMemory
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
 
-           // foreach (Card ca in dontFlipAI)
-           // {
-            //    if (cardIndex == dontFlipAI.IndexOf(ca))
-            //    {
-
-            //    }
-            //}
-
+            while (cards[cardIndex].flipped == true)
+            {
+                cardIndex = computerRandom.Next(0, cards.Count);
+                if (totalPoints==endGame)
+                {
+                    break;
+                }
+                
+            }
 
 
             foreach (Card c in cards)
@@ -405,25 +404,6 @@ namespace JensMemory
             }
 
 
-
-            //foreach (Player p in players)    fråga adam
-            //{
-
-
-            //        p.computerChoice1 = computerRandom.Next(0, rows);
-            //        p.computerChoice2 = computerRandom.Next(0, columns);
-
-            //        Point Location = new System.Drawing.Point(p.computerChoice1 * (cardWidth + 5), p.computerChoice2 * (cardHeight + 5));
-
-            //        foreach (Card c in cards)
-            //        {
-            //            if (Location == c.Location)
-            //            {
-            //                card_Click(c,e);
-            //            }
-            //        }
-
-            //}
         }
 
         public void ComputerThinks_Tick(object sender, EventArgs e)

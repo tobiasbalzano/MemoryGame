@@ -98,7 +98,7 @@
             // 
             // timerCompare
             // 
-            this.timerCompare.Interval = 10;
+            this.timerCompare.Interval = 1000;
             this.timerCompare.Tick += new System.EventHandler(this.timerCompare_Tick);
             // 
             // timerEndGame
@@ -108,7 +108,7 @@
             // 
             // ComputerThinks
             // 
-            this.ComputerThinks.Interval = 10;
+            this.ComputerThinks.Interval = 500;
             this.ComputerThinks.Tick += new System.EventHandler(this.ComputerThinks_Tick);
             // 
             // GameWindow
