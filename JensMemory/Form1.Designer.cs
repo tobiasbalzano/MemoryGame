@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlCardHolder = new System.Windows.Forms.Panel();
-            this.btnStart = new System.Windows.Forms.Button();
             this.lblWhosTurn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,17 +45,6 @@
             this.pnlCardHolder.Name = "pnlCardHolder";
             this.pnlCardHolder.Size = new System.Drawing.Size(800, 600);
             this.pnlCardHolder.TabIndex = 0;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(13, 4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(94, 50);
-            this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "Lägg till spelare";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // lblWhosTurn
             // 
@@ -120,7 +108,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWhosTurn);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pnlCardHolder);
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -134,7 +121,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlCardHolder;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblWhosTurn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

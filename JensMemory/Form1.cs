@@ -100,7 +100,7 @@ namespace JensMemory
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             endGame = cards.Count() / 2;
             totalPoints = 0;
-            //lägger till testkommentar här
+            StartGame();
         }
 
         private void randomizeIdInCardList(int numberOfCards) //metod för att blanda kortens id
@@ -120,22 +120,6 @@ namespace JensMemory
                 cards[i].id = shuffledIntList[i];
                 //  Här kan man stoppa in bildreferens i Card:
                 cards[i].Image = coverVector[BG.coverChoice];
-            }
-        }
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-
-            //Här kan vi lägga lägga kod för att skapa användare och rita ut planen mm..
-            // istället för att göra det i spelfönstrets konstruktor..
-            PopUp popUp = new PopUp();
-
-            DialogResult dialogResult = popUp.ShowDialog();
-            if (dialogResult == DialogResult.OK)
-            {
-                //chooseTurn = rand.Next(0, players.Count);
-                //players[chooseTurn].turn = true;
-                StartGame();
             }
         }
 

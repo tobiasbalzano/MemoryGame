@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.PictureBox();
             this.Character6 = new System.Windows.Forms.PictureBox();
             this.Character5 = new System.Windows.Forms.PictureBox();
             this.Character4 = new System.Windows.Forms.PictureBox();
@@ -41,7 +41,7 @@
             this.Portrait = new System.Windows.Forms.PictureBox();
             this.LeftArrow = new System.Windows.Forms.PictureBox();
             this.lblChooseChar = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character4)).BeginInit();
@@ -55,18 +55,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox12
+            // btnPlay
             // 
-            this.pictureBox12.Location = new System.Drawing.Point(204, 360);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox12.TabIndex = 11;
-            this.pictureBox12.TabStop = false;
+            this.btnPlay.BackgroundImage = global::JensMemory.Properties.Resources.playBoardButton;
+            this.btnPlay.Location = new System.Drawing.Point(150, 433);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(221, 125);
+            this.btnPlay.TabIndex = 11;
+            this.btnPlay.TabStop = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // Character6
             // 
             this.Character6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character6.Location = new System.Drawing.Point(446, 289);
+            this.Character6.Location = new System.Drawing.Point(442, 377);
             this.Character6.Name = "Character6";
             this.Character6.Size = new System.Drawing.Size(60, 50);
             this.Character6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -76,7 +78,7 @@
             // Character5
             // 
             this.Character5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character5.Location = new System.Drawing.Point(364, 289);
+            this.Character5.Location = new System.Drawing.Point(360, 377);
             this.Character5.Name = "Character5";
             this.Character5.Size = new System.Drawing.Size(60, 50);
             this.Character5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,7 +88,7 @@
             // Character4
             // 
             this.Character4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character4.Location = new System.Drawing.Point(278, 289);
+            this.Character4.Location = new System.Drawing.Point(274, 377);
             this.Character4.Name = "Character4";
             this.Character4.Size = new System.Drawing.Size(60, 50);
             this.Character4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +98,7 @@
             // Character3
             // 
             this.Character3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character3.Location = new System.Drawing.Point(191, 289);
+            this.Character3.Location = new System.Drawing.Point(187, 377);
             this.Character3.Name = "Character3";
             this.Character3.Size = new System.Drawing.Size(60, 50);
             this.Character3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +108,7 @@
             // Character2
             // 
             this.Character2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character2.Location = new System.Drawing.Point(110, 289);
+            this.Character2.Location = new System.Drawing.Point(103, 377);
             this.Character2.Name = "Character2";
             this.Character2.Size = new System.Drawing.Size(60, 50);
             this.Character2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +118,7 @@
             // Character1
             // 
             this.Character1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character1.Location = new System.Drawing.Point(22, 289);
+            this.Character1.Location = new System.Drawing.Point(12, 377);
             this.Character1.Name = "Character1";
             this.Character1.Size = new System.Drawing.Size(60, 50);
             this.Character1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,27 +127,29 @@
             // 
             // Choose
             // 
-            this.Choose.Image = global::JensMemory.Properties.Resources.ChooseButton;
-            this.Choose.Location = new System.Drawing.Point(204, 192);
+            this.Choose.BackgroundImage = global::JensMemory.Properties.Resources.playBoardButton;
+            this.Choose.Location = new System.Drawing.Point(150, 234);
             this.Choose.Name = "Choose";
-            this.Choose.Size = new System.Drawing.Size(106, 77);
+            this.Choose.Size = new System.Drawing.Size(221, 125);
             this.Choose.TabIndex = 4;
             this.Choose.TabStop = false;
             this.Choose.Click += new System.EventHandler(this.Choose_Click);
             // 
             // Computer
             // 
-            this.Computer.Image = global::JensMemory.Properties.Resources.PC;
-            this.Computer.Location = new System.Drawing.Point(204, 107);
+            this.Computer.BackgroundImage = global::JensMemory.Properties.Resources.PC;
+            this.Computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Computer.Location = new System.Drawing.Point(171, 94);
             this.Computer.Name = "Computer";
-            this.Computer.Size = new System.Drawing.Size(106, 69);
+            this.Computer.Size = new System.Drawing.Size(167, 134);
             this.Computer.TabIndex = 3;
             this.Computer.TabStop = false;
             this.Computer.Click += new System.EventHandler(this.Computer_Click);
             // 
             // RightArrow
             // 
-            this.RightArrow.Image = global::JensMemory.Properties.Resources.RightArrow;
+            this.RightArrow.BackgroundImage = global::JensMemory.Properties.Resources.RightArrow;
+            this.RightArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RightArrow.Location = new System.Drawing.Point(415, 38);
             this.RightArrow.Name = "RightArrow";
             this.RightArrow.Size = new System.Drawing.Size(100, 50);
@@ -166,7 +170,8 @@
             // 
             // LeftArrow
             // 
-            this.LeftArrow.Image = global::JensMemory.Properties.Resources.LeftArrow;
+            this.LeftArrow.BackgroundImage = global::JensMemory.Properties.Resources.LeftArrow;
+            this.LeftArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LeftArrow.Location = new System.Drawing.Point(12, 38);
             this.LeftArrow.Name = "LeftArrow";
             this.LeftArrow.Size = new System.Drawing.Size(100, 50);
@@ -187,9 +192,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 436);
+            this.ClientSize = new System.Drawing.Size(534, 562);
             this.Controls.Add(this.lblChooseChar);
-            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.Character6);
             this.Controls.Add(this.Character5);
             this.Controls.Add(this.Character4);
@@ -203,9 +208,9 @@
             this.Controls.Add(this.LeftArrow);
             this.Name = "ChooseCharacter";
             this.Text = "ChooseCharacter";
-            this.TransparencyKey = System.Drawing.Color.Black;
+            this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.ChooseCharacter_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character4)).EndInit();
@@ -235,7 +240,7 @@
         private System.Windows.Forms.PictureBox Character4;
         private System.Windows.Forms.PictureBox Character5;
         private System.Windows.Forms.PictureBox Character6;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox btnPlay;
         private System.Windows.Forms.Label lblChooseChar;
     }
 }

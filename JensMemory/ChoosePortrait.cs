@@ -21,8 +21,10 @@ namespace JensMemory
             Portrait.BackgroundImage = Portraits[0];
         }
 
+        bool AI = false;
+        int click = 1;
         private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
-        private string[] TrainerName = { "Player1", "Plyer2", "Player3", "Player4", "Player5", "Player6" };
+        private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
         int i = 0;
         int amountOfPlayer;
         private static Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
@@ -67,6 +69,7 @@ namespace JensMemory
 
         private void UpdateGUI()
         {
+            EndRange = Portraits.Count() - 1;
             Portrait.BackgroundImage = Portraits[i];
             Character1.BackgroundImage = Choices[0];
             Character2.BackgroundImage = Choices[1];
@@ -78,19 +81,45 @@ namespace JensMemory
 
         private void Computer_Click(object sender, EventArgs e)
         {
-
+            click++;
+            if (click % 2 == 0)
+            {
+                Computer.Image = Properties.Resources.choiceRing;
+                AI = true;
+            }
+            else
+            {
+                Computer.Image = null;
+                AI = false;
+            }
         }
 
         private void Choose_Click(object sender, EventArgs e)
         {
-            if (amountOfPlayer == 6)
+            if (amountOfPlayer <= EndRange)
+            {
+                GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI);
+                Choices[amountOfPlayer] = Portraits[i];
+                Portraits[i] = Silhouettes[i];
+                amountOfPlayer++;
+            }
+            else
+            {
+                Choose.Enabled = false;
+            }
+            UpdateGUI();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            if(amountOfPlayer >= 2)
+            {
+                this.Close();
+            }
+            else
             {
 
             }
-            GameWindow.CreatePlayer(TrainerName[i], Portraits[i], true);
-            Choices[amountOfPlayer] = Portraits[i];
-            amountOfPlayer++;
-            UpdateGUI();
         }
     }
 }
