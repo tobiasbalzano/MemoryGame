@@ -355,7 +355,7 @@ namespace JensMemory
 
 
                 }
-            }
+            
             //min hemliga kommentar av Tobias
             else
             {
