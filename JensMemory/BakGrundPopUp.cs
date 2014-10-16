@@ -16,7 +16,7 @@ namespace JensMemory
         public BakGrundPopUp()
         {
             InitializeComponent();
-            lblBackGround.Text = "Choose a background by clicking on one of the pictures";
+            lblBackGround.Text = "Choose a background picture";
 
         }
 
