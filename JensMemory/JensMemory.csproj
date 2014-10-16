@@ -94,6 +94,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="PokemonSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokemonSplash.Designer.cs">
+      <DependentUpon>PokemonSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokemonSplash.resx">
+      <DependentUpon>PokemonSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp.resx">
       <DependentUpon>PopUp.cs</DependentUpon>
@@ -148,6 +157,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pokemonSplash.jpg" />
     <None Include="Resources\nextButton.png" />
     <None Include="Resources\playBoardButton.png" />
     <None Include="Resources\LeftArrow.jpg" />
