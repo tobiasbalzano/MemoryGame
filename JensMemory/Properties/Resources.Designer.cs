@@ -63,6 +63,16 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addButton {
+            get {
+                object obj = ResourceManager.GetObject("addButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boardSz10x10 {
             get {
                 object obj = ResourceManager.GetObject("boardSz10x10", resourceCulture);
@@ -236,6 +246,16 @@ namespace JensMemory.Properties {
         internal static System.Drawing.Bitmap newpokemon2 {
             get {
                 object obj = ResourceManager.GetObject("newpokemon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nextButton {
+            get {
+                object obj = ResourceManager.GetObject("nextButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
