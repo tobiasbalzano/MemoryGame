@@ -56,9 +56,9 @@ namespace JensMemory
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
-        int drawPlayer = 0;
+        //int drawPlayer = 0;
         Random rand = new Random();
-        int chooseTurn;
+        //int chooseTurn;
         Player activePlayer;
         int totalPoints;
         int endGame;
@@ -234,7 +234,9 @@ namespace JensMemory
             }
             if (result == DialogResult.Yes)
             {
+                winnerList.Clear();
                 PlayAgain();
+               
             }
             else
             {
@@ -264,7 +266,8 @@ namespace JensMemory
         public bool WhoWon()
         {
             bool winner = false;
-
+            int drawPlayer = 0;
+            
             //winnerList = players;
             foreach (Player p in players)
             {
@@ -291,9 +294,7 @@ namespace JensMemory
             {
                 winner = true;
             }
-
-
-
+           
             return winner;
         }
 
@@ -364,6 +365,7 @@ namespace JensMemory
         {
 
         }
+
         public void ComputerPlay()
         {
             
