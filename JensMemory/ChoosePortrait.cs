@@ -83,7 +83,10 @@ namespace JensMemory
 
         private void Choose_Click(object sender, EventArgs e)
         {
+            if (amountOfPlayer == 6)
+            {
 
+            }
             GameWindow.CreatePlayer(TrainerName[i], Portraits[i], true);
             Choices[amountOfPlayer] = Portraits[i];
             amountOfPlayer++;

@@ -199,8 +199,6 @@ namespace JensMemory
 
         }
 
-        public static void CreatePlayer(string name, bool computer)
-
         public static void CreatePlayer(string name,Image portrait, bool computer)
         {
             Player player = new Player(name, portrait, computer);
