@@ -204,9 +204,9 @@ namespace JensMemory
         }
 
 
-        public static void CreatePlayer(string name, bool computer)
+        public static void CreatePlayer(string name,Image portrait, bool computer)
         {
-            Player player = new Player(name, computer);
+            Player player = new Player(name, portrait, computer);
             players.Add(player);
             playerTurn.Add(player);
 
