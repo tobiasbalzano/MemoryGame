@@ -28,41 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbSmallBtn = new System.Windows.Forms.PictureBox();
-            this.pbMedBtn = new System.Windows.Forms.PictureBox();
+            this.choice3Btn = new System.Windows.Forms.PictureBox();
+            this.choice2Btn = new System.Windows.Forms.PictureBox();
+            this.confirmBtn = new System.Windows.Forms.PictureBox();
             this.pbLargeBtn = new System.Windows.Forms.PictureBox();
             this.choice1Btn = new System.Windows.Forms.PictureBox();
-            this.choice2Btn = new System.Windows.Forms.PictureBox();
-            this.choice3Btn = new System.Windows.Forms.PictureBox();
-            this.confirmBtn = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).BeginInit();
+            this.pbMedBtn = new System.Windows.Forms.PictureBox();
+            this.pbSmallBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choice2Btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.confirmBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLargeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.choice1Btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.choice2Btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.confirmBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbSmallBtn
+            // choice3Btn
             // 
-            this.pbSmallBtn.Image = global::JensMemory.Properties.Resources.smallBoardButton;
-            this.pbSmallBtn.Location = new System.Drawing.Point(38, 12);
-            this.pbSmallBtn.Name = "pbSmallBtn";
-            this.pbSmallBtn.Size = new System.Drawing.Size(221, 134);
-            this.pbSmallBtn.TabIndex = 0;
-            this.pbSmallBtn.TabStop = false;
-            this.pbSmallBtn.Click += new System.EventHandler(this.pbSmallBtn_Click);
+            this.choice3Btn.Location = new System.Drawing.Point(523, 292);
+            this.choice3Btn.Name = "choice3Btn";
+            this.choice3Btn.Size = new System.Drawing.Size(167, 134);
+            this.choice3Btn.TabIndex = 0;
+            this.choice3Btn.TabStop = false;
+            this.choice3Btn.Click += new System.EventHandler(this.choice3Btn_Click);
             // 
-            // pbMedBtn
+            // choice2Btn
             // 
-            this.pbMedBtn.Image = global::JensMemory.Properties.Resources.mediumBoardButton;
-            this.pbMedBtn.Location = new System.Drawing.Point(38, 152);
-            this.pbMedBtn.Name = "pbMedBtn";
-            this.pbMedBtn.Size = new System.Drawing.Size(221, 134);
-            this.pbMedBtn.TabIndex = 0;
-            this.pbMedBtn.TabStop = false;
-            this.pbMedBtn.Click += new System.EventHandler(this.pbMedBtn_Click);
+            this.choice2Btn.Location = new System.Drawing.Point(523, 152);
+            this.choice2Btn.Name = "choice2Btn";
+            this.choice2Btn.Size = new System.Drawing.Size(167, 134);
+            this.choice2Btn.TabIndex = 0;
+            this.choice2Btn.TabStop = false;
+            this.choice2Btn.Click += new System.EventHandler(this.choice2Btn_Click);
+            // 
+            // confirmBtn
+            // 
+            this.confirmBtn.Enabled = false;
+            this.confirmBtn.Image = global::JensMemory.Properties.Resources.nextButton;
+            this.confirmBtn.Location = new System.Drawing.Point(281, 424);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(221, 125);
+            this.confirmBtn.TabIndex = 0;
+            this.confirmBtn.TabStop = false;
+            this.confirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
             // 
             // pbLargeBtn
             // 
@@ -83,34 +92,25 @@
             this.choice1Btn.TabStop = false;
             this.choice1Btn.Click += new System.EventHandler(this.choice1Btn_Click);
             // 
-            // choice2Btn
+            // pbMedBtn
             // 
-            this.choice2Btn.Location = new System.Drawing.Point(523, 152);
-            this.choice2Btn.Name = "choice2Btn";
-            this.choice2Btn.Size = new System.Drawing.Size(167, 134);
-            this.choice2Btn.TabIndex = 0;
-            this.choice2Btn.TabStop = false;
-            this.choice2Btn.Click += new System.EventHandler(this.choice2Btn_Click);
+            this.pbMedBtn.Image = global::JensMemory.Properties.Resources.mediumBoardButton;
+            this.pbMedBtn.Location = new System.Drawing.Point(38, 152);
+            this.pbMedBtn.Name = "pbMedBtn";
+            this.pbMedBtn.Size = new System.Drawing.Size(221, 134);
+            this.pbMedBtn.TabIndex = 0;
+            this.pbMedBtn.TabStop = false;
+            this.pbMedBtn.Click += new System.EventHandler(this.pbMedBtn_Click);
             // 
-            // choice3Btn
+            // pbSmallBtn
             // 
-            this.choice3Btn.Location = new System.Drawing.Point(523, 292);
-            this.choice3Btn.Name = "choice3Btn";
-            this.choice3Btn.Size = new System.Drawing.Size(167, 134);
-            this.choice3Btn.TabIndex = 0;
-            this.choice3Btn.TabStop = false;
-            this.choice3Btn.Click += new System.EventHandler(this.choice3Btn_Click);
-            // 
-            // confirmBtn
-            // 
-            this.confirmBtn.Enabled = false;
-            this.confirmBtn.Image = global::JensMemory.Properties.Resources.playBoardButton;
-            this.confirmBtn.Location = new System.Drawing.Point(281, 424);
-            this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(221, 125);
-            this.confirmBtn.TabIndex = 0;
-            this.confirmBtn.TabStop = false;
-            this.confirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
+            this.pbSmallBtn.Image = global::JensMemory.Properties.Resources.smallBoardButton;
+            this.pbSmallBtn.Location = new System.Drawing.Point(38, 12);
+            this.pbSmallBtn.Name = "pbSmallBtn";
+            this.pbSmallBtn.Size = new System.Drawing.Size(221, 134);
+            this.pbSmallBtn.TabIndex = 0;
+            this.pbSmallBtn.TabStop = false;
+            this.pbSmallBtn.Click += new System.EventHandler(this.pbSmallBtn_Click);
             // 
             // PopUpBoardSize
             // 
@@ -127,13 +127,13 @@
             this.Name = "PopUpBoardSize";
             this.Text = "PopUpBoardSize";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PopUpBoardSize_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.choice2Btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.confirmBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLargeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.choice1Btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.choice2Btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.confirmBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).EndInit();
             this.ResumeLayout(false);
 
         }

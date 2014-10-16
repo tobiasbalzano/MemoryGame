@@ -57,7 +57,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.BackgroundImage = global::JensMemory.Properties.Resources.playBoardButton;
+            this.btnPlay.BackgroundImage = global::JensMemory.Properties.Resources.nextButton;
             this.btnPlay.Location = new System.Drawing.Point(150, 433);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(221, 125);
@@ -127,7 +127,7 @@
             // 
             // Choose
             // 
-            this.Choose.BackgroundImage = global::JensMemory.Properties.Resources.playBoardButton;
+            this.Choose.BackgroundImage = global::JensMemory.Properties.Resources.addButton;
             this.Choose.Location = new System.Drawing.Point(150, 234);
             this.Choose.Name = "Choose";
             this.Choose.Size = new System.Drawing.Size(221, 125);
