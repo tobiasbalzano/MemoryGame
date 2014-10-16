@@ -252,7 +252,7 @@ namespace JensMemory
 
         public void PlayAgain()
         {
-            //Adams Kod
+            
             foreach (Player p in players)
             {
                 p.points = 0;
@@ -305,11 +305,8 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
-            if (card.flipped == true && activePlayer.computer==true)
-            {
-                ComputerPlay();
-            }
-            else if (card.flipped == false)
+
+            if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
@@ -377,21 +374,15 @@ namespace JensMemory
         }
         public void ComputerPlay()
         {
-            //object sender = new Object();
+            
             EventArgs e = new EventArgs();
 
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
-
-           // foreach (Card ca in dontFlipAI)
-           // {
-            //    if (cardIndex == dontFlipAI.IndexOf(ca))
-            //    {
-
-            //    }
-            //}
-
-
+            while (cards[cardIndex].flipped && totalPoints!=endGame)
+            {
+                cardIndex = computerRandom.Next(0, cards.Count);
+            }
 
             foreach (Card c in cards)
             {
@@ -403,27 +394,6 @@ namespace JensMemory
                 }
 
             }
-
-
-
-            //foreach (Player p in players)    fråga adam
-            //{
-
-
-            //        p.computerChoice1 = computerRandom.Next(0, rows);
-            //        p.computerChoice2 = computerRandom.Next(0, columns);
-
-            //        Point Location = new System.Drawing.Point(p.computerChoice1 * (cardWidth + 5), p.computerChoice2 * (cardHeight + 5));
-
-            //        foreach (Card c in cards)
-            //        {
-            //            if (Location == c.Location)
-            //            {
-            //                card_Click(c,e);
-            //            }
-            //        }
-
-            //}
         }
 
         public void ComputerThinks_Tick(object sender, EventArgs e)
