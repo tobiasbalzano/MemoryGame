@@ -56,9 +56,9 @@ namespace JensMemory
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
-        int drawPlayer = 0;
+        //int drawPlayer = 0;
         Random rand = new Random();
-        int chooseTurn;
+        //int chooseTurn;
         Player activePlayer;
         int totalPoints;
         int endGame;
@@ -68,7 +68,7 @@ namespace JensMemory
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
-
+        
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -100,7 +100,7 @@ namespace JensMemory
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             endGame = cards.Count() / 2;
             totalPoints = 0;
-            //lägger till testkommentar här
+            StartGame();
         }
 
         private void randomizeIdInCardList(int numberOfCards) //metod för att blanda kortens id
@@ -120,22 +120,6 @@ namespace JensMemory
                 cards[i].id = shuffledIntList[i];
                 //  Här kan man stoppa in bildreferens i Card:
                 cards[i].Image = coverVector[BG.coverChoice];
-            }
-        }
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-
-            //Här kan vi lägga lägga kod för att skapa användare och rita ut planen mm..
-            // istället för att göra det i spelfönstrets konstruktor..
-            PopUp popUp = new PopUp();
-
-            DialogResult dialogResult = popUp.ShowDialog();
-            if (dialogResult == DialogResult.OK)
-            {
-                //chooseTurn = rand.Next(0, players.Count);
-                //players[chooseTurn].turn = true;
-                StartGame();
             }
         }
 
@@ -177,7 +161,7 @@ namespace JensMemory
             {
                 ComputerPlay();
                 ComputerThinks.Start();
-            }
+        }
 
         }
 
@@ -199,9 +183,9 @@ namespace JensMemory
 
         }
 
-        public static void CreatePlayer(string name, bool computer)
+        public static void CreatePlayer(string name,Image portrait, bool computer)
         {
-            Player player = new Player(name, computer);
+            Player player = new Player(name, portrait, computer);
             players.Add(player);
             playerTurn.Add(player);
 
@@ -222,19 +206,21 @@ namespace JensMemory
             if (win)
             {
 
-                message = "Congrats! " + winnerList[0].name + ", won the game " + winnerList[0].points.ToString()
-                    + " poäng \nDo you want to play agein?";
+                message = "Grattis " + winnerList[0].name + ", du vann med " + winnerList[0].points.ToString()
+                    + " poäng \nVill ni spela igen?";
                 result = MessageBox.Show(message, caption, buttons, question);
             }
 
             else
             {
-                message = "Draw!\nDo you want to play agein?";
+                message = "Det blev oavgjort!\nVill ni spela igen?";
                 result = MessageBox.Show(message, caption, buttons, question);
             }
             if (result == DialogResult.Yes)
             {
+                winnerList.Clear();
                 PlayAgain();
+               
             }
             else
             {
@@ -246,7 +232,7 @@ namespace JensMemory
 
         public void PlayAgain()
         {
-
+            
             foreach (Player p in players)
             {
                 p.points = 0;
@@ -264,7 +250,8 @@ namespace JensMemory
         public bool WhoWon()
         {
             bool winner = false;
-
+            int drawPlayer = 0;
+            
             //winnerList = players;
             foreach (Player p in players)
             {
@@ -291,9 +278,7 @@ namespace JensMemory
             {
                 winner = true;
             }
-
-
-
+           
             return winner;
         }
 
@@ -350,7 +335,7 @@ namespace JensMemory
                 GetInfo();
 
 
-            }
+                }
 
             //min hemliga kommentar av Tobias
             else
@@ -364,11 +349,12 @@ namespace JensMemory
         {
 
         }
+
         public void ComputerPlay()
         {
-
+            
             EventArgs e = new EventArgs();
-
+            
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
             while (cards[cardIndex].flipped && totalPoints != endGame)
@@ -385,7 +371,7 @@ namespace JensMemory
 
                 }
 
-            }
+    }
 
 
         }

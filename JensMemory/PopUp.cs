@@ -23,13 +23,13 @@ namespace JensMemory
         {
             if (tbxName.Text != "")
             {
-                if (checkBoxAi.Checked==true)
+                if (checkBoxAi.Checked == true)
                 {
-                    GameWindow.CreatePlayer(tbxName.Text, true);
+                    //GameWindow.CreatePlayer(tbxName.Text, true);
                 }
                 else
                 {
-                    GameWindow.CreatePlayer(tbxName.Text, false);
+                    //GameWindow.CreatePlayer(tbxName.Text, false);
                 }
                 tbxName.Text = "";
                 lblGiveName.Text = "Write player name " + (GameWindow.players.Count + 1) + "\nAnd click add:";

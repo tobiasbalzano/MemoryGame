@@ -15,15 +15,20 @@ namespace JensMemory
 
         public ChooseCharacter()
         {
-            
+
             InitializeComponent();
+            UpdateGUI();
             Portrait.BackgroundImage = Portraits[0];
         }
 
+        bool AI = false;
+        int click = 1;
+        private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
+        private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
         int i = 0;
+        int amountOfPlayer;
         private static Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
         private static Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
-        //public static List<Image> trainer = new List<Image>();
         int EndRange = Portraits.Count() - 1;
 
         private void LeftArrow_Click(object sender, EventArgs e)
@@ -37,9 +42,6 @@ namespace JensMemory
                 i--;
             }
             UpdateGUI();
-
-             
-
         }
 
         private void Portrait_Click(object sender, EventArgs e)
@@ -57,17 +59,73 @@ namespace JensMemory
             {
                 i++;
             }
-            UpdateGUI();    
+            UpdateGUI();
         }
 
         private void ChooseCharacter_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UpdateGUI()
         {
+            EndRange = Portraits.Count() - 1;
             Portrait.BackgroundImage = Portraits[i];
+            Character1.BackgroundImage = Choices[0];
+            Character2.BackgroundImage = Choices[1];
+            Character3.BackgroundImage = Choices[2];
+            Character4.BackgroundImage = Choices[3];
+            Character5.BackgroundImage = Choices[4];
+            Character6.BackgroundImage = Choices[5];
+        }
+
+        private void Computer_Click(object sender, EventArgs e)
+        {
+            click++;
+            if (click % 2 == 0)
+            {
+                Computer.Image = Properties.Resources.choiceRing;
+                AI = true;
+            }
+            else
+            {
+                Computer.Image = null;
+                AI = false;
+            }
+        }
+
+        private void Choose_Click(object sender, EventArgs e)
+        {
+            if (amountOfPlayer <= EndRange)
+            {
+                GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI);
+                Choices[amountOfPlayer] = Portraits[i];
+                Portraits[i] = Silhouettes[i];
+                amountOfPlayer++;
+            }
+            else
+            {
+                Choose.Enabled = false;
+            }
+            UpdateGUI();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            if(amountOfPlayer >= 2)
+            {
+                this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void ChooseCharacter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = e.CloseReason == CloseReason.UserClosing;
         }
     }
 }
