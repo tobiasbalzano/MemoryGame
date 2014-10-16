@@ -54,16 +54,16 @@
             // 
             // BG2
             // 
-            this.BG2.Image = global::JensMemory.Properties.Resources.newpokemon;
             resources.ApplyResources(this.BG2, "BG2");
+            this.BG2.Image = global::JensMemory.Properties.Resources.newpokemon;
             this.BG2.Name = "BG2";
             this.BG2.TabStop = false;
             this.BG2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // BG3
             // 
-            this.BG3.Image = global::JensMemory.Properties.Resources.newpokemon2;
             resources.ApplyResources(this.BG3, "BG3");
+            this.BG3.Image = global::JensMemory.Properties.Resources.newpokemon2;
             this.BG3.Name = "BG3";
             this.BG3.TabStop = false;
             this.BG3.Click += new System.EventHandler(this.pictureBox3_Click);
