@@ -209,6 +209,7 @@
             this.Name = "ChooseCharacter";
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChooseCharacter_FormClosing);
             this.Load += new System.EventHandler(this.ChooseCharacter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).EndInit();

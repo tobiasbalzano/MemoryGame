@@ -114,12 +114,18 @@ namespace JensMemory
         {
             if(amountOfPlayer >= 2)
             {
+                this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
                 this.Close();
             }
             else
             {
 
             }
+        }
+
+        private void ChooseCharacter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = e.CloseReason == CloseReason.UserClosing;
         }
     }
 }
