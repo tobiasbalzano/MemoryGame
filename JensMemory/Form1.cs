@@ -355,7 +355,7 @@ namespace JensMemory
 
 
                 }
-            
+
             //min hemliga kommentar av Tobias
             else
             {
@@ -375,7 +375,7 @@ namespace JensMemory
 
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
-            while (cards[cardIndex].flipped && totalPoints!=endGame)
+            while (cards[cardIndex].flipped && totalPoints != endGame)
             {
                 cardIndex = computerRandom.Next(0, cards.Count);
             }
