@@ -58,7 +58,7 @@
             this.btnCreatePlayer.Name = "btnCreatePlayer";
             this.btnCreatePlayer.Size = new System.Drawing.Size(83, 40);
             this.btnCreatePlayer.TabIndex = 2;
-            this.btnCreatePlayer.Text = "Skapa ny";
+            this.btnCreatePlayer.Text = "Add";
             this.btnCreatePlayer.UseVisualStyleBackColor = true;
             this.btnCreatePlayer.Click += new System.EventHandler(this.btnCreatePlayer_Click);
             // 
@@ -69,7 +69,7 @@
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(65, 39);
             this.btnDone.TabIndex = 3;
-            this.btnDone.Text = "Klar";
+            this.btnDone.Text = "Play!";
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
@@ -96,6 +96,7 @@
             this.Name = "PopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Användare";
+            this.Load += new System.EventHandler(this.PopUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,7 +15,7 @@ namespace JensMemory
         public PopUp()
         {
             InitializeComponent();
-            lblGiveName.Text = "Ge namn till spelare 1\noch tryck skapa ny.:";
+            lblGiveName.Text = "Write player name \nAnd click add:";
 
         }
 
@@ -32,13 +32,13 @@ namespace JensMemory
                     GameWindow.CreatePlayer(tbxName.Text, false);
                 }
                 tbxName.Text = "";
-                lblGiveName.Text = "Ge namn till spelare " + (GameWindow.players.Count + 1) + "\noch tryck skapa ny:";
+                lblGiveName.Text = "Write player name " + (GameWindow.players.Count + 1) + "\nAnd click add:";
                 this.ActiveControl = tbxName;
 
             }
             else
             {
-                lblGiveName.Text = "Du måste ange ett namn";
+                lblGiveName.Text = "Enter a name";
                 this.ActiveControl = tbxName;
             }
             if (GameWindow.players.Count > 1)
@@ -54,8 +54,13 @@ namespace JensMemory
         {
             if (GameWindow.players.Count < 2)
             {
-                lblGiveName.Text = "Du måste skapa minst 2st spelare";
+                lblGiveName.Text = "Add at least 2 players";
             }
+
+        }
+
+        private void PopUp_Load(object sender, EventArgs e)
+        {
 
         }
 
