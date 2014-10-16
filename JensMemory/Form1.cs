@@ -133,14 +133,9 @@ namespace JensMemory
             DialogResult dialogResult = popUp.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
-                chooseTurn = rand.Next(0, players.Count);
-                players[chooseTurn].turn = true;
-                activePlayer = playerTurn[0];
-                foreach (Card card in cards)
-                {
-                    card.Enabled = true;
-                }
-                GetInfo();
+                //chooseTurn = rand.Next(0, players.Count);
+                //players[chooseTurn].turn = true;
+                StartGame();
             }
         }
 
@@ -257,7 +252,7 @@ namespace JensMemory
             foreach (Player p in players)
             {
                 p.points = 0;
-                chooseTurn = rand.Next(0, players.Count);
+                //chooseTurn = rand.Next(0, players.Count);
             }
             randomizeIdInCardList(cards.Count);
             foreach (Card c in cards)
@@ -265,7 +260,7 @@ namespace JensMemory
                 c.flipped = false;
             }
             totalPoints = 0;
-            GetInfo();
+            StartGame();
         }
 
         public bool WhoWon()
@@ -307,10 +302,6 @@ namespace JensMemory
         private void flipCards(Card card)
         {
             if (card.flipped == false)
-            {
-                ComputerPlay();
-            }
-            else if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
@@ -362,7 +353,7 @@ namespace JensMemory
 
 
                 }
-            }
+
             //min hemliga kommentar av Tobias
             else
             {
@@ -382,7 +373,7 @@ namespace JensMemory
             
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
-            while (cards[cardIndex].flipped && totalPoints!=endGame)
+            while (cards[cardIndex].flipped && totalPoints != endGame)
             {
                 cardIndex = computerRandom.Next(0, cards.Count);
             }
@@ -410,6 +401,21 @@ namespace JensMemory
         private void GameWindow_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void StartGame()
+        {
+            activePlayer = playerTurn[0];
+            if (activePlayer.computer)
+            {
+                ComputerPlay();
+                ComputerThinks.Start();
+            }
+            foreach (Card card in cards)
+            {
+                card.Enabled = true;
+            }
+            GetInfo();
         }
     }
 }
