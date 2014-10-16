@@ -305,11 +305,7 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
-            if (card.flipped == true && activePlayer.computer == true)
-            {
-                ComputerPlay();
-            }
-            else if (card.flipped == false)
+            if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
@@ -336,7 +332,7 @@ namespace JensMemory
                 foreach (Card c in cards)
                 {
                     c.Enabled = true;
-                    
+
                 }
                 // Tömmer listan för jämförelse
                 flippedCards.Clear();
@@ -381,14 +377,10 @@ namespace JensMemory
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
 
-            while (cards[cardIndex].flipped == true)
+            while (cards[cardIndex].flipped == true && totalPoints != endGame)
             {
                 cardIndex = computerRandom.Next(0, cards.Count);
-                if (totalPoints==endGame)
-                {
-                    break;
-                }
-                
+
             }
 
 
