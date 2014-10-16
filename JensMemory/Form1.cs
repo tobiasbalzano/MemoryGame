@@ -246,7 +246,7 @@ namespace JensMemory
 
         public void PlayAgain()
         {
-            //Adams Kod
+            
             foreach (Player p in players)
             {
                 p.points = 0;
@@ -301,6 +301,10 @@ namespace JensMemory
         {
             if (card.flipped == false)
             {
+                ComputerPlay();
+            }
+            else if (card.flipped == false)
+            {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
                 flippedCards.Add(card);
@@ -350,6 +354,7 @@ namespace JensMemory
                 GetInfo();
 
 
+                }
             }
             //min hemliga kommentar av Tobias
             else
@@ -365,18 +370,15 @@ namespace JensMemory
         }
         public void ComputerPlay()
         {
-            //object sender = new Object();
+            
             EventArgs e = new EventArgs();
 
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
-
-            while (cards[cardIndex].flipped == true && totalPoints != endGame)
+            while (cards[cardIndex].flipped && totalPoints!=endGame)
             {
                 cardIndex = computerRandom.Next(0, cards.Count);
-
             }
-
 
             foreach (Card c in cards)
             {
