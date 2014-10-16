@@ -54,7 +54,7 @@
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(94, 50);
             this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "Lägg till spelare";
+            this.btnStart.Text = "Add Player";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -73,9 +73,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(128, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.Size = new System.Drawing.Size(103, 16);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Aktiv spelare:";
+            this.label1.Text = "Active Player:";
             // 
             // label2
             // 
@@ -85,7 +85,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Poäng:";
+            this.label2.Text = "Points:";
             // 
             // tbxInfo
             // 

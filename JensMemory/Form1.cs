@@ -301,10 +301,6 @@ namespace JensMemory
         {
             if (card.flipped == false)
             {
-                ComputerPlay();
-            }
-            else if (card.flipped == false)
-            {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
                 flippedCards.Add(card);
