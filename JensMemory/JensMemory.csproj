@@ -157,6 +157,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pokemonSplash.jpg" />
     <None Include="Resources\nextButton.png" />
     <None Include="Resources\playBoardButton.png" />
     <None Include="Resources\LeftArrow.jpg" />

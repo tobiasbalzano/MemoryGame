@@ -125,6 +125,7 @@
             this.Controls.Add(this.pbMedBtn);
             this.Controls.Add(this.pbSmallBtn);
             this.Name = "PopUpBoardSize";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PopUpBoardSize";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PopUpBoardSize_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).EndInit();

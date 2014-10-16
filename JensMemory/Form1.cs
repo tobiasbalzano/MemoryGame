@@ -62,6 +62,7 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int endGame;
+        PokemonSplash splash = new PokemonSplash();
         ChooseCharacter CHAR = new ChooseCharacter();
         BakGrundPopUp BG = new BakGrundPopUp();
         PopUpBoardSize boardSize = new PopUpBoardSize();
@@ -72,6 +73,7 @@ namespace JensMemory
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
+            splash.ShowDialog();
             CHAR.ShowDialog();
             boardSize.ShowDialog();
             BG.ShowDialog();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblChooseChar = new System.Windows.Forms.Label();
             this.btnPlay = new System.Windows.Forms.PictureBox();
             this.Character6 = new System.Windows.Forms.PictureBox();
             this.Character5 = new System.Windows.Forms.PictureBox();
@@ -40,7 +41,6 @@
             this.RightArrow = new System.Windows.Forms.PictureBox();
             this.Portrait = new System.Windows.Forms.PictureBox();
             this.LeftArrow = new System.Windows.Forms.PictureBox();
-            this.lblChooseChar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character5)).BeginInit();
@@ -54,6 +54,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblChooseChar
+            // 
+            this.lblChooseChar.AutoSize = true;
+            this.lblChooseChar.Location = new System.Drawing.Point(204, 13);
+            this.lblChooseChar.Name = "lblChooseChar";
+            this.lblChooseChar.Size = new System.Drawing.Size(92, 13);
+            this.lblChooseChar.TabIndex = 18;
+            this.lblChooseChar.Text = "Choose Character";
             // 
             // btnPlay
             // 
@@ -179,15 +188,6 @@
             this.LeftArrow.TabStop = false;
             this.LeftArrow.Click += new System.EventHandler(this.LeftArrow_Click);
             // 
-            // lblChooseChar
-            // 
-            this.lblChooseChar.AutoSize = true;
-            this.lblChooseChar.Location = new System.Drawing.Point(204, 13);
-            this.lblChooseChar.Name = "lblChooseChar";
-            this.lblChooseChar.Size = new System.Drawing.Size(92, 13);
-            this.lblChooseChar.TabIndex = 18;
-            this.lblChooseChar.Text = "Choose Character";
-            // 
             // ChooseCharacter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +207,7 @@
             this.Controls.Add(this.Portrait);
             this.Controls.Add(this.LeftArrow);
             this.Name = "ChooseCharacter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChooseCharacter_FormClosing);
