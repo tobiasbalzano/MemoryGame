@@ -251,7 +251,7 @@ namespace JensMemory
 
         public void PlayAgain()
         {
-            
+
             foreach (Player p in players)
             {
                 p.points = 0;
@@ -359,8 +359,8 @@ namespace JensMemory
                 GetInfo();
 
 
-                }
             }
+
             //min hemliga kommentar av Tobias
             else
             {
@@ -375,12 +375,12 @@ namespace JensMemory
         }
         public void ComputerPlay()
         {
-            
+
             EventArgs e = new EventArgs();
 
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
-            while (cards[cardIndex].flipped && totalPoints!=endGame)
+            while (cards[cardIndex].flipped && totalPoints != endGame)
             {
                 cardIndex = computerRandom.Next(0, cards.Count);
             }
