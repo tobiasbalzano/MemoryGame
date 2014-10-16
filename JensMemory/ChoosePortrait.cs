@@ -12,7 +12,6 @@ namespace JensMemory
 {
     public partial class ChooseCharacter : Form
     {
-
         public ChooseCharacter()
         {
 

@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 562);
+            this.ClientSize = new System.Drawing.Size(534, 600);
             this.Controls.Add(this.lblChooseChar);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.Character6);
@@ -206,7 +206,9 @@
             this.Controls.Add(this.RightArrow);
             this.Controls.Add(this.Portrait);
             this.Controls.Add(this.LeftArrow);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChooseCharacter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChooseCharacter_FormClosing);

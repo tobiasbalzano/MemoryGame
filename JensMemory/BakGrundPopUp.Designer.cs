@@ -76,6 +76,7 @@
             this.Controls.Add(this.BG2);
             this.Controls.Add(this.BG1);
             this.Controls.Add(this.lblBackGround);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BakGrundPopUp";
             this.Load += new System.EventHandler(this.BakGrundPopUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).EndInit();

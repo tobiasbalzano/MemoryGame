@@ -37,6 +37,7 @@
             this.timerCompare = new System.Windows.Forms.Timer(this.components);
             this.timerEndGame = new System.Windows.Forms.Timer(this.components);
             this.ComputerThinks = new System.Windows.Forms.Timer(this.components);
+            this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlCardHolder
@@ -99,16 +100,22 @@
             this.ComputerThinks.Interval = 1;
             this.ComputerThinks.Tick += new System.EventHandler(this.ComputerThinks_Tick);
             // 
+            // splashTimer
+            // 
+            this.splashTimer.Interval = 3000;
+            this.splashTimer.Tick += new System.EventHandler(this.splashTimer_Tick);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.tbxInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWhosTurn);
             this.Controls.Add(this.pnlCardHolder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory";
@@ -128,6 +135,7 @@
         private System.Windows.Forms.Timer timerCompare;
         private System.Windows.Forms.Timer timerEndGame;
         private System.Windows.Forms.Timer ComputerThinks;
+        private System.Windows.Forms.Timer splashTimer;
     }
 }
 

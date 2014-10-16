@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 600);
             this.Controls.Add(this.choice3Btn);
             this.Controls.Add(this.choice2Btn);
             this.Controls.Add(this.confirmBtn);
@@ -124,7 +124,9 @@
             this.Controls.Add(this.choice1Btn);
             this.Controls.Add(this.pbMedBtn);
             this.Controls.Add(this.pbSmallBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PopUpBoardSize";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PopUpBoardSize";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PopUpBoardSize_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).EndInit();

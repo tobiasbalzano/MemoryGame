@@ -72,35 +72,7 @@ namespace JensMemory
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
-            CHAR.ShowDialog();
-            boardSize.ShowDialog();
-            BG.ShowDialog();
-
-            if (columns == rows)
-            {
-                this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
-                this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
-            }
-            else
-            {
-                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows + 5) * columns, 600);
-            }
-
-            //Nya kort instansieras och argument skickas med i för position på spelplanen
-            for (int i = 0; i < columns; i++)
-            {
-                for (int j = 0; j < rows; j++)
-                {
-                    Card card = new Card(i, j, (pnlCardHolder.Height / rows - 5), card_Click);
-                    cards.Add(card);
-                    this.pnlCardHolder.Controls.Add(card);
-                }
-
-            }
-            randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
-            endGame = cards.Count() / 2;
-            totalPoints = 0;
-            StartGame();
+            splashTimer.Enabled = true;
         }
 
         private void randomizeIdInCardList(int numberOfCards) //metod för att blanda kortens id
@@ -165,7 +137,13 @@ namespace JensMemory
 
         }
 
-
+        private void initializeGame()
+        {
+            CHAR.ShowDialog();
+            boardSize.ShowDialog();
+            BG.ShowDialog();
+            StartGame();
+        }
         public void GetInfo() //Metod föra att skriva ut poäng mm
         {
             string info = "";
@@ -389,6 +367,31 @@ namespace JensMemory
 
         private void StartGame()
         {
+
+            if (columns == rows)
+            {
+                this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
+                this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
+            }
+            else
+            {
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows + 5) * columns, 600);
+            }
+
+            //Nya kort instansieras och argument skickas med i för position på spelplanen
+            for (int i = 0; i < columns; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    Card card = new Card(i, j, (pnlCardHolder.Height / rows - 5), card_Click);
+                    cards.Add(card);
+                    this.pnlCardHolder.Controls.Add(card);
+                }
+
+            }
+            randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
+            endGame = cards.Count() / 2;
+            totalPoints = 0;
             activePlayer = playerTurn[0];
             if (activePlayer.computer)
             {
@@ -400,6 +403,12 @@ namespace JensMemory
                 card.Enabled = true;
             }
             GetInfo();
+        }
+
+        private void splashTimer_Tick(object sender, EventArgs e)
+        {
+            splashTimer.Enabled = false;
+            initializeGame();
         }
     }
 }
