@@ -148,6 +148,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\nextButton.png" />
     <None Include="Resources\playBoardButton.png" />
     <None Include="Resources\LeftArrow.jpg" />
     <None Include="Resources\RightArrow.jpg" />
@@ -221,6 +222,7 @@
     <None Include="Resources\boardSz10x8.png" />
     <None Include="Resources\boardSz10x10.png" />
     <None Include="Resources\boardSz12x10.png" />
+    <None Include="Resources\addButton.png" />
     <Content Include="Resources\card1.gif" />
     <Content Include="Resources\card2.gif" />
     <Content Include="Resources\card3.gif" />
