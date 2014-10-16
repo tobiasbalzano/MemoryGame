@@ -68,7 +68,7 @@ namespace JensMemory
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
-
+        
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -177,7 +177,7 @@ namespace JensMemory
             {
                 ComputerPlay();
                 ComputerThinks.Start();
-            }
+        }
 
         }
 
@@ -199,9 +199,9 @@ namespace JensMemory
 
         }
 
-        public static void CreatePlayer(string name, bool computer)
+        public static void CreatePlayer(string name,Image portrait, bool computer)
         {
-            Player player = new Player(name, computer);
+            Player player = new Player(name, portrait, computer);
             players.Add(player);
             playerTurn.Add(player);
 
@@ -370,7 +370,7 @@ namespace JensMemory
         {
             
             EventArgs e = new EventArgs();
-
+            
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
             while (cards[cardIndex].flipped && totalPoints != endGame)
@@ -387,7 +387,7 @@ namespace JensMemory
 
                 }
 
-            }
+    }
 
 
         }
