@@ -38,6 +38,8 @@
             this.timerEndGame = new System.Windows.Forms.Timer(this.components);
             this.ComputerThinks = new System.Windows.Forms.Timer(this.components);
             this.splashTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCardHolder
@@ -105,11 +107,22 @@
             this.splashTimer.Interval = 3000;
             this.splashTimer.Tick += new System.EventHandler(this.splashTimer_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JensMemory.Properties.Resources.pokemonSplash;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1280, 720);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -120,6 +133,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory";
             this.Load += new System.EventHandler(this.GameWindow_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +150,7 @@
         private System.Windows.Forms.Timer timerEndGame;
         private System.Windows.Forms.Timer ComputerThinks;
         private System.Windows.Forms.Timer splashTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

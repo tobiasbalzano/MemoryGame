@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace JensMemory
 {
@@ -65,6 +66,7 @@ namespace JensMemory
         ChooseCharacter CHAR = new ChooseCharacter();
         BakGrundPopUp BG = new BakGrundPopUp();
         PopUpBoardSize boardSize = new PopUpBoardSize();
+        SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
@@ -72,6 +74,7 @@ namespace JensMemory
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
+            splashSound.Play();
             splashTimer.Enabled = true;
         }
 
@@ -124,6 +127,7 @@ namespace JensMemory
             NewTurn();
             GetInfo();
         }
+
         public void NewTurn()
         {
             playerTurn.RemoveAt(0);
@@ -142,8 +146,10 @@ namespace JensMemory
             CHAR.ShowDialog();
             boardSize.ShowDialog();
             BG.ShowDialog();
+            pictureBox1.Visible = false;
             StartGame();
         }
+
         public void GetInfo() //Metod föra att skriva ut poäng mm
         {
             string info = "";
