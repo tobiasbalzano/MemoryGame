@@ -222,14 +222,14 @@ namespace JensMemory
             if (win)
             {
 
-                message = "Grattis " + winnerList[0].name + ", du vann med " + winnerList[0].points.ToString()
-                    + " poäng \nVill ni spela igen?";
+                message = "Congrats! " + winnerList[0].name + ", won the game " + winnerList[0].points.ToString()
+                    + " poäng \nDo you want to play agein?";
                 result = MessageBox.Show(message, caption, buttons, question);
             }
 
             else
             {
-                message = "Det blev oavgjort!\nVill ni spela igen?";
+                message = "Draw!\nDo you want to play agein?";
                 result = MessageBox.Show(message, caption, buttons, question);
             }
             if (result == DialogResult.Yes)
