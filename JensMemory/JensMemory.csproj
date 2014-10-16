@@ -148,6 +148,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\playBoardButton.png" />
     <None Include="Resources\LeftArrow.jpg" />
     <None Include="Resources\RightArrow.jpg" />
     <None Include="Resources\PC.jpg" />
@@ -230,6 +231,7 @@
     <Content Include="Resources\card8.gif" />
     <None Include="Resources\Character.jpg" />
     <None Include="Resources\ChooseButton.jpg" />
+    <None Include="Resources\choiceRing.png" />
     <Content Include="Resources\cover.gif" />
     <None Include="Resources\trainer6S.png" />
     <None Include="Resources\trainer6.png" />

@@ -305,8 +305,11 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
-
             if (card.flipped == false)
+            {
+                ComputerPlay();
+            }
+            else if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
@@ -333,10 +336,6 @@ namespace JensMemory
                 foreach (Card c in cards)
                 {
                     c.Enabled = true;
-                    if (c.id == flippedCards[0].id)
-                    {
-                        dontFlipAI.Add(c);
-                    }
 
                 }
                 // Tömmer listan för jämförelse
@@ -345,6 +344,11 @@ namespace JensMemory
                 // poäng delas ut
                 activePlayer.points++;
                 totalPoints++;
+
+                if (totalPoints == endGame)
+                {
+                    timerEndGame.Start();
+                }
 
                 if (activePlayer.computer == true)
                 {
@@ -355,9 +359,7 @@ namespace JensMemory
                 //poäng skrivs ut
                 GetInfo();
 
-                if (totalPoints == endGame)
-                {
-                    timerEndGame.Start();
+
                 }
             }
             //min hemliga kommentar av Tobias
@@ -394,6 +396,8 @@ namespace JensMemory
                 }
 
             }
+
+
         }
 
         public void ComputerThinks_Tick(object sender, EventArgs e)
