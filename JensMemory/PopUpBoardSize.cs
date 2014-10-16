@@ -62,6 +62,7 @@ namespace JensMemory
             sendDimensions = activeDimensions[choice];
             GameWindow.columns = sendDimensions.collumns;
             GameWindow.rows = sendDimensions.rows;
+            this.FormClosing -= new FormClosingEventHandler(this.PopUpBoardSize_FormClosing);
             this.Close();
         }
 
@@ -71,7 +72,7 @@ namespace JensMemory
             choice1Btn.Image = Properties.Resources.choiceRing;
             choice2Btn.Image = null;
             choice3Btn.Image = null;
-
+            confirmBtn.Enabled = true;
         }
 
         private void choice2Btn_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace JensMemory
             choice2Btn.Image = Properties.Resources.choiceRing;
             choice1Btn.Image = null;
             choice3Btn.Image = null;
-
+            confirmBtn.Enabled = true;
         }
 
         private void choice3Btn_Click(object sender, EventArgs e)
@@ -89,13 +90,18 @@ namespace JensMemory
             choice3Btn.Image = Properties.Resources.choiceRing;
             choice2Btn.Image = null;
             choice1Btn.Image = null;
-
+            confirmBtn.Enabled = true;
         }
         public void updateGui()
         {
             choice1Btn.BackgroundImage = boardArray[0];
             choice2Btn.BackgroundImage = boardArray[1];
             choice3Btn.BackgroundImage = boardArray[2];
+        }
+
+        private void PopUpBoardSize_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = e.CloseReason == CloseReason.UserClosing;
         }
     }
     public class dimensions

@@ -55,6 +55,7 @@ namespace JensMemory
         private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
         int drawPlayer = 0;
         Random rand = new Random();
         int chooseTurn;
@@ -82,7 +83,7 @@ namespace JensMemory
             }
             else
             {
-                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows +5)* columns,600);
+                this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows + 5) * columns, 600);
             }
 
             //Nya kort instansieras och argument skickas med i för position på spelplanen
@@ -203,6 +204,7 @@ namespace JensMemory
 
         }
 
+        public static void CreatePlayer(string name, bool computer)
 
         public static void CreatePlayer(string name,Image portrait, bool computer)
         {
@@ -251,7 +253,7 @@ namespace JensMemory
 
         public void PlayAgain()
         {
-            //Adams Kod
+            
             foreach (Player p in players)
             {
                 p.points = 0;
@@ -306,6 +308,10 @@ namespace JensMemory
         {
             if (card.flipped == false)
             {
+                ComputerPlay();
+            }
+            else if (card.flipped == false)
+            {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
                 flippedCards.Add(card);
@@ -327,11 +333,12 @@ namespace JensMemory
             if (flippedCards[0].id == flippedCards[1].id)
             {
                 // gör korten klickbara igen
+
                 foreach (Card c in cards)
                 {
                     c.Enabled = true;
-                }
 
+                }
                 // Tömmer listan för jämförelse
                 flippedCards.Clear();
 
@@ -339,12 +346,21 @@ namespace JensMemory
                 activePlayer.points++;
                 totalPoints++;
 
+                if (totalPoints == endGame)
+                {
+                    timerEndGame.Start();
+                }
+
+                if (activePlayer.computer == true)
+                {
+                    ComputerPlay();
+                    ComputerThinks.Start();
+
+                }
                 //poäng skrivs ut
                 GetInfo();
 
-                if (totalPoints >= endGame)
-                {
-                    timerEndGame.Start();
+
                 }
             }
             //min hemliga kommentar av Tobias
@@ -361,12 +377,15 @@ namespace JensMemory
         }
         public void ComputerPlay()
         {
-            //object sender = new Object();
+            
             EventArgs e = new EventArgs();
             
             Random computerRandom = new Random();
-
             int cardIndex = computerRandom.Next(0, cards.Count);
+            while (cards[cardIndex].flipped && totalPoints!=endGame)
+            {
+                cardIndex = computerRandom.Next(0, cards.Count);
+            }
 
             foreach (Card c in cards)
             {
@@ -374,33 +393,15 @@ namespace JensMemory
                 if (cardIndex == cards.IndexOf(c))
                 {
                     card_Click(c, e);
+
                 }
 
     }
 
 
-
-            //foreach (Player p in players)    fråga adam
-            //{
-
-
-            //        p.computerChoice1 = computerRandom.Next(0, rows);
-            //        p.computerChoice2 = computerRandom.Next(0, columns);
-
-            //        Point Location = new System.Drawing.Point(p.computerChoice1 * (cardWidth + 5), p.computerChoice2 * (cardHeight + 5));
-
-            //        foreach (Card c in cards)
-            //        {
-            //            if (Location == c.Location)
-            //            {
-            //                card_Click(c,e);
-            //            }
-            //        }
-
-            //}
         }
 
-        private void ComputerThinks_Tick(object sender, EventArgs e)
+        public void ComputerThinks_Tick(object sender, EventArgs e)
         {
             ComputerThinks.Stop();
             ComputerPlay();

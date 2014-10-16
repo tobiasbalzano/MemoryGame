@@ -66,36 +66,40 @@
             // Character6
             // 
             this.Character6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character6.Location = new System.Drawing.Point(467, 310);
+            this.Character6.Location = new System.Drawing.Point(446, 289);
             this.Character6.Name = "Character6";
-            this.Character6.Size = new System.Drawing.Size(48, 29);
+            this.Character6.Size = new System.Drawing.Size(60, 50);
+            this.Character6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Character6.TabIndex = 10;
             this.Character6.TabStop = false;
             // 
             // Character5
             // 
             this.Character5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character5.Location = new System.Drawing.Point(374, 310);
+            this.Character5.Location = new System.Drawing.Point(364, 289);
             this.Character5.Name = "Character5";
-            this.Character5.Size = new System.Drawing.Size(48, 29);
+            this.Character5.Size = new System.Drawing.Size(60, 50);
+            this.Character5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Character5.TabIndex = 9;
             this.Character5.TabStop = false;
             // 
             // Character4
             // 
             this.Character4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character4.Location = new System.Drawing.Point(279, 310);
+            this.Character4.Location = new System.Drawing.Point(278, 289);
             this.Character4.Name = "Character4";
-            this.Character4.Size = new System.Drawing.Size(48, 29);
+            this.Character4.Size = new System.Drawing.Size(60, 50);
+            this.Character4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Character4.TabIndex = 8;
             this.Character4.TabStop = false;
             // 
             // Character3
             // 
             this.Character3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Character3.Location = new System.Drawing.Point(191, 310);
+            this.Character3.Location = new System.Drawing.Point(191, 289);
             this.Character3.Name = "Character3";
-            this.Character3.Size = new System.Drawing.Size(48, 29);
+            this.Character3.Size = new System.Drawing.Size(60, 50);
+            this.Character3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Character3.TabIndex = 7;
             this.Character3.TabStop = false;
             // 
@@ -105,6 +109,7 @@
             this.Character2.Location = new System.Drawing.Point(110, 289);
             this.Character2.Name = "Character2";
             this.Character2.Size = new System.Drawing.Size(60, 50);
+            this.Character2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Character2.TabIndex = 6;
             this.Character2.TabStop = false;
             // 
@@ -113,7 +118,7 @@
             this.Character1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character1.Location = new System.Drawing.Point(22, 289);
             this.Character1.Name = "Character1";
-            this.Character1.Size = new System.Drawing.Size(62, 50);
+            this.Character1.Size = new System.Drawing.Size(60, 50);
             this.Character1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Character1.TabIndex = 5;
             this.Character1.TabStop = false;

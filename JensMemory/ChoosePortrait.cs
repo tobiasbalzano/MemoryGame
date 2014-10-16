@@ -15,11 +15,13 @@ namespace JensMemory
 
         public ChooseCharacter()
         {
-            
+
             InitializeComponent();
+            UpdateGUI();
             Portrait.BackgroundImage = Portraits[0];
         }
 
+        private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
         private string[] TrainerName = { "Player1", "Plyer2", "Player3", "Player4", "Player5", "Player6" };
         int i = 0;
         int amountOfPlayer;
@@ -55,31 +57,37 @@ namespace JensMemory
             {
                 i++;
             }
-            UpdateGUI();    
+            UpdateGUI();
         }
 
         private void ChooseCharacter_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UpdateGUI()
         {
             Portrait.BackgroundImage = Portraits[i];
-
-            //Character1.BackgroundImage = GameWindow.players[0].potrait;
+            Character1.BackgroundImage = Choices[0];
+            Character2.BackgroundImage = Choices[1];
+            Character3.BackgroundImage = Choices[2];
+            Character4.BackgroundImage = Choices[3];
+            Character5.BackgroundImage = Choices[4];
+            Character6.BackgroundImage = Choices[5];
         }
 
         private void Computer_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Choose_Click(object sender, EventArgs e)
         {
-            amountOfPlayer++;
+
             GameWindow.CreatePlayer(TrainerName[i], Portraits[i], true);
-            Character1.BackgroundImage = GameWindow.players[0].potrait;
+            Choices[amountOfPlayer] = Portraits[i];
+            amountOfPlayer++;
+            UpdateGUI();
         }
     }
 }
