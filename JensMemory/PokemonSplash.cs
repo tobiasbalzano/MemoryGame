@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace JensMemory
 {
     public partial class PokemonSplash : Form
     {
+        SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
         public PokemonSplash()
         {
             InitializeComponent();
-
+            playSound();
+        }
+        private void playSound()
+        {
+            splashSound.Play();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

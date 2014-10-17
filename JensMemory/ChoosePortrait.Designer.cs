@@ -128,9 +128,10 @@
             // Choose
             // 
             this.Choose.BackgroundImage = global::JensMemory.Properties.Resources.addButton;
-            this.Choose.Location = new System.Drawing.Point(150, 234);
+            this.Choose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Choose.Location = new System.Drawing.Point(241, 284);
             this.Choose.Name = "Choose";
-            this.Choose.Size = new System.Drawing.Size(221, 125);
+            this.Choose.Size = new System.Drawing.Size(147, 86);
             this.Choose.TabIndex = 4;
             this.Choose.TabStop = false;
             this.Choose.Click += new System.EventHandler(this.Choose_Click);
@@ -139,9 +140,9 @@
             // 
             this.Computer.BackgroundImage = global::JensMemory.Properties.Resources.PC;
             this.Computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Computer.Location = new System.Drawing.Point(171, 94);
+            this.Computer.Location = new System.Drawing.Point(140, 284);
             this.Computer.Name = "Computer";
-            this.Computer.Size = new System.Drawing.Size(167, 134);
+            this.Computer.Size = new System.Drawing.Size(95, 86);
             this.Computer.TabIndex = 3;
             this.Computer.TabStop = false;
             this.Computer.Click += new System.EventHandler(this.Computer_Click);
@@ -150,7 +151,7 @@
             // 
             this.RightArrow.BackgroundImage = global::JensMemory.Properties.Resources.RightArrow;
             this.RightArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RightArrow.Location = new System.Drawing.Point(415, 38);
+            this.RightArrow.Location = new System.Drawing.Point(413, 38);
             this.RightArrow.Name = "RightArrow";
             this.RightArrow.Size = new System.Drawing.Size(100, 50);
             this.RightArrow.TabIndex = 2;
@@ -161,9 +162,9 @@
             // 
             this.Portrait.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Portrait.InitialImage = null;
-            this.Portrait.Location = new System.Drawing.Point(204, 40);
+            this.Portrait.Location = new System.Drawing.Point(140, 29);
             this.Portrait.Name = "Portrait";
-            this.Portrait.Size = new System.Drawing.Size(106, 48);
+            this.Portrait.Size = new System.Drawing.Size(248, 248);
             this.Portrait.TabIndex = 1;
             this.Portrait.TabStop = false;
             this.Portrait.Click += new System.EventHandler(this.Portrait_Click);
