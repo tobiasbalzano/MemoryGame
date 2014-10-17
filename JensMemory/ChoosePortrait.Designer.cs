@@ -151,7 +151,7 @@
             // 
             this.RightArrow.BackgroundImage = global::JensMemory.Properties.Resources.RightArrow;
             this.RightArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RightArrow.Location = new System.Drawing.Point(413, 38);
+            this.RightArrow.Location = new System.Drawing.Point(415, 216);
             this.RightArrow.Name = "RightArrow";
             this.RightArrow.Size = new System.Drawing.Size(100, 50);
             this.RightArrow.TabIndex = 2;
@@ -173,7 +173,7 @@
             // 
             this.LeftArrow.BackgroundImage = global::JensMemory.Properties.Resources.LeftArrow;
             this.LeftArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LeftArrow.Location = new System.Drawing.Point(12, 38);
+            this.LeftArrow.Location = new System.Drawing.Point(14, 216);
             this.LeftArrow.Name = "LeftArrow";
             this.LeftArrow.Size = new System.Drawing.Size(100, 50);
             this.LeftArrow.TabIndex = 0;
