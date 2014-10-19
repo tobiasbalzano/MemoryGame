@@ -109,7 +109,7 @@ namespace JensMemory
         public int collumns;
         public int rows;
 
-        public dimensions(int _collumns, int _rows)
+        public dimensions(int _collumns, int _rows) //Constructor med parametrar
         {
             collumns = _collumns;
             rows = _rows;
