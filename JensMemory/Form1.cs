@@ -57,6 +57,7 @@ namespace JensMemory
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
+        private List<Card> AIMemory = new List<Card>(); 
         //int drawPlayer = 0;
         Random rand = new Random();
         //int chooseTurn;
@@ -228,7 +229,7 @@ namespace JensMemory
                 c.flipped = false;
             }
             totalPoints = 0;
-            StartGame();
+            //StartGame();
         }
 
         public bool WhoWon()
@@ -274,6 +275,17 @@ namespace JensMemory
                 card.flipped = true;
                 flippedCards.Add(card);
                 card.Image = picVector[card.id];
+
+                if (AIMemory.Count < 5)
+                {
+                    AIMemory.Add(card);
+                }
+                else
+                {
+                    AIMemory.RemoveAt(0);
+                    AIMemory.Add(card);
+                }
+                
             }
             if (flippedCards.Count == 2)
             {
@@ -338,7 +350,21 @@ namespace JensMemory
         {
             
             EventArgs e = new EventArgs();
-            
+            foreach (Card c in AIMemory.ToList())
+            {
+                foreach (Card j in AIMemory.ToList())
+                {
+                    if (c.id == j.id && AIMemory.IndexOf(c) != AIMemory.IndexOf(j))
+                    {
+                        card_Click(c, e);
+                        card_Click(j, e);
+                        AIMemory.Remove(c);
+                        AIMemory.Remove(j);
+                    }
+                }
+            }
+
+
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
             while (cards[cardIndex].flipped && totalPoints != endGame)
