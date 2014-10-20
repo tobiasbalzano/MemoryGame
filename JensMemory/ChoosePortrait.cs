@@ -22,6 +22,7 @@ namespace JensMemory
 
         bool AI = false;
         int click = 1;
+        List<int> Chosen = new List<int>();
         private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
         private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
         int i = 0;
@@ -95,23 +96,32 @@ namespace JensMemory
 
         private void Choose_Click(object sender, EventArgs e)
         {
-            if (amountOfPlayer <= EndRange)
+            if (Chosen.Contains(i))
             {
-                GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI);
-                Choices[amountOfPlayer] = Portraits[i];
-                Portraits[i] = Silhouettes[i];
-                amountOfPlayer++;
+                //if the list cotains the value we want to add, do nothing.
+                //om listan innehåller värdet som vi vill lägga till, gör inget.
             }
             else
             {
-                Choose.Enabled = false;
+                if (amountOfPlayer <= EndRange)
+                {
+                    GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI);
+                    Choices[amountOfPlayer] = Portraits[i];
+                    Portraits[i] = Silhouettes[i];
+                    amountOfPlayer++;
+                    Chosen.Add(i);
+                }
+                else
+                {
+                    Choose.Enabled = false;
+                }
+                UpdateGUI();
             }
-            UpdateGUI();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if(amountOfPlayer >= 2)
+            if (amountOfPlayer >= 2)
             {
                 this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
                 this.Close();
