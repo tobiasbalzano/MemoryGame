@@ -355,7 +355,13 @@ namespace JensMemory
 
                 }
 
-    }
+            }
+            foreach (Card c in cards)
+            {
+
+                c.Enabled = false;
+
+            }
 
 
         }
