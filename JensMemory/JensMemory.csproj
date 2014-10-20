@@ -87,6 +87,12 @@
     <Compile Include="ChoosePortrait.Designer.cs">
       <DependentUpon>ChoosePortrait.cs</DependentUpon>
     </Compile>
+    <Compile Include="EndSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndSplash.Designer.cs">
+      <DependentUpon>EndSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChoosePortrait.resx">
       <DependentUpon>ChoosePortrait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndSplash.resx">
+      <DependentUpon>EndSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

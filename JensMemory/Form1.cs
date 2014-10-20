@@ -66,6 +66,7 @@ namespace JensMemory
         BakGrundPopUp BG = new BakGrundPopUp();
         PopUpBoardSize boardSize = new PopUpBoardSize();
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+        EndSplash exit = new EndSplash();
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
@@ -209,7 +210,7 @@ namespace JensMemory
             }
             else
             {
-                Application.Exit();
+                //exit.Show();
             }
 
 
