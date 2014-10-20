@@ -99,7 +99,7 @@
             // 
             // ComputerThinks
             // 
-            this.ComputerThinks.Interval = 500;
+            this.ComputerThinks.Interval = 1000;
             this.ComputerThinks.Tick += new System.EventHandler(this.ComputerThinks_Tick);
             // 
             // splashTimer
