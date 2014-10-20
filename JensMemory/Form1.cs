@@ -51,9 +51,9 @@ namespace JensMemory
         private Image[] coverVector = { Properties.Resources.newpokeball, Properties.Resources.newpokemon, Properties.Resources.newpokemon2 };
         private Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
         private Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
-        public static List<Player> players = new List<Player>(); // Lista som håller spelarna
+        public static List<Player> players; // Lista som håller spelarna
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
-        private List<Card> cards = new List<Card>(); //Lista som håller alla kort(objekt)
+        private List<Card> cards; //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
@@ -68,6 +68,7 @@ namespace JensMemory
         BakGrundPopUp BG = new BakGrundPopUp();
         PopUpBoardSize boardSize = new PopUpBoardSize();
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+        EndSplash exit = new EndSplash();
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
@@ -134,9 +135,9 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
-            if (activePlayer.computer == true)
+            if (activePlayer.computer)
             {
-                ComputerPlay();
+                ComputerThinks.Start();
                 ComputerThinks.Start();
         }
 
@@ -144,6 +145,8 @@ namespace JensMemory
 
         private void initializeGame()
         {
+            cards = new List<Card>();
+            players = new List<Player>();
             CHAR.ShowDialog();
             boardSize.ShowDialog();
             BG.ShowDialog();
@@ -168,7 +171,7 @@ namespace JensMemory
 
         }
 
-        public static void CreatePlayer(string name,Image portrait, bool computer)
+        public static void CreatePlayer(string name, Image portrait, bool computer)
         {
             Player player = new Player(name, portrait, computer);
             players.Add(player);
@@ -209,7 +212,7 @@ namespace JensMemory
             }
             else
             {
-                Application.Exit();
+                //exit.Show();
             }
 
 
@@ -229,7 +232,9 @@ namespace JensMemory
                 c.flipped = false;
             }
             totalPoints = 0;
-            //StartGame();
+            GetInfo();
+            NewTurn();
+
         }
 
         public bool WhoWon()
@@ -279,7 +284,7 @@ namespace JensMemory
                 if (AIMemory.Count < 5)
                 {
                     AIMemory.Add(card);
-                }
+            }
                 else
                 {
                     AIMemory.RemoveAt(0);
@@ -323,7 +328,7 @@ namespace JensMemory
 
                 if (activePlayer.computer == true)
                 {
-                    ComputerPlay();
+                    ComputerThinks.Start();
                     ComputerThinks.Start();
 
                 }
@@ -364,7 +369,7 @@ namespace JensMemory
                 }
             }
 
-
+            
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
             while (cards[cardIndex].flipped && totalPoints != endGame)
@@ -433,7 +438,7 @@ namespace JensMemory
             activePlayer = playerTurn[0];
             if (activePlayer.computer)
             {
-                ComputerPlay();
+                ComputerThinks.Start();
                 ComputerThinks.Start();
             }
             foreach (Card card in cards)
