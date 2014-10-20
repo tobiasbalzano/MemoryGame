@@ -20,6 +20,8 @@ namespace JensMemory
 
         }
 
+        //Där det används samma kod, är det bättre att använda en funktion.
+
         private void BakGrundPopUp_Load(object sender, EventArgs e)
         {
 
@@ -32,26 +34,25 @@ namespace JensMemory
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            coverChoice = 0;
-            close();
+            SetCover(0);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            coverChoice = 1;
-            close();
+            SetCover(1);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            coverChoice = 2;
-            close();
+            SetCover(2);
         }
 
-        private void close()
+        void SetCover(int choice) 
         {
-
+            coverChoice = choice;
             this.Close();
         }
+
+
     }
 }
