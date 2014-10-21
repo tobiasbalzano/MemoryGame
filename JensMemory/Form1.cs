@@ -55,17 +55,18 @@ namespace JensMemory
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards; //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
-        private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        public static List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         //int drawPlayer = 0;
         Random rand = new Random();
         //int chooseTurn;
         Player activePlayer;
         int totalPoints;
-        int endGame;
-        ChooseCharacter CHAR = new ChooseCharacter();
-        BakGrundPopUp BG = new BakGrundPopUp();
-        PopUpBoardSize boardSize = new PopUpBoardSize();
+        int allPoints;
+        ChooseCharacter CHAR;
+        BakGrundPopUp BG;
+        PopUpBoardSize boardSize;
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+        EndGame endGame;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
@@ -134,7 +135,7 @@ namespace JensMemory
             activePlayer = playerTurn[0];
             if (activePlayer.computer)
             {
-                ComputerThinks.Start();
+                ComputerPlay();
                 ComputerThinks.Start();
             }
 
@@ -144,6 +145,9 @@ namespace JensMemory
         {
             cards = new List<Card>();
             players = new List<Player>();
+            CHAR = new ChooseCharacter();
+            BG = new BakGrundPopUp();
+            boardSize = new PopUpBoardSize();
             CHAR.ShowDialog();
             boardSize.ShowDialog();
             BG.ShowDialog();
@@ -180,38 +184,28 @@ namespace JensMemory
         {
             bool win = WhoWon();
             timerEndGame.Stop();
-            // Adams kod 
-            string message;
-            string caption = "Memory Game";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            MessageBoxIcon question = MessageBoxIcon.Question;
-            DialogResult result;
+            endGame = new EndGame(win);
+            DialogResult result = endGame.ShowDialog();
 
-
-            if (win)
+            if (result == DialogResult.Retry)
             {
-
-                message = "Grattis " + winnerList[0].name + ", du vann med " + winnerList[0].points.ToString()
-                    + " poäng \nVill ni spela igen?";
-                result = MessageBox.Show(message, caption, buttons, question);
-            }
-
-            else
-            {
-                message = "Det blev oavgjort!\nVill ni spela igen?";
-                result = MessageBox.Show(message, caption, buttons, question);
-            }
-            if (result == DialogResult.Yes)
-            {
-                winnerList.Clear();
                 PlayAgain();
-
             }
-            else
+            else if (result == DialogResult.OK)
+            {
+                foreach(Card c in cards)
+                {
+                    this.pnlCardHolder.Controls.Remove(c);
+                }
+                cards.Clear();
+
+                initializeGame();
+            }
+            else if (result == DialogResult.Cancel)
             {
                 Application.Exit();
             }
-
+            
 
         }
 
@@ -307,14 +301,14 @@ namespace JensMemory
                 activePlayer.points++;
                 totalPoints++;
 
-                if (totalPoints == endGame)
+                if (totalPoints == allPoints)
                 {
                     timerEndGame.Start();
                 }
 
                 if (activePlayer.computer == true)
                 {
-                    ComputerThinks.Start();
+                    ComputerPlay();
                     ComputerThinks.Start();
 
                 }
@@ -344,7 +338,7 @@ namespace JensMemory
 
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
-            while (cards[cardIndex].flipped && totalPoints != endGame)
+            while (cards[cardIndex].flipped && totalPoints != allPoints)
             {
                 cardIndex = computerRandom.Next(0, cards.Count);
             }
@@ -405,12 +399,12 @@ namespace JensMemory
 
             }
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
-            endGame = cards.Count() / 2;
+            allPoints = cards.Count() / 2;
             totalPoints = 0;
             activePlayer = playerTurn[0];
             if (activePlayer.computer)
             {
-                ComputerThinks.Start();
+                ComputerPlay();
                 ComputerThinks.Start();
             }
             foreach (Card card in cards)
@@ -425,5 +419,7 @@ namespace JensMemory
             splashTimer.Enabled = false;
             initializeGame();
         }
+
+
     }
 }
