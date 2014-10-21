@@ -34,6 +34,8 @@
             this.BG2 = new System.Windows.Forms.PictureBox();
             this.BG3 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.lbltimeChoice = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).BeginInit();
@@ -73,15 +75,28 @@
             // trackBar1
             // 
             resources.ApplyResources(this.trackBar1, "trackBar1");
-            this.trackBar1.Maximum = 2;
-            this.trackBar1.Minimum = 2;
+            this.trackBar1.Maximum = 20;
+            this.trackBar1.Minimum = 5;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Value = 2;
+            this.trackBar1.Value = 10;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // lbltimeChoice
+            // 
+            resources.ApplyResources(this.lbltimeChoice, "lbltimeChoice");
+            this.lbltimeChoice.Name = "lbltimeChoice";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // BakGrundPopUp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbltimeChoice);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.BG3);
             this.Controls.Add(this.BG2);
@@ -89,7 +104,6 @@
             this.Controls.Add(this.lblBackGround);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BakGrundPopUp";
-            this.Load += new System.EventHandler(this.BakGrundPopUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).EndInit();
@@ -105,6 +119,8 @@
         private System.Windows.Forms.PictureBox BG2;
         private System.Windows.Forms.PictureBox BG3;
         private System.Windows.Forms.PictureBox BG1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        public System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label lbltimeChoice;
+        private System.Windows.Forms.Label label1;
     }
 }

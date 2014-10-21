@@ -84,7 +84,8 @@ namespace JensMemory
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
         EndSplash exit = new EndSplash();
         EndGame endGame;
-        int duration = 5;
+        public static int setDuration;
+        int duration;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
@@ -139,7 +140,7 @@ namespace JensMemory
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
             timerTurn.Start();
-            duration = 5;
+            duration = setDuration;
             if (activePlayer.computer)
             {
                 ComputerPlay();
@@ -211,7 +212,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
-                //exit.Show();
+                Application.Exit();
             }
 
 
@@ -332,7 +333,7 @@ namespace JensMemory
                     ComputerThinks.Start();
 
                 }
-                duration = 5;
+                duration = setDuration;
                 //poäng skrivs ut
                 GetInfo();
 
@@ -436,6 +437,7 @@ namespace JensMemory
             {
                 card.Enabled = true;
             }
+            duration = setDuration;
             timerTurn.Start();
             GetInfo();
         }
@@ -451,7 +453,7 @@ namespace JensMemory
             lblTimerTurn.Text = "timer: " + duration + " seconds";
             duration--;
 
-            if (duration == 0)
+            if (duration == -1)
             {
                 timerTurn.Stop();
                 if (flippedCards.Count == 1)

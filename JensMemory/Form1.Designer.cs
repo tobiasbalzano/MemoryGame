@@ -127,9 +127,10 @@
             // lblTimerTurn
             // 
             this.lblTimerTurn.AutoSize = true;
-            this.lblTimerTurn.Location = new System.Drawing.Point(1074, 667);
+            this.lblTimerTurn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimerTurn.Location = new System.Drawing.Point(288, 12);
             this.lblTimerTurn.Name = "lblTimerTurn";
-            this.lblTimerTurn.Size = new System.Drawing.Size(81, 13);
+            this.lblTimerTurn.Size = new System.Drawing.Size(118, 16);
             this.lblTimerTurn.TabIndex = 7;
             this.lblTimerTurn.Text = "time: 0 seconds";
             // 
@@ -138,9 +139,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.lblTimerTurn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxInfo);
+            this.Controls.Add(this.lblTimerTurn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWhosTurn);
