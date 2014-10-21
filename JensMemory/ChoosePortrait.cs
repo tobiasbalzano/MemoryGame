@@ -130,7 +130,6 @@ namespace JensMemory
             {
                 this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
                 this.Close();
-
             }
             else
             {

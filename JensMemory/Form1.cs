@@ -450,7 +450,5 @@ namespace JensMemory
             splashTimer.Enabled = false;
             initializeGame();
         }
-
-
     }
 }
