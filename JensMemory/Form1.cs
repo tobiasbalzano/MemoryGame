@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 
+
 namespace JensMemory
 {
     public partial class GameWindow : Form
@@ -57,13 +58,14 @@ namespace JensMemory
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
-        private List<Card> AIMemory = new List<Card>(); 
+        private List<Card> AIMemory = new List<Card>();
         //int drawPlayer = 0;
         Random rand = new Random();
         //int chooseTurn;
         Player activePlayer;
         int totalPoints;
         int endGame;
+        int duration = 6;
         ChooseCharacter CHAR = new ChooseCharacter();
         BakGrundPopUp BG = new BakGrundPopUp();
         PopUpBoardSize boardSize = new PopUpBoardSize();
@@ -72,7 +74,7 @@ namespace JensMemory
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
-        
+
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -135,11 +137,14 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
+            timerTurn.Start();
+            duration = 6;
             if (activePlayer.computer)
             {
                 ComputerThinks.Start();
                 ComputerThinks.Start();
-        }
+            }
+            GetInfo();
 
         }
 
@@ -208,7 +213,7 @@ namespace JensMemory
             {
                 winnerList.Clear();
                 PlayAgain();
-               
+
             }
             else
             {
@@ -220,7 +225,7 @@ namespace JensMemory
 
         public void PlayAgain()
         {
-            
+
             foreach (Player p in players)
             {
                 p.points = 0;
@@ -241,7 +246,7 @@ namespace JensMemory
         {
             bool winner = false;
             int drawPlayer = 0;
-            
+
             //winnerList = players;
             foreach (Player p in players)
             {
@@ -268,7 +273,7 @@ namespace JensMemory
             {
                 winner = true;
             }
-           
+
             return winner;
         }
 
@@ -284,13 +289,13 @@ namespace JensMemory
                 if (AIMemory.Count < 5)
                 {
                     AIMemory.Add(card);
-            }
+                }
                 else
                 {
                     AIMemory.RemoveAt(0);
                     AIMemory.Add(card);
                 }
-                
+
             }
             if (flippedCards.Count == 2)
             {
@@ -336,7 +341,7 @@ namespace JensMemory
                 GetInfo();
 
 
-                }
+            }
 
             //min hemliga kommentar av Tobias
             else
@@ -353,7 +358,7 @@ namespace JensMemory
 
         public void ComputerPlay()
         {
-            
+
             EventArgs e = new EventArgs();
             foreach (Card c in AIMemory.ToList())
             {
@@ -369,7 +374,7 @@ namespace JensMemory
                 }
             }
 
-            
+
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
             while (cards[cardIndex].flipped && totalPoints != endGame)
@@ -445,6 +450,7 @@ namespace JensMemory
             {
                 card.Enabled = true;
             }
+            timerTurn.Start();
             GetInfo();
         }
 
@@ -453,5 +459,26 @@ namespace JensMemory
             splashTimer.Enabled = false;
             initializeGame();
         }
+
+        private void timerTurn_Tick(object sender, EventArgs e)
+        {
+            duration--;
+            lblTimerTurn.Text = "timer: " + duration + " seconds";
+
+            if (duration == 0)
+            {
+                timerTurn.Stop();
+                if (flippedCards.Count == 1)
+                {
+                    foreach (Card c in flippedCards)
+                    {
+                        c.flipped = false;
+                        c.Image = coverVector[BG.coverChoice];
+                    }
+                    flippedCards.Clear();
+                }
+                NewTurn();
+            }
+        }              
     }
 }
