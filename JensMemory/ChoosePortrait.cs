@@ -22,15 +22,16 @@ namespace JensMemory
 
         bool AI = false;
         int click = 1;
-        List<int> Chosen = new List<int>();
-        private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
-        private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
         int i = 0;
         int amountOfPlayer;
+        List<int> Chosen = new List<int>(); //Lista med värde som visar valda silhouetter. 
+        private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
+        private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
         private static Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
         private static Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
         int EndRange = Portraits.Count() - 1;
 
+        //vänster knappen.
         private void LeftArrow_Click(object sender, EventArgs e)
         {
             if (i == 0)
@@ -49,6 +50,7 @@ namespace JensMemory
 
         }
 
+        //Höger knappen.
         private void RightArrow_Click(object sender, EventArgs e)
         {
             if (i == EndRange)
@@ -67,6 +69,7 @@ namespace JensMemory
 
         }
 
+        //Uppdaterar GUI efter varje knapptryck.
         private void UpdateGUI()
         {
             EndRange = Portraits.Count() - 1;
@@ -79,6 +82,7 @@ namespace JensMemory
             Character6.BackgroundImage = Choices[5];
         }
 
+        //Knappen för att välja en AI.
         private void Computer_Click(object sender, EventArgs e)
         {
             click++;
@@ -94,6 +98,7 @@ namespace JensMemory
             }
         }
 
+        //Knappen för att lägga till en spelare.
         private void Choose_Click(object sender, EventArgs e)
         {
             if (Chosen.Contains(i))
@@ -105,9 +110,9 @@ namespace JensMemory
             {
                 if (amountOfPlayer <= EndRange)
                 {
-                    GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI);
-                    Choices[amountOfPlayer] = Portraits[i];
-                    Portraits[i] = Silhouettes[i];
+                    GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI); //Skapar en spelares namn, bild, människa eller AI.
+                    Choices[amountOfPlayer] = Portraits[i]; //visar toma silhouetter för ej valda spelare.
+                    Portraits[i] = Silhouettes[i]; //ändrar en tränares bild till silhouettes.
                     amountOfPlayer++;
                     Chosen.Add(i);
                 }
@@ -118,10 +123,10 @@ namespace JensMemory
                 UpdateGUI();
             }
         }
-
+        //Klickar för att gå till nästa form/sida.
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if (amountOfPlayer >= 2)
+            if (amountOfPlayer >= 2) //Måste välja minnst 2 spelare för att gå vidare.
             {
                 this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
                 this.Close();
@@ -132,7 +137,7 @@ namespace JensMemory
 
             }
         }
-
+        //Gör att man inte kan stänga ner formen/sidan.
         private void ChooseCharacter_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = e.CloseReason == CloseReason.UserClosing;

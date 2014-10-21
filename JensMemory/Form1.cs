@@ -55,7 +55,9 @@ namespace JensMemory
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards; //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
-        public static List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
+        private List<Card> AIMemory = new List<Card>(); 
         //int drawPlayer = 0;
         Random rand = new Random();
         //int chooseTurn;
@@ -66,6 +68,7 @@ namespace JensMemory
         BakGrundPopUp BG;
         PopUpBoardSize boardSize;
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+        EndSplash exit = new EndSplash();
         EndGame endGame;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
@@ -194,18 +197,18 @@ namespace JensMemory
             else if (result == DialogResult.OK)
             {
                 foreach(Card c in cards)
-                {
+            {
                     this.pnlCardHolder.Controls.Remove(c);
-                }
+            }
                 cards.Clear();
 
                 initializeGame();
             }
             else if (result == DialogResult.Cancel)
             {
-                Application.Exit();
+                //exit.Show();
             }
-            
+
 
         }
 
@@ -271,6 +274,17 @@ namespace JensMemory
                 card.flipped = true;
                 flippedCards.Add(card);
                 card.Image = picVector[card.id];
+
+                if (AIMemory.Count < 5)
+                {
+                    AIMemory.Add(card);
+            }
+                else
+                {
+                    AIMemory.RemoveAt(0);
+                    AIMemory.Add(card);
+                }
+                
             }
             if (flippedCards.Count == 2)
             {
@@ -335,6 +349,20 @@ namespace JensMemory
         {
 
             EventArgs e = new EventArgs();
+            foreach (Card c in AIMemory.ToList())
+            {
+                foreach (Card j in AIMemory.ToList())
+                {
+                    if (c.id == j.id && AIMemory.IndexOf(c) != AIMemory.IndexOf(j))
+                    {
+                        card_Click(c, e);
+                        card_Click(j, e);
+                        AIMemory.Remove(c);
+                        AIMemory.Remove(j);
+                    }
+                }
+            }
+
 
             Random computerRandom = new Random();
             int cardIndex = computerRandom.Next(0, cards.Count);
