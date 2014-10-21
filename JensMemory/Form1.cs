@@ -13,7 +13,7 @@ namespace JensMemory
 {
     public partial class GameWindow : Form
     {
-        #region // Bildvektor som håller alla bilder på korten. Denna kommer hålla 60st kort till VG-uppgiften
+        #region // Vektorer för alla bilder
         private Image[] picVector = { Properties.Resources.pic0, Properties.Resources.pic01,
                                       Properties.Resources.pic02, Properties.Resources.pic03,
                                       Properties.Resources.pic04, Properties.Resources.pic05,
@@ -44,20 +44,33 @@ namespace JensMemory
                                       Properties.Resources.pic54, Properties.Resources.pic55,
                                       Properties.Resources.pic56, Properties.Resources.pic57,
                                       Properties.Resources.pic58, Properties.Resources.pic59};
-        #endregion
+        
 
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
-        private Image[] coverVector = { Properties.Resources.newpokeball, Properties.Resources.newpokemon, Properties.Resources.newpokemon2 };
-        private Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
-        private Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
+        private Image[] coverVector = { Properties.Resources.newpokeball,
+                                        Properties.Resources.newpokemon,
+                                        Properties.Resources.newpokemon2 };
+
+        private Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2,
+                                      Properties.Resources.trainer3, Properties.Resources.trainer4,
+                                      Properties.Resources.trainer5, Properties.Resources.trainer6 };
+
+        private Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S,
+                                        Properties.Resources.trainer3S, Properties.Resources.trainer4S,
+                                        Properties.Resources.trainer5S, Properties.Resources.trainer6S };
+        #endregion
+
+        #region //Alla listor
         public static List<Player> players; // Lista som håller spelarna
         public static List<Player> playerTurn = new List<Player>(); // Lista som håller spelarordningen
         private List<Card> cards; //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
-        private List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        public static List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
         private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
-        private List<Card> AIMemory = new List<Card>(); 
+        private List<Card> AIMemory = new List<Card>();
+        #endregion
+
         //int drawPlayer = 0;
         Random rand = new Random();
         //int chooseTurn;
@@ -72,8 +85,7 @@ namespace JensMemory
         EndGame endGame;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
-
-
+        
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -109,6 +121,7 @@ namespace JensMemory
             flipCards(card);
         }
         // Metod som körs när timern räknat ned.
+
         private void timerCompare_Tick(object sender, EventArgs e)
         {
             //Ändrar tillbaka bild till baksidan mm..
@@ -196,10 +209,10 @@ namespace JensMemory
             }
             else if (result == DialogResult.OK)
             {
-                foreach(Card c in cards)
-            {
+                foreach (Card c in cards)
+                {
                     this.pnlCardHolder.Controls.Remove(c);
-            }
+                }
                 cards.Clear();
 
                 initializeGame();
@@ -278,13 +291,13 @@ namespace JensMemory
                 if (AIMemory.Count < 5)
                 {
                     AIMemory.Add(card);
-            }
+                }
                 else
                 {
                     AIMemory.RemoveAt(0);
                     AIMemory.Add(card);
                 }
-                
+
             }
             if (flippedCards.Count == 2)
             {
@@ -340,11 +353,6 @@ namespace JensMemory
             }
         }
 
-        private void GameWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void ComputerPlay()
         {
 
@@ -395,11 +403,6 @@ namespace JensMemory
         {
             ComputerThinks.Stop();
             ComputerPlay();
-        }
-
-        private void GameWindow_Load_1(object sender, EventArgs e)
-        {
-
         }
 
         private void StartGame()
