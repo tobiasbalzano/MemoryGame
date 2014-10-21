@@ -39,6 +39,8 @@
             this.ComputerThinks = new System.Windows.Forms.Timer(this.components);
             this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timerTurn = new System.Windows.Forms.Timer(this.components);
+            this.lblTimerTurn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +119,21 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // timerTurn
+            // 
+            this.timerTurn.Interval = 1000;
+            this.timerTurn.Tick += new System.EventHandler(this.timerTurn_Tick);
+            // 
+            // lblTimerTurn
+            // 
+            this.lblTimerTurn.AutoSize = true;
+            this.lblTimerTurn.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimerTurn.Location = new System.Drawing.Point(288, 12);
+            this.lblTimerTurn.Name = "lblTimerTurn";
+            this.lblTimerTurn.Size = new System.Drawing.Size(118, 16);
+            this.lblTimerTurn.TabIndex = 7;
+            this.lblTimerTurn.Text = "time: 0 seconds";
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +141,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxInfo);
+            this.Controls.Add(this.lblTimerTurn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWhosTurn);
@@ -150,6 +168,8 @@
         private System.Windows.Forms.Timer ComputerThinks;
         private System.Windows.Forms.Timer splashTimer;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timerTurn;
+        private System.Windows.Forms.Label lblTimerTurn;
     }
 }
 

@@ -17,16 +17,13 @@ namespace JensMemory
         {
             InitializeComponent();
             lblBackGround.Text = "Choose a background picture";
+            GameWindow.setDuration = trackBar1.Value;
 
         }
 
         //Där det används samma kod, är det bättre att använda en funktion.
 
-        private void BakGrundPopUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -47,10 +44,17 @@ namespace JensMemory
             SetCover(2);
         }
 
-        void SetCover(int choice) 
+        void SetCover(int choice)
         {
             coverChoice = choice;
             this.Close();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            lbltimeChoice.Text = trackBar1.Value.ToString() + " seconds";
+            GameWindow.setDuration = trackBar1.Value;
+
         }
 
 

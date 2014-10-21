@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 
+
 namespace JensMemory
 {
     public partial class GameWindow : Form
@@ -83,6 +84,8 @@ namespace JensMemory
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
         EndSplash exit = new EndSplash();
         EndGame endGame;
+        public static int setDuration;
+        int duration;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
         
@@ -124,20 +127,7 @@ namespace JensMemory
 
         private void timerCompare_Tick(object sender, EventArgs e)
         {
-            //Ändrar tillbaka bild till baksidan mm..
-            foreach (Card flippedcard in flippedCards.ToList())
-            {
-                // vid olida ändras kortens bild till baksida och listan töms
-                flippedcard.Image = coverVector[BG.coverChoice];
-                flippedcard.flipped = false;
-                flippedCards.Remove(flippedcard);
-            }
-            // Gör alla kort klickbara igen
-            foreach (Card c in cards)
-            {
-                c.Enabled = true;
-            }
-
+            FlipBackCards();
             //Stoppar timern...
             timerCompare.Stop();
             NewTurn();
@@ -149,11 +139,14 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
+            timerTurn.Start();
+            duration = setDuration;
             if (activePlayer.computer)
             {
                 ComputerPlay();
                 ComputerThinks.Start();
             }
+            GetInfo();
 
         }
 
@@ -219,7 +212,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
-                //exit.Show();
+                Application.Exit();
             }
 
 
@@ -331,6 +324,7 @@ namespace JensMemory
                 if (totalPoints == allPoints)
                 {
                     timerEndGame.Start();
+                    timerTurn.Stop();
                 }
 
                 if (activePlayer.computer == true)
@@ -339,6 +333,7 @@ namespace JensMemory
                     ComputerThinks.Start();
 
                 }
+                duration = setDuration;
                 //poäng skrivs ut
                 GetInfo();
 
@@ -442,6 +437,8 @@ namespace JensMemory
             {
                 card.Enabled = true;
             }
+            duration = setDuration;
+            timerTurn.Start();
             GetInfo();
         }
 
@@ -450,5 +447,38 @@ namespace JensMemory
             splashTimer.Enabled = false;
             initializeGame();
         }
+
+        private void timerTurn_Tick(object sender, EventArgs e)
+        {
+            lblTimerTurn.Text = "timer: " + duration + " seconds";
+            duration--;
+
+            if (duration == -1)
+            {
+                timerTurn.Stop();
+                if (flippedCards.Count == 1)
+                {
+                    FlipBackCards();
+                }
+                NewTurn();
+            }
+        }
+
+        private void FlipBackCards()
+        {
+            //Ändrar tillbaka bild till baksidan mm..
+            foreach (Card flippedcard in flippedCards)
+            {
+                flippedcard.Image = coverVector[BG.coverChoice];
+                flippedcard.flipped = false;
+            }
+            // Gör alla kort klickbara igen
+            foreach (Card c in cards)
+            {
+                c.Enabled = true;
+            }
+            flippedCards.Clear();
+
     }
+}
 }

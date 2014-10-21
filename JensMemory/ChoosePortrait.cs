@@ -112,7 +112,7 @@ namespace JensMemory
                 {
                     GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI); //Skapar en spelares namn, bild, människa eller AI.
                     Choices[amountOfPlayer] = Portraits[i]; //visar toma silhouetter för ej valda spelare.
-                    Portraits[i] = Silhouettes[i]; //ändrar en tränares bild till silhouettes.
+                    Portraits[i] = Silhouettes[i]; //ändrar en tränares bild till silhouettes efter en tränare har blivit vald.
                     amountOfPlayer++;
                     Chosen.Add(i);
                 }
