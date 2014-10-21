@@ -212,7 +212,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
-                Application.Exit();
+                exit.Show();
             }
 
 
