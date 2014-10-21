@@ -33,9 +33,11 @@
             this.BG1 = new System.Windows.Forms.PictureBox();
             this.BG2 = new System.Windows.Forms.PictureBox();
             this.BG3 = new System.Windows.Forms.PictureBox();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBackGround
@@ -68,10 +70,19 @@
             this.BG3.TabStop = false;
             this.BG3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // trackBar1
+            // 
+            resources.ApplyResources(this.trackBar1, "trackBar1");
+            this.trackBar1.Maximum = 2;
+            this.trackBar1.Minimum = 2;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Value = 2;
+            // 
             // BakGrundPopUp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.BG3);
             this.Controls.Add(this.BG2);
             this.Controls.Add(this.BG1);
@@ -82,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +105,6 @@
         private System.Windows.Forms.PictureBox BG2;
         private System.Windows.Forms.PictureBox BG3;
         private System.Windows.Forms.PictureBox BG1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
