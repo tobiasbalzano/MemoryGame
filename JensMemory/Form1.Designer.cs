@@ -149,7 +149,6 @@
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory";
-            this.Load += new System.EventHandler(this.GameWindow_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
