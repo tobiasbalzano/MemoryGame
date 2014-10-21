@@ -107,8 +107,8 @@ namespace JensMemory
             Card card = (Card)sender;
             flipCards(card);
         }
-        // Metod som körs när timern räknat ned.
-        private void timerCompare_Tick(object sender, EventArgs e)
+
+        private void flipBack()
         {
             //Ändrar tillbaka bild till baksidan mm..
             foreach (Card flippedcard in flippedCards.ToList())
@@ -116,6 +116,15 @@ namespace JensMemory
                 // vid olida ändras kortens bild till baksida och listan töms
                 flippedcard.Image = coverVector[BG.coverChoice];
                 flippedcard.flipped = false;
+                if (AIMemory.Count < 6)
+                {
+                    AIMemory.Add(flippedcard);
+                }
+                else
+                {
+                    AIMemory.RemoveAt(0);
+                    AIMemory.Add(flippedcard);
+                }
                 flippedCards.Remove(flippedcard);
             }
             // Gör alla kort klickbara igen
@@ -123,11 +132,8 @@ namespace JensMemory
             {
                 c.Enabled = true;
             }
-
-            //Stoppar timern...
-            timerCompare.Stop();
+            updateGUI();
             NewTurn();
-            GetInfo();
         }
 
         public void NewTurn()
@@ -135,12 +141,11 @@ namespace JensMemory
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
-            if (activePlayer.computer)
+            updateGUI();
+            if (activePlayer.computer == true)
             {
-                ComputerThinks.Start();
-                ComputerThinks.Start();
-        }
-
+                ComputerPlay();
+            }
         }
 
         private void initializeGame()
@@ -154,20 +159,15 @@ namespace JensMemory
             StartGame();
         }
 
-        public void GetInfo() //Metod föra att skriva ut poäng mm
+        public void updateGUI() //Metod föra att skriva ut poäng mm
         {
             string info = "";
             foreach (Player p in players)
             {
-                info += p.name + " - " + p.points + " poäng.\r\n";
-                /*if (p.turn)
-                {
-                    lblWhosTurn.Text = p.name;
-                }*/
-
-                lblWhosTurn.Text = activePlayer.name;
+                info += p.name + " - " + p.points + " poäng.\r\n"; 
             }
             tbxInfo.Text = info;
+            lblWhosTurn.Text = activePlayer.name;
 
         }
 
@@ -232,7 +232,7 @@ namespace JensMemory
                 c.flipped = false;
             }
             totalPoints = 0;
-            GetInfo();
+            updateGUI();
             NewTurn();
 
         }
@@ -279,18 +279,7 @@ namespace JensMemory
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
                 card.flipped = true;
                 flippedCards.Add(card);
-                card.Image = picVector[card.id];
-
-                if (AIMemory.Count < 5)
-                {
-                    AIMemory.Add(card);
-            }
-                else
-                {
-                    AIMemory.RemoveAt(0);
-                    AIMemory.Add(card);
-                }
-                
+                card.Image = picVector[card.id]; 
             }
             if (flippedCards.Count == 2)
             {
@@ -325,24 +314,20 @@ namespace JensMemory
                 {
                     timerEndGame.Start();
                 }
-
-                if (activePlayer.computer == true)
-                {
-                    ComputerThinks.Start();
-                    ComputerThinks.Start();
-
-                }
                 //poäng skrivs ut
-                GetInfo();
-
-
+                updateGUI();
+                delay(2500);
+                if(activePlayer.computer == true)
+                {
+                    ComputerPlay();
                 }
-
-            //min hemliga kommentar av Tobias
+            }
             else
             {
                 //timerCompare.Enabled = true;
-                timerCompare.Start();
+                //timerCompare.Start();
+                delay(2500);
+                flipBack();
             }
         }
 
@@ -353,54 +338,83 @@ namespace JensMemory
 
         public void ComputerPlay()
         {
-            
-            EventArgs e = new EventArgs();
-            foreach (Card c in AIMemory.ToList())
+            if (activePlayer.computer == true)
             {
-                foreach (Card j in AIMemory.ToList())
+                int AiTurn = 0;
+                Card card1 = null;
+                Card card2 = null;
+                Random randomWait = new Random();
+                EventArgs e = new EventArgs();
+                Random computerRandom = new Random();
+
+                foreach (Card c in cards)
                 {
-                    if (c.id == j.id && AIMemory.IndexOf(c) != AIMemory.IndexOf(j))
+                    c.Enabled = false;
+                }
+
+                while (AiTurn < 2)
+                {
+                    if (AIMemory.Count > 0)
                     {
-                        card_Click(c, e);
-                        card_Click(j, e);
-                        AIMemory.Remove(c);
-                        AIMemory.Remove(j);
+                        foreach (Card c in AIMemory.ToList())
+                        {
+                            foreach (Card j in AIMemory.ToList())
+                            {
+                                if (c.id == j.id && AIMemory.IndexOf(c) != AIMemory.IndexOf(j))
+                                {
+                                    //delay(randomWait.Next(345, 1234));
+                                    //card_Click(c, e);
+                                    //delay(randomWait.Next(345, 1234));
+                                    //card_Click(j, e);
+                                    card1 = c;
+                                    card2 = j;
+                                    AIMemory.Remove(c);
+                                    AIMemory.Remove(j);
+                                    AiTurn = 2;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    if (AiTurn < 2)
+                    {
+                        int cardIndex = computerRandom.Next(0, cards.Count);
+                        while (cards[cardIndex].flipped && totalPoints != endGame)
+                        {
+                            cardIndex = computerRandom.Next(0, cards.Count);
+                        }
+
+                        foreach (Card c in cards)
+                        {
+                            if (cardIndex == cards.IndexOf(c) && AiTurn == 0)
+                            {
+                                //delay(randomWait.Next(345, 1234));
+                                //card_Click(c, e);
+                                card1 = c;
+                                AIMemory.Add(c);
+                                AiTurn = 1;
+                            }
+                            else if (cardIndex == cards.IndexOf(c) && AiTurn == 1)
+                            {
+                                //delay(randomWait.Next(345, 1234));
+                                //card_Click(c, e);
+                                card2 = c;
+                                AiTurn = 2;
+                                break;
+                            }
+                        }
+                    }
+                    if (AiTurn == 2)
+                    {
+                        delay(randomWait.Next(345, 1234));
+                        card_Click(card1, e);
+                        delay(randomWait.Next(345, 1234));
+                        card_Click(card2, e);
+                        break;
                     }
                 }
             }
-
-            
-            Random computerRandom = new Random();
-            int cardIndex = computerRandom.Next(0, cards.Count);
-            while (cards[cardIndex].flipped && totalPoints != endGame)
-            {
-                cardIndex = computerRandom.Next(0, cards.Count);
-            }
-
-            foreach (Card c in cards)
-            {
-
-                if (cardIndex == cards.IndexOf(c))
-                {
-                    card_Click(c, e);
-
-                }
-
-            }
-            foreach (Card c in cards)
-            {
-
-                c.Enabled = false;
-
-            }
-
-
-        }
-
-        public void ComputerThinks_Tick(object sender, EventArgs e)
-        {
-            ComputerThinks.Stop();
-            ComputerPlay();
         }
 
         private void GameWindow_Load_1(object sender, EventArgs e)
@@ -438,20 +452,30 @@ namespace JensMemory
             activePlayer = playerTurn[0];
             if (activePlayer.computer)
             {
-                ComputerThinks.Start();
-                ComputerThinks.Start();
+                ComputerPlay();
             }
             foreach (Card card in cards)
             {
                 card.Enabled = true;
             }
-            GetInfo();
+            updateGUI();
         }
 
         private void splashTimer_Tick(object sender, EventArgs e)
         {
             splashTimer.Enabled = false;
             initializeGame();
+        }
+
+        public void delay(int _delayTime)
+        {
+            bool bajs = true;
+            while (bajs==true)
+            {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(_delayTime);
+                bajs = false;
+            }
         }
     }
 }

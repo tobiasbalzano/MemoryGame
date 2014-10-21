@@ -36,7 +36,6 @@
             this.tbxInfo = new System.Windows.Forms.TextBox();
             this.timerCompare = new System.Windows.Forms.Timer(this.components);
             this.timerEndGame = new System.Windows.Forms.Timer(this.components);
-            this.ComputerThinks = new System.Windows.Forms.Timer(this.components);
             this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,20 +86,10 @@
             this.tbxInfo.Size = new System.Drawing.Size(140, 400);
             this.tbxInfo.TabIndex = 5;
             // 
-            // timerCompare
-            // 
-            this.timerCompare.Interval = 1000;
-            this.timerCompare.Tick += new System.EventHandler(this.timerCompare_Tick);
-            // 
             // timerEndGame
             // 
             this.timerEndGame.Interval = 500;
             this.timerEndGame.Tick += new System.EventHandler(this.timerEndGame_Tick);
-            // 
-            // ComputerThinks
-            // 
-            this.ComputerThinks.Interval = 1000;
-            this.ComputerThinks.Tick += new System.EventHandler(this.ComputerThinks_Tick);
             // 
             // splashTimer
             // 
@@ -148,7 +137,6 @@
         private System.Windows.Forms.TextBox tbxInfo;
         private System.Windows.Forms.Timer timerCompare;
         private System.Windows.Forms.Timer timerEndGame;
-        private System.Windows.Forms.Timer ComputerThinks;
         private System.Windows.Forms.Timer splashTimer;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
