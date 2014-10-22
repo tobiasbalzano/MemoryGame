@@ -13,7 +13,7 @@ namespace JensMemory
     public partial class EndGame : Form
     {
         bool win;
-        
+
         public EndGame(bool _win)
         {
             win = _win;
@@ -31,7 +31,5 @@ namespace JensMemory
                 lblEndGame.Text = "Draw!\nNobody wins!";
             }
         }
-
-
     }
 }
