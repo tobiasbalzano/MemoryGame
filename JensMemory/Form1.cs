@@ -134,23 +134,22 @@ namespace JensMemory
             GetInfo();
         }
 
-        public void NewTurn()
+        public void NewTurn() //Metod för att byta spelarens tur
         {
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
             timerTurn.Start();
-            duration = setDuration;
+            duration = setDuration; // startar om timer vid varje new turn.
             if (activePlayer.computer)
             {
                 ComputerPlay();
                 ComputerThinks.Start();
             }
             GetInfo();
-
         }
 
-        private void initializeGame()
+        private void initializeGame()//Metoden för att starta om hela spelet från och med efter splash screen
         {
             cards = new List<Card>();
             players = new List<Player>();
@@ -189,7 +188,7 @@ namespace JensMemory
 
         }
 
-        private void timerEndGame_Tick(object sender, EventArgs e)
+        private void timerEndGame_Tick(object sender, EventArgs e)//3 olika alternativ - börja om samma spel, starta om hela spelet,stänga spelet
         {
             bool win = WhoWon();
             timerEndGame.Stop();
@@ -214,8 +213,6 @@ namespace JensMemory
             {
                 exit.Show();
             }
-
-
         }
 
         public void PlayAgain()
@@ -450,10 +447,11 @@ namespace JensMemory
 
         private void timerTurn_Tick(object sender, EventArgs e)
         {
-            lblTimerTurn.Text = "timer: " + duration + " seconds";
+            //Skriver ut betänkertiden i sekunder och räknar tiden neråt.
+            lblTimerTurn.Text = "timer: " + duration + " seconds"; 
             duration--;
 
-            if (duration == -1)
+            if (duration == -1)// Byter spelare när tiden räknat ner till 0.
             {
                 timerTurn.Stop();
                 if (flippedCards.Count == 1)
