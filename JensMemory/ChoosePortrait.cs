@@ -12,24 +12,28 @@ namespace JensMemory
 {
     public partial class ChooseCharacter : Form
     {
-        public ChooseCharacter()
-        {
-
-            InitializeComponent();
-            UpdateGUI();
-            Portrait.BackgroundImage = Portraits[0];
-        }
 
         bool AI = false;
         int click = 1;
         int i = 0;
         int amountOfPlayer;
         List<int> Chosen = new List<int>(); //Lista med värde som visar valda silhouetter. 
-        private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
-        private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
-        private static Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
+        private static Image[] Choices;
+        private string[] TrainerName = { "Ash", "Misty", "Flannery", "May", "Gary", "Calem" };
+        private static Image[] Portraits;
         private static Image[] Silhouettes = { Properties.Resources.trainer1S, Properties.Resources.trainer2S, Properties.Resources.trainer3S, Properties.Resources.trainer4S, Properties.Resources.trainer5S, Properties.Resources.trainer6S };
-        int EndRange = Portraits.Count() - 1;
+        int EndRange;
+
+        public ChooseCharacter()
+        {
+
+            InitializeComponent();
+            Choices = new Image[] { Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette };
+            Portraits = new Image[] { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
+            EndRange = Portraits.Count() - 1;
+            UpdateGUI();
+            Portrait.BackgroundImage = Portraits[0];
+        }
 
         //vänster knappen.
         private void LeftArrow_Click(object sender, EventArgs e)
@@ -72,6 +76,7 @@ namespace JensMemory
         //Uppdaterar GUI efter varje knapptryck.
         private void UpdateGUI()
         {
+            lblChooseChar.Text = TrainerName[i];
             EndRange = Portraits.Count() - 1;
             Portrait.BackgroundImage = Portraits[i];
             Character1.BackgroundImage = Choices[0];
@@ -88,7 +93,7 @@ namespace JensMemory
             click++;
             if (click % 2 == 0)
             {
-                Computer.Image = Properties.Resources.choiceRing;
+                Computer.Image = Properties.Resources.AIChoice;
                 AI = true;
             }
             else

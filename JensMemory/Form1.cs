@@ -85,6 +85,7 @@ namespace JensMemory
         EndSplash exit = new EndSplash();
         EndGame endGame;
         int duration = 5;
+        bool updatePortraits;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
 
@@ -93,6 +94,7 @@ namespace JensMemory
             InitializeComponent();
             splashSound.Play();
             splashTimer.Enabled = true;
+            updatePortraits = true;
         }
 
         private void randomizeIdInCardList(int numberOfCards) //metod för att blanda kortens id
@@ -130,7 +132,7 @@ namespace JensMemory
             //Stoppar timern...
             timerCompare.Stop();
             NewTurn();
-            GetInfo();
+            updateGUI();
         }
 
         public void NewTurn()
@@ -140,12 +142,13 @@ namespace JensMemory
             activePlayer = playerTurn[0];
             timerTurn.Start();
             duration = 5;
+            updateGUI();
             if (activePlayer.computer)
             {
                 ComputerPlay();
                 ComputerThinks.Start();
             }
-            GetInfo();
+            
 
         }
 
@@ -157,27 +160,112 @@ namespace JensMemory
             BG = new BakGrundPopUp();
             boardSize = new PopUpBoardSize();
             CHAR.ShowDialog();
+            updateGUI();
             boardSize.ShowDialog();
+            updateGUI();
             BG.ShowDialog();
-            pictureBox1.Visible = false;
+            updateGUI();
             StartGame();
         }
 
-        public void GetInfo() //Metod föra att skriva ut poäng mm
+        public void updateGUI() //Metod föra att skriva ut poäng mm
         {
-            string info = "";
-            foreach (Player p in players)
+            lblP1ScoreN.Text = players[0].points.ToString();
+            lblP2ScoreN.Text = players[1].points.ToString();
+            lblTimerTurn.Text = duration.ToString();
+#region Update correct number of gui-elements
+            if (updatePortraits == true)
             {
-                info += p.name + " - " + p.points + " poäng.\r\n";
-                /*if (p.turn)
+                pictureBoxP1.BackgroundImage = players[0].potrait;
+                lblP1ScoreN.Text = players[0].points.ToString();
+                lblNameP1.Text = players[0].name;
+                lblp1Score.Text = "Score:";
+                pictureBoxP2.BackgroundImage = players[1].potrait;
+                lblP2ScoreN.Text = players[1].points.ToString();
+                lblNameP2.Text = players[1].name;
+                lblp2Score.Text = "Score:";
+                if (players.Count == 3)
                 {
-                    lblWhosTurn.Text = p.name;
-                }*/
-
-                lblWhosTurn.Text = activePlayer.name;
+                    pictureBoxP3.BackgroundImage = players[2].potrait;
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblNameP3.Text = players[2].name;
+                    lblp3Score.Text = "Score:";
+                }
+                if (players.Count == 4)
+                {
+                    pictureBoxP3.BackgroundImage = players[2].potrait;
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblNameP3.Text = players[2].name;
+                    lblp3Score.Text = "Score:";
+                    pictureBoxP4.BackgroundImage = players[3].potrait;
+                    lblP4ScoreN.Text = players[3].points.ToString();
+                    lblNameP4.Text = players[3].name;
+                    lblp4Score.Text = "Score:";
+                }
+                if (players.Count == 5)
+                {
+                    pictureBoxP3.BackgroundImage = players[2].potrait;
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblNameP3.Text = players[2].name;
+                    lblp3Score.Text = "Score:";
+                    pictureBoxP4.BackgroundImage = players[3].potrait;
+                    lblP4ScoreN.Text = players[3].points.ToString();
+                    lblNameP4.Text = players[3].name;
+                    lblp4Score.Text = "Score:";
+                    pictureBoxP5.BackgroundImage = players[4].potrait;
+                    lblP5ScoreN.Text = players[4].points.ToString();
+                    lblNameP5.Text = players[4].name;
+                    lblp5Score.Text = "Score:";
+                }
+                if (players.Count == 6)
+                {
+                    pictureBoxP3.BackgroundImage = players[2].potrait;
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblNameP3.Text = players[2].name;
+                    lblp3Score.Text = "Score:";
+                    pictureBoxP4.BackgroundImage = players[3].potrait;
+                    lblP4ScoreN.Text = players[3].points.ToString();
+                    lblNameP4.Text = players[3].name;
+                    lblp4Score.Text = "Score:";
+                    pictureBoxP5.BackgroundImage = players[4].potrait;
+                    lblP5ScoreN.Text = players[4].points.ToString();
+                    lblNameP5.Text = players[4].name;
+                    lblp5Score.Text = "Score:";
+                    pictureBoxP6.BackgroundImage = players[5].potrait;
+                    lblP6ScoreN.Text = players[5].points.ToString();
+                    lblNameP6.Text = players[5].name;
+                    lblp6Score.Text = "Score:";
+                }
+                updatePortraits = false;
             }
-            tbxInfo.Text = info;
+#endregion
+             if (players.Count == 3)
+                {
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                }
+                if (players.Count == 4)
+                {
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblP4ScoreN.Text = players[3].points.ToString();
+                }
+                if (players.Count == 5)
+                {
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblP4ScoreN.Text = players[3].points.ToString();
+                    lblP5ScoreN.Text = players[4].points.ToString();
+                }
+                if (players.Count == 6)
+                {
+                    lblP3ScoreN.Text = players[2].points.ToString();
+                    lblP4ScoreN.Text = players[3].points.ToString();
+                    lblP5ScoreN.Text = players[4].points.ToString();
+                    lblP6ScoreN.Text = players[5].points.ToString();
+                }
 
+            if(activePlayer != null)
+            {
+                pictureBoxTurn.BackgroundImage = activePlayer.potrait;
+            }
         }
 
         public static void CreatePlayer(string name, Image portrait, bool computer)
@@ -211,7 +299,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
-                //exit.Show();
+                exit.ShowDialog();
             }
 
 
@@ -231,7 +319,7 @@ namespace JensMemory
                 c.flipped = false;
             }
             totalPoints = 0;
-            GetInfo();
+            updateGUI();
             NewTurn();
 
         }
@@ -334,7 +422,7 @@ namespace JensMemory
                 }
                 duration = 5;
                 //poäng skrivs ut
-                GetInfo();
+                updateGUI();
 
 
             }
@@ -405,7 +493,7 @@ namespace JensMemory
             if (columns == rows)
             {
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
-                this.pnlCardHolder.Location = new System.Drawing.Point(250, 60);
+                this.pnlCardHolder.Location = new System.Drawing.Point(340, 60);
             }
             else
             {
@@ -427,30 +515,29 @@ namespace JensMemory
             allPoints = cards.Count() / 2;
             totalPoints = 0;
             activePlayer = playerTurn[0];
+            updateGUI();
             if (activePlayer.computer)
             {
                 ComputerPlay();
-                ComputerThinks.Start();
             }
             foreach (Card card in cards)
             {
                 card.Enabled = true;
             }
-            timerTurn.Start();
-            GetInfo();
+            timerTurn.Start();   
         }
 
         private void splashTimer_Tick(object sender, EventArgs e)
         {
             splashTimer.Enabled = false;
+            splashBox.Visible = false;
             initializeGame();
         }
 
         private void timerTurn_Tick(object sender, EventArgs e)
         {
-            lblTimerTurn.Text = "timer: " + duration + " seconds";
             duration--;
-
+            lblTimerTurn.Text = duration.ToString();
             if (duration == 0)
             {
                 timerTurn.Stop();
@@ -458,6 +545,7 @@ namespace JensMemory
                 {
                     FlipBackCards();
                 }
+                lblTimerTurn.Text = "0";
                 NewTurn();
             }
         }
@@ -477,6 +565,12 @@ namespace JensMemory
             }
             flippedCards.Clear();
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            exit.ShowDialog();
         }
     }
 }

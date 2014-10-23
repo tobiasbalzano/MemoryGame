@@ -34,8 +34,10 @@
             // 
             // pbxExit
             // 
-            this.pbxExit.Image = global::JensMemory.Properties.Resources.pokemonSplash;
+            this.pbxExit.BackColor = System.Drawing.Color.Transparent;
+            this.pbxExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxExit.Location = new System.Drawing.Point(0, 0);
+            this.pbxExit.Margin = new System.Windows.Forms.Padding(0);
             this.pbxExit.Name = "pbxExit";
             this.pbxExit.Size = new System.Drawing.Size(1280, 720);
             this.pbxExit.TabIndex = 0;
@@ -46,7 +48,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.BackgroundImage = global::JensMemory.Properties.Resources.pokemonSplashBlur;
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pbxExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EndSplash";

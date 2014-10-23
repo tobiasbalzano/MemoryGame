@@ -166,16 +166,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exit.gif" />
-    <None Include="Resources\new-game.png" />
-    <None Include="Resources\StartOver.jpg" />
-    <None Include="Resources\pokemonSplash.wav" />
-    <None Include="Resources\pokemonSplash.jpg" />
-    <None Include="Resources\nextButton.png" />
-    <None Include="Resources\playBoardButton.png" />
-    <None Include="Resources\LeftArrow.jpg" />
-    <None Include="Resources\RightArrow.jpg" />
-    <None Include="Resources\PC.jpg" />
+    <None Include="Resources\newpokemon2.png" />
+    <None Include="Resources\newpokemon.png" />
+    <None Include="Resources\newpokeball.png" />
     <None Include="Resources\pic59.png" />
     <None Include="Resources\pic58.png" />
     <None Include="Resources\pic57.png" />
@@ -235,6 +228,23 @@
     <None Include="Resources\pic03.png" />
     <None Include="Resources\pic02.png" />
     <None Include="Resources\pic0.png" />
+    <None Include="Resources\pokemonSplashBlur.png" />
+    <None Include="Resources\trainer4S.png" />
+    <None Include="Resources\trainer4.png" />
+    <None Include="Resources\emptySilhouette.png" />
+    <None Include="Resources\playBoardButton.png" />
+    <None Include="Resources\nextButton.png" />
+    <None Include="Resources\popUp.png" />
+    <None Include="Resources\MainBG.png" />
+    <None Include="Resources\exitButton.png" />
+    <None Include="Resources\exit.gif" />
+    <None Include="Resources\new-game.png" />
+    <None Include="Resources\StartOver.jpg" />
+    <None Include="Resources\pokemonSplash.wav" />
+    <None Include="Resources\pokemonSplash.jpg" />
+    <None Include="Resources\LeftArrow.jpg" />
+    <None Include="Resources\RightArrow.jpg" />
+    <None Include="Resources\PC.jpg" />
     <None Include="Resources\01.png" />
     <None Include="Resources\boardSz4x4.png" />
     <None Include="Resources\boardSz5x4.png" />
@@ -245,6 +255,13 @@
     <None Include="Resources\boardSz10x8.png" />
     <None Include="Resources\boardSz10x10.png" />
     <None Include="Resources\boardSz12x10.png" />
+    <None Include="Resources\arrowLeft.png" />
+    <None Include="Resources\arrowRight.png" />
+    <None Include="Resources\AIChoice.png" />
+    <None Include="Resources\AILogo.png" />
+    <None Include="Resources\boardSizeLarge.png" />
+    <None Include="Resources\boardSizeMid.png" />
+    <None Include="Resources\boardSizeSmall.png" />
     <None Include="Resources\addButton.png" />
     <Content Include="Resources\card1.gif" />
     <Content Include="Resources\card2.gif" />
@@ -262,8 +279,6 @@
     <None Include="Resources\trainer6.png" />
     <None Include="Resources\trainer5S.png" />
     <None Include="Resources\trainer5.png" />
-    <None Include="Resources\trainer4S.png" />
-    <None Include="Resources\trainer4.png" />
     <None Include="Resources\trainer3S.png" />
     <None Include="Resources\trainer3.png" />
     <None Include="Resources\trainer2S.png" />

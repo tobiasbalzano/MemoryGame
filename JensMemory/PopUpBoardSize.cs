@@ -40,6 +40,7 @@ namespace JensMemory
         {
             boardArray = smallBoards;
             activeDimensions = smallDimensions;
+            bgPanel.BackColor = Color.Lime;
             updateGui();
         }
 
@@ -47,6 +48,7 @@ namespace JensMemory
         {
             boardArray = mediumBoards;
             activeDimensions = mediumDimensions;
+            bgPanel.BackColor = Color.Orange;
             updateGui();
         }
 
@@ -54,6 +56,7 @@ namespace JensMemory
         {
             boardArray = largeBoards;
             activeDimensions = largeDimensions;
+            bgPanel.BackColor = Color.Red;
             updateGui();
         }
 
