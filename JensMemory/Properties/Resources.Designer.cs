@@ -426,6 +426,16 @@ namespace JensMemory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap newGame {
+            get {
+                object obj = ResourceManager.GetObject("newGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newpokeball {
             get {
                 object obj = ResourceManager.GetObject("newpokeball", resourceCulture);
@@ -1156,6 +1166,16 @@ namespace JensMemory.Properties {
         internal static System.IO.UnmanagedMemoryStream PThemeS {
             get {
                 return ResourceManager.GetStream("PThemeS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap replayButton {
+            get {
+                object obj = ResourceManager.GetObject("replayButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

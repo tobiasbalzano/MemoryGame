@@ -166,6 +166,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\newGame.png" />
+    <None Include="Resources\replayButton.png" />
     <None Include="Resources\WinSound.wav" />
     <None Include="Resources\PThemeS.wav" />
     <None Include="Resources\PairPoint.wav" />

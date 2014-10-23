@@ -121,7 +121,6 @@ namespace JensMemory
             loseDrawFX.Load();
             creditSong.Load();
             splashTimer.Enabled = true;
-            updatePortraits = true;
         }
 
         private void randomizeIdInCardList(int numberOfCards) //metod för att blanda kortens id
@@ -181,6 +180,7 @@ namespace JensMemory
             CHAR = new ChooseCharacter();
             BG = new BakGrundPopUp();
             boardSize = new PopUpBoardSize();
+            updatePortraits = true;
             CHAR.ShowDialog();
             updateGUI();
             boardSize.ShowDialog();

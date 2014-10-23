@@ -29,6 +29,7 @@ namespace JensMemory
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             SetCover(0);
+            GameWindow.clickNextFX.Play();
             BG1.Location = new System.Drawing.Point(22,250);
             BG1.Size = new System.Drawing.Size(200, 200);
             BG2.Location = new System.Drawing.Point(325+25, 250+25);
@@ -40,6 +41,7 @@ namespace JensMemory
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             SetCover(1);
+            GameWindow.clickNextFX.Play();
             BG1.Location = new System.Drawing.Point(22+25, 250+25);
             BG1.Size = new System.Drawing.Size(150, 150);
             BG2.Location = new System.Drawing.Point(325, 250);
@@ -51,6 +53,7 @@ namespace JensMemory
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             SetCover(2);
+            GameWindow.clickNextFX.Play();
             BG1.Location = new System.Drawing.Point(22+25, 250+25);
             BG1.Size = new System.Drawing.Size(150, 150);
             BG2.Location = new System.Drawing.Point(325+25, 250+25);

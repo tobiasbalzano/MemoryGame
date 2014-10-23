@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EndGame));
             this.pbxWinner = new System.Windows.Forms.PictureBox();
             this.lblEndGame = new System.Windows.Forms.Label();
             this.btnStartOver = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             // 
             // pbxWinner
             // 
+            this.pbxWinner.BackColor = System.Drawing.Color.Transparent;
             this.pbxWinner.Location = new System.Drawing.Point(108, 75);
             this.pbxWinner.Name = "pbxWinner";
             this.pbxWinner.Size = new System.Drawing.Size(300, 300);
@@ -58,38 +60,60 @@
             // 
             // btnStartOver
             // 
-            this.btnStartOver.BackgroundImage = global::JensMemory.Properties.Resources.StartOver;
+            this.btnStartOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnStartOver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStartOver.BackgroundImage")));
             this.btnStartOver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStartOver.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnStartOver.Location = new System.Drawing.Point(156, 402);
+            this.btnStartOver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnStartOver.FlatAppearance.BorderSize = 0;
+            this.btnStartOver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnStartOver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnStartOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartOver.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnStartOver.Location = new System.Drawing.Point(108, 381);
+            this.btnStartOver.Margin = new System.Windows.Forms.Padding(0);
             this.btnStartOver.Name = "btnStartOver";
-            this.btnStartOver.Size = new System.Drawing.Size(250, 150);
+            this.btnStartOver.Size = new System.Drawing.Size(200, 200);
             this.btnStartOver.TabIndex = 5;
-            this.btnStartOver.UseVisualStyleBackColor = true;
+            this.btnStartOver.UseVisualStyleBackColor = false;
             this.btnStartOver.Click += new System.EventHandler(this.btnStartOver_Click);
             // 
             // btnNewGame
             // 
-            this.btnNewGame.BackgroundImage = global::JensMemory.Properties.Resources.new_game;
+            this.btnNewGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnNewGame.BackgroundImage = global::JensMemory.Properties.Resources.newGame;
             this.btnNewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNewGame.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnNewGame.Location = new System.Drawing.Point(449, 402);
+            this.btnNewGame.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnNewGame.FlatAppearance.BorderSize = 0;
+            this.btnNewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnNewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewGame.Location = new System.Drawing.Point(566, 381);
+            this.btnNewGame.Margin = new System.Windows.Forms.Padding(0);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(250, 150);
+            this.btnNewGame.Size = new System.Drawing.Size(200, 200);
             this.btnNewGame.TabIndex = 6;
-            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.UseVisualStyleBackColor = false;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // btnExit
             // 
-            this.btnExit.BackgroundImage = global::JensMemory.Properties.Resources.exit;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnExit.BackgroundImage = global::JensMemory.Properties.Resources.exitButton;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(377, 615);
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(325, 511);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 50);
+            this.btnExit.Size = new System.Drawing.Size(200, 200);
             this.btnExit.TabIndex = 7;
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // EndGame

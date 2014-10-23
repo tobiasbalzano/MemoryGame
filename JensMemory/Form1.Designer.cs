@@ -409,11 +409,12 @@
             // lblPlayerTurn
             // 
             this.lblPlayerTurn.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayerTurn.Font = new System.Drawing.Font("Ketchum", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerTurn.Font = new System.Drawing.Font("Ketchum", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerTurn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
-            this.lblPlayerTurn.Location = new System.Drawing.Point(15, 318);
+            this.lblPlayerTurn.Location = new System.Drawing.Point(2, 318);
+            this.lblPlayerTurn.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlayerTurn.Name = "lblPlayerTurn";
-            this.lblPlayerTurn.Size = new System.Drawing.Size(222, 100);
+            this.lblPlayerTurn.Size = new System.Drawing.Size(235, 100);
             this.lblPlayerTurn.TabIndex = 10;
             // 
             // lblTurnAnnounce
