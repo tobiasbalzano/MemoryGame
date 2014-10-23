@@ -67,7 +67,7 @@ namespace JensMemory
         public static List<Player> playerTurn; // Lista som håller spelarordningen
         private List<Card> cards; //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
-        public static List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
+        public static List<Player> winnerList; // Lista som skall hålla vinnare
         public Card[] AICards = new Card[2];
         private List<Card> AIMemory = new List<Card>();
         #endregion
@@ -178,6 +178,7 @@ namespace JensMemory
             cards = new List<Card>();
             players = new List<Player>();
             playerTurn = new List<Player>();
+            winnerList = new List<Player>();
             CHAR = new ChooseCharacter();
             BG = new BakGrundPopUp();
             boardSize = new PopUpBoardSize();
