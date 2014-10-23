@@ -45,7 +45,7 @@ namespace JensMemory
                                       Properties.Resources.pic54, Properties.Resources.pic55,
                                       Properties.Resources.pic56, Properties.Resources.pic57,
                                       Properties.Resources.pic58, Properties.Resources.pic59};
-        
+
 
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
@@ -78,7 +78,22 @@ namespace JensMemory
         Player activePlayer;
         int totalPoints;
         int allPoints;
-        SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+
+        #region //Alla ljud
+        public static SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+        public static SoundPlayer clickForwardFX = new SoundPlayer(Properties.Resources.ClickForward);
+        public static SoundPlayer clickBackFX = new SoundPlayer(Properties.Resources.ClickBack);
+        public static SoundPlayer clickBigFX = new SoundPlayer(Properties.Resources.ClickBig);
+        public static SoundPlayer clickNextFX = new SoundPlayer(Properties.Resources.NextFx);
+        public static SoundPlayer gameBoardFX = new SoundPlayer(Properties.Resources.GameWindow);
+        public static SoundPlayer cardFlipFX = new SoundPlayer(Properties.Resources.CardFlip);
+        public static SoundPlayer flipBackFX = new SoundPlayer(Properties.Resources.CardFlipBack);
+        public static SoundPlayer pointsFX = new SoundPlayer(Properties.Resources.PairPoint);
+        public static SoundPlayer winFX = new SoundPlayer(Properties.Resources.WinSound);
+        public static SoundPlayer loseDrawFX = new SoundPlayer(Properties.Resources.CompWinDraw);
+        public static SoundPlayer creditSong = new SoundPlayer(Properties.Resources.PThemeS);
+        #endregion
+
         ChooseCharacter CHAR;
         BakGrundPopUp BG;
         PopUpBoardSize boardSize;
@@ -88,11 +103,22 @@ namespace JensMemory
         int duration;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
-        
+
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
             splashSound.Play();
+            clickForwardFX.Load();
+            clickBackFX.Load();
+            clickBigFX.Load();
+            clickNextFX.Load();
+            gameBoardFX.Load();
+            cardFlipFX.Load();
+            flipBackFX.Load();
+            pointsFX.Load();
+            winFX.Load();
+            loseDrawFX.Load();
+            creditSong.Load();
             splashTimer.Enabled = true;
         }
 
@@ -210,6 +236,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
+                creditSong.Play();
                 exit.Show();
             }
         }
@@ -266,6 +293,7 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
+            cardFlipFX.Play();
             if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
@@ -312,6 +340,7 @@ namespace JensMemory
                 // poäng delas ut
                 activePlayer.points++;
                 totalPoints++;
+                pointsFX.Play();
 
                 if (totalPoints == allPoints)
                 {
@@ -386,6 +415,7 @@ namespace JensMemory
 
         private void StartGame()
         {
+            gameBoardFX.Play();
             if (columns == rows)
             {
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
@@ -450,6 +480,7 @@ namespace JensMemory
 
         private void FlipBackCards()
         {
+            flipBackFX.Play();
             //Ändrar tillbaka bild till baksidan mm..
             foreach (Card flippedcard in flippedCards)
             {
@@ -462,6 +493,6 @@ namespace JensMemory
                 c.Enabled = true;
             }
             flippedCards.Clear();
+        }
     }
-}
 }

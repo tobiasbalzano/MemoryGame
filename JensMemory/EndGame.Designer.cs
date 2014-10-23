@@ -65,7 +65,7 @@
             this.btnStartOver.Size = new System.Drawing.Size(250, 150);
             this.btnStartOver.TabIndex = 5;
             this.btnStartOver.UseVisualStyleBackColor = true;
-           
+            this.btnStartOver.Click += new System.EventHandler(this.btnStartOver_Click);
             // 
             // btnNewGame
             // 
@@ -77,7 +77,7 @@
             this.btnNewGame.Size = new System.Drawing.Size(250, 150);
             this.btnNewGame.TabIndex = 6;
             this.btnNewGame.UseVisualStyleBackColor = true;
-            
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // btnExit
             // 
@@ -89,7 +89,7 @@
             this.btnExit.Size = new System.Drawing.Size(100, 50);
             this.btnExit.TabIndex = 7;
             this.btnExit.UseVisualStyleBackColor = true;
-           
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // EndGame
             // 

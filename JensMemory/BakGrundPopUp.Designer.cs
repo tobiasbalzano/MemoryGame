@@ -46,7 +46,7 @@
             // 
             resources.ApplyResources(this.lblBackGround, "lblBackGround");
             this.lblBackGround.Name = "lblBackGround";
-            this.lblBackGround.Click += new System.EventHandler(this.label1_Click);
+        
             // 
             // BG1
             // 

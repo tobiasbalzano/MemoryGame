@@ -23,12 +23,6 @@ namespace JensMemory
 
         //Där det används samma kod, är det bättre att använda en funktion.
 
-       
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             SetCover(0);
@@ -49,8 +43,8 @@ namespace JensMemory
             coverChoice = choice;
             this.Close();
         }
-        
-        
+
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             // Väljer betänketiden från trackbaren och sedan skriver ut den.

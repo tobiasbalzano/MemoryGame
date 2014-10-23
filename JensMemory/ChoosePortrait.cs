@@ -34,6 +34,7 @@ namespace JensMemory
         //vänster knappen.
         private void LeftArrow_Click(object sender, EventArgs e)
         {
+            GameWindow.clickForwardFX.Play();
             if (i == 0)
             {
                 i = EndRange;
@@ -45,14 +46,11 @@ namespace JensMemory
             UpdateGUI();
         }
 
-        private void Portrait_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //Höger knappen.
         private void RightArrow_Click(object sender, EventArgs e)
         {
+            GameWindow.clickForwardFX.Play();
             if (i == EndRange)
             {
                 i = 0;
@@ -63,12 +61,7 @@ namespace JensMemory
             }
             UpdateGUI();
         }
-
-        private void ChooseCharacter_Load(object sender, EventArgs e)
-        {
-
-        }
-
+              
         //Uppdaterar GUI efter varje knapptryck.
         private void UpdateGUI()
         {
@@ -85,6 +78,7 @@ namespace JensMemory
         //Knappen för att välja en AI.
         private void Computer_Click(object sender, EventArgs e)
         {
+            GameWindow.clickBackFX.Play();
             click++;
             if (click % 2 == 0)
             {
@@ -101,6 +95,7 @@ namespace JensMemory
         //Knappen för att lägga till en spelare.
         private void Choose_Click(object sender, EventArgs e)
         {
+            GameWindow.clickBigFX.Play();
             if (Chosen.Contains(i))
             {
                 //if the list cotains the value we want to add, do nothing.
@@ -126,6 +121,7 @@ namespace JensMemory
         //Klickar för att gå till nästa form/sida.
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            GameWindow.clickNextFX.Play();
             if (amountOfPlayer >= 2) //Måste välja minnst 2 spelare för att gå vidare.
             {
                 this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
