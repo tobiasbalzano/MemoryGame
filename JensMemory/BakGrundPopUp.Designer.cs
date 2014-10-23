@@ -32,18 +32,18 @@
             this.BG1 = new System.Windows.Forms.PictureBox();
             this.BG2 = new System.Windows.Forms.PictureBox();
             this.BG3 = new System.Windows.Forms.PictureBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.pigctureBoxAdvance = new System.Windows.Forms.PictureBox();
-            this.lbltimeChoice = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pigctureBoxAdvance)).BeginInit();
             this.SuspendLayout();
             // 
             // BG1
             // 
+            this.BG1.BackColor = System.Drawing.Color.Transparent;
+            this.BG1.BackgroundImage = global::JensMemory.Properties.Resources.newpokeball;
             resources.ApplyResources(this.BG1, "BG1");
             this.BG1.Name = "BG1";
             this.BG1.TabStop = false;
@@ -51,6 +51,8 @@
             // 
             // BG2
             // 
+            this.BG2.BackColor = System.Drawing.Color.Transparent;
+            this.BG2.BackgroundImage = global::JensMemory.Properties.Resources.newpokemon;
             resources.ApplyResources(this.BG2, "BG2");
             this.BG2.Name = "BG2";
             this.BG2.TabStop = false;
@@ -58,40 +60,36 @@
             // 
             // BG3
             // 
+            this.BG3.BackColor = System.Drawing.Color.Transparent;
+            this.BG3.BackgroundImage = global::JensMemory.Properties.Resources.newpokemon2;
             resources.ApplyResources(this.BG3, "BG3");
             this.BG3.Name = "BG3";
             this.BG3.TabStop = false;
             this.BG3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // trackBar1
-            // 
-            resources.ApplyResources(this.trackBar1, "trackBar1");
-            this.trackBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(100)))), ((int)(((byte)(232)))));
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Minimum = 10;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.TickFrequency = 5;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBar1.Value = 10;
-            // 
             // pigctureBoxAdvance
             // 
             this.pigctureBoxAdvance.BackColor = System.Drawing.Color.Transparent;
-            this.pigctureBoxAdvance.BackgroundImage = global::JensMemory.Properties.Resources.nextButton;
+            this.pigctureBoxAdvance.BackgroundImage = global::JensMemory.Properties.Resources.playBoardButton;
             resources.ApplyResources(this.pigctureBoxAdvance, "pigctureBoxAdvance");
             this.pigctureBoxAdvance.Name = "pigctureBoxAdvance";
             this.pigctureBoxAdvance.TabStop = false;
             this.pigctureBoxAdvance.Click += new System.EventHandler(this.pictureBoxAdvance_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
+            this.label1.Name = "label1";
+            // 
             // BakGrundPopUp
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Fuchsia;
-            this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lbltimeChoice);
-            this.Controls.Add(this.trackBar1);
+            this.BackColor = System.Drawing.Color.Fuchsia;
+            this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BG3);
             this.Controls.Add(this.pigctureBoxAdvance);
             this.Controls.Add(this.BG2);
@@ -103,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pigctureBoxAdvance)).EndInit();
             this.ResumeLayout(false);
 
@@ -114,8 +111,7 @@
         private System.Windows.Forms.PictureBox BG2;
         private System.Windows.Forms.PictureBox BG3;
         private System.Windows.Forms.PictureBox BG1;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.PictureBox pigctureBoxAdvance;
-        private System.Windows.Forms.Label lbltimeChoice;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -87,7 +87,7 @@
             this.pbLargeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLargeBtn.Location = new System.Drawing.Point(620, 263);
             this.pbLargeBtn.Name = "pbLargeBtn";
-            this.pbLargeBtn.Size = new System.Drawing.Size(180, 81);
+            this.pbLargeBtn.Size = new System.Drawing.Size(180, 80);
             this.pbLargeBtn.TabIndex = 0;
             this.pbLargeBtn.TabStop = false;
             this.pbLargeBtn.Click += new System.EventHandler(this.pbLargeBtn_Click);
@@ -110,7 +110,7 @@
             this.pbMedBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMedBtn.Location = new System.Drawing.Point(335, 263);
             this.pbMedBtn.Name = "pbMedBtn";
-            this.pbMedBtn.Size = new System.Drawing.Size(180, 81);
+            this.pbMedBtn.Size = new System.Drawing.Size(180, 80);
             this.pbMedBtn.TabIndex = 0;
             this.pbMedBtn.TabStop = false;
             this.pbMedBtn.Click += new System.EventHandler(this.pbMedBtn_Click);
@@ -122,7 +122,7 @@
             this.pbSmallBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbSmallBtn.Location = new System.Drawing.Point(65, 263);
             this.pbSmallBtn.Name = "pbSmallBtn";
-            this.pbSmallBtn.Size = new System.Drawing.Size(180, 81);
+            this.pbSmallBtn.Size = new System.Drawing.Size(180, 80);
             this.pbSmallBtn.TabIndex = 0;
             this.pbSmallBtn.TabStop = false;
             this.pbSmallBtn.Click += new System.EventHandler(this.pbSmallBtn_Click);
@@ -132,7 +132,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ketchum", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
-            this.label1.Location = new System.Drawing.Point(50, 68);
+            this.label1.Location = new System.Drawing.Point(50, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(750, 97);
             this.label1.TabIndex = 1;

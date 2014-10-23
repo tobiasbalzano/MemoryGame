@@ -22,7 +22,6 @@ namespace JensMemory
             BG2.Size = new System.Drawing.Size(150, 150);
             BG3.Location = new System.Drawing.Point(BG3.Location.X+25, BG3.Location.Y+25);
             BG3.Size = new System.Drawing.Size(150, 150);
-            GameWindow.setDuration = trackBar1.Value;
 
         }
 
@@ -30,33 +29,33 @@ namespace JensMemory
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             SetCover(0);
-            BG1.Location = new System.Drawing.Point(22,140);
+            BG1.Location = new System.Drawing.Point(22,250);
             BG1.Size = new System.Drawing.Size(200, 200);
-            BG2.Location = new System.Drawing.Point(325+25, 140+25);
+            BG2.Location = new System.Drawing.Point(325+25, 250+25);
             BG2.Size = new System.Drawing.Size(150, 150);
-            BG3.Location = new System.Drawing.Point(628+25, 140+25);
+            BG3.Location = new System.Drawing.Point(628+25, 250+25);
             BG3.Size = new System.Drawing.Size(150, 150);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             SetCover(1);
-            BG1.Location = new System.Drawing.Point(22+25, 140+25);
+            BG1.Location = new System.Drawing.Point(22+25, 250+25);
             BG1.Size = new System.Drawing.Size(150, 150);
-            BG2.Location = new System.Drawing.Point(325, 140);
+            BG2.Location = new System.Drawing.Point(325, 250);
             BG2.Size = new System.Drawing.Size(200, 200);
-            BG3.Location = new System.Drawing.Point(628+25, 140+25);
+            BG3.Location = new System.Drawing.Point(628+25, 250+25);
             BG3.Size = new System.Drawing.Size(150, 150);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             SetCover(2);
-            BG1.Location = new System.Drawing.Point(22+25, 140+25);
+            BG1.Location = new System.Drawing.Point(22+25, 250+25);
             BG1.Size = new System.Drawing.Size(150, 150);
-            BG2.Location = new System.Drawing.Point(325+25, 140+25);
+            BG2.Location = new System.Drawing.Point(325+25, 250+25);
             BG2.Size = new System.Drawing.Size(150, 150);
-            BG3.Location = new System.Drawing.Point(628, 140);
+            BG3.Location = new System.Drawing.Point(628, 250);
             BG3.Size = new System.Drawing.Size(200, 200);
         }
 
@@ -68,15 +67,6 @@ namespace JensMemory
         private void pictureBoxAdvance_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        
-        
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            // Väljer betänketiden från trackbaren och sedan skriver ut den.
-            lbltimeChoice.Text = trackBar1.Value.ToString() + " seconds";
-            GameWindow.setDuration = trackBar1.Value;
-
         }
 
 

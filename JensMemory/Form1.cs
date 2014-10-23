@@ -287,6 +287,7 @@ namespace JensMemory
             if (activePlayer != null)
             {
                 pictureBoxTurn.BackgroundImage = activePlayer.potrait;
+                lblPlayerTurn.Text = activePlayer.name + "!";
             }
         }
 
@@ -578,6 +579,7 @@ namespace JensMemory
                     this.pnlCardHolder.Controls.Add(card);
                 }
             }
+            lblTurnAnnounce.Text = "It's your turn:";
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             allPoints = cards.Count() / 2;
             totalPoints = 0;
@@ -642,7 +644,7 @@ namespace JensMemory
         {
             totalPoints = allPoints;
             creditSong.Play();
-            exit.Show();
+            exit.ShowDialog(); 
         }
 
         public void delay(int _delayTime)

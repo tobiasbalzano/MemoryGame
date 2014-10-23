@@ -61,6 +61,8 @@
             this.lblP6ScoreN = new System.Windows.Forms.Label();
             this.pictureBoxP6 = new System.Windows.Forms.PictureBox();
             this.pictureBoxTurn = new System.Windows.Forms.PictureBox();
+            this.lblPlayerTurn = new System.Windows.Forms.Label();
+            this.lblTurnAnnounce = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splashBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP1)).BeginInit();
@@ -398,11 +400,32 @@
             // 
             this.pictureBoxTurn.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxTurn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTurn.Location = new System.Drawing.Point(9, 29);
+            this.pictureBoxTurn.Location = new System.Drawing.Point(12, 135);
             this.pictureBoxTurn.Name = "pictureBoxTurn";
             this.pictureBoxTurn.Size = new System.Drawing.Size(180, 180);
             this.pictureBoxTurn.TabIndex = 9;
             this.pictureBoxTurn.TabStop = false;
+            // 
+            // lblPlayerTurn
+            // 
+            this.lblPlayerTurn.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerTurn.Font = new System.Drawing.Font("Ketchum", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerTurn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
+            this.lblPlayerTurn.Location = new System.Drawing.Point(15, 318);
+            this.lblPlayerTurn.Name = "lblPlayerTurn";
+            this.lblPlayerTurn.Size = new System.Drawing.Size(222, 100);
+            this.lblPlayerTurn.TabIndex = 10;
+            // 
+            // lblTurnAnnounce
+            // 
+            this.lblTurnAnnounce.BackColor = System.Drawing.Color.Transparent;
+            this.lblTurnAnnounce.Font = new System.Drawing.Font("Ketchum", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnAnnounce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
+            this.lblTurnAnnounce.Location = new System.Drawing.Point(12, 32);
+            this.lblTurnAnnounce.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTurnAnnounce.Name = "lblTurnAnnounce";
+            this.lblTurnAnnounce.Size = new System.Drawing.Size(225, 129);
+            this.lblTurnAnnounce.TabIndex = 10;
             // 
             // GameWindow
             // 
@@ -411,9 +434,11 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.MainBG;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.pictureBoxTurn);
+            this.Controls.Add(this.lblTurnAnnounce);
+            this.Controls.Add(this.lblPlayerTurn);
             this.Controls.Add(this.splashBox);
             this.Controls.Add(this.pictureBoxP6);
-            this.Controls.Add(this.pictureBoxTurn);
             this.Controls.Add(this.lblP6ScoreN);
             this.Controls.Add(this.pictureBoxP5);
             this.Controls.Add(this.lblP5ScoreN);
@@ -491,6 +516,8 @@
         private System.Windows.Forms.Label lblP6ScoreN;
         private System.Windows.Forms.PictureBox pictureBoxP6;
         private System.Windows.Forms.PictureBox pictureBoxTurn;
+        private System.Windows.Forms.Label lblPlayerTurn;
+        private System.Windows.Forms.Label lblTurnAnnounce;
     }
 }
 
