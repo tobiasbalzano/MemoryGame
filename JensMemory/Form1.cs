@@ -411,7 +411,7 @@ namespace JensMemory
             allPoints = cards.Count() / 2;
             totalPoints = 0;
             activePlayer = playerTurn[0];
-            if (activePlayer.computer)
+            if (activePlayer.computer == true)
             {
                 ComputerPlay();
                 ComputerThinks.Start();
