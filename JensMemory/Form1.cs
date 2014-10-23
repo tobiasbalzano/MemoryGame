@@ -68,7 +68,7 @@ namespace JensMemory
         private List<Card> cards; //Lista som håller alla kort(objekt)
         private List<Card> flippedCards = new List<Card>(); //Lista som håller de 2st kort som skall jämföras
         public static List<Player> winnerList = new List<Player>(); // Lista som skall hålla vinnare
-        private List<Card> dontFlipAI = new List<Card>(); // lista av kort som AI inte får välja
+        public Card[] AICards = new Card[2];
         private List<Card> AIMemory = new List<Card>();
         #endregion
 
@@ -77,7 +77,7 @@ namespace JensMemory
         //int chooseTurn;
         Player activePlayer;
         int totalPoints;
-        int allPoints;
+        public int allPoints;
         SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
         ChooseCharacter CHAR;
         BakGrundPopUp BG;
@@ -126,32 +126,16 @@ namespace JensMemory
             Card card = (Card)sender;
             flipCards(card);
         }
-        // Metod som körs när timern räknat ned.
-
-        private void timerCompare_Tick(object sender, EventArgs e)
-        {
-            FlipBackCards();
-            //Stoppar timern...
-            timerCompare.Stop();
-            NewTurn();
-            updateGUI();
-        }
 
         public void NewTurn() //Metod för att byta spelarens tur
         {
             playerTurn.RemoveAt(0);
             playerTurn.Add(activePlayer);
             activePlayer = playerTurn[0];
-            timerTurn.Start();
             updateGUI();
             duration = setDuration; //startar om timer vid varje new turn
-            if (activePlayer.computer)
-            {
-                ComputerPlay();
-                ComputerThinks.Start();
-            }
-            
-
+            timerTurn.Start();
+            checkComp();
         }
 
         private void initializeGame()//Metoden för att starta om hela spelet från och med efter splash screen
@@ -175,7 +159,7 @@ namespace JensMemory
             lblP1ScoreN.Text = players[0].points.ToString();
             lblP2ScoreN.Text = players[1].points.ToString();
             lblTimerTurn.Text = duration.ToString();
-#region Update correct number of gui-elements
+            #region Update correct number of gui-elements
             if (updatePortraits == true)
             {
                 pictureBoxP1.BackgroundImage = players[0].potrait;
@@ -240,39 +224,39 @@ namespace JensMemory
                 }
                 updatePortraits = false;
             }
-#endregion
-             if (players.Count == 3)
-                {
-                    lblP3ScoreN.Text = players[2].points.ToString();
-                }
-                if (players.Count == 4)
-        {
-                    lblP3ScoreN.Text = players[2].points.ToString();
-                    lblP4ScoreN.Text = players[3].points.ToString();
-                }
-                if (players.Count == 5)
+            #endregion
+            if (players.Count == 3)
             {
-                    lblP3ScoreN.Text = players[2].points.ToString();
-                    lblP4ScoreN.Text = players[3].points.ToString();
-                    lblP5ScoreN.Text = players[4].points.ToString();
-                }
-                if (players.Count == 6)
-                {
-                    lblP3ScoreN.Text = players[2].points.ToString();
-                    lblP4ScoreN.Text = players[3].points.ToString();
-                    lblP5ScoreN.Text = players[4].points.ToString();
-                    lblP6ScoreN.Text = players[5].points.ToString();
-                }
+                lblP3ScoreN.Text = players[2].points.ToString();
+            }
+            if (players.Count == 4)
+            {
+                lblP3ScoreN.Text = players[2].points.ToString();
+                lblP4ScoreN.Text = players[3].points.ToString();
+            }
+            if (players.Count == 5)
+            {
+                lblP3ScoreN.Text = players[2].points.ToString();
+                lblP4ScoreN.Text = players[3].points.ToString();
+                lblP5ScoreN.Text = players[4].points.ToString();
+            }
+            if (players.Count == 6)
+            {
+                lblP3ScoreN.Text = players[2].points.ToString();
+                lblP4ScoreN.Text = players[3].points.ToString();
+                lblP5ScoreN.Text = players[4].points.ToString();
+                lblP6ScoreN.Text = players[5].points.ToString();
+            }
 
-            if(activePlayer != null)
+            if (activePlayer != null)
             {
                 pictureBoxTurn.BackgroundImage = activePlayer.potrait;
             }
         }
 
-        public static void CreatePlayer(string name, Image portrait, bool computer)
+        public static void CreatePlayer(string name, Image portrait, bool computer, int AILevel)
         {
-            Player player = new Player(name, portrait, computer);
+            Player player = new Player(name, portrait, computer, AILevel);
             players.Add(player);
             playerTurn.Add(player);
         }
@@ -309,6 +293,7 @@ namespace JensMemory
             foreach (Player p in players)
             {
                 p.points = 0;
+                p.aiMemory.Clear();
                 //chooseTurn = rand.Next(0, players.Count);
             }
             randomizeIdInCardList(cards.Count);
@@ -362,17 +347,6 @@ namespace JensMemory
                 card.flipped = true;
                 flippedCards.Add(card);
                 card.Image = picVector[card.id];
-
-                if (AIMemory.Count < 5)
-                {
-                    AIMemory.Add(card);
-                }
-                else
-                {
-                    AIMemory.RemoveAt(0);
-                    AIMemory.Add(card);
-                }
-
             }
             if (flippedCards.Count == 2)
             {
@@ -397,6 +371,13 @@ namespace JensMemory
 
                 }
                 // Tömmer listan för jämförelse
+                foreach (Card c in flippedCards)
+                {
+                    foreach (Player p in players)
+                    {
+                        p.aiMemory.Remove(c);
+                    }
+                }
                 flippedCards.Clear();
 
                 // poäng delas ut
@@ -409,69 +390,130 @@ namespace JensMemory
                     timerTurn.Stop();
                 }
 
-                if (activePlayer.computer == true)
-                {
-                    ComputerPlay();
-                    ComputerThinks.Start();
-
-                }
                 duration = setDuration;
                 //poäng skrivs ut
                 updateGUI();
-
-
+                delay(500);
+                checkComp();
             }
-
-            //min hemliga kommentar av Tobias
             else
             {
                 //timerCompare.Enabled = true;
-                timerCompare.Start();
+                //timerCompare.Start();
+                delay(500);
+                FlipBackCards();
             }
         }
 
-        public void ComputerPlay()
+        public Card[] ComputerPlay()
         {
-
+            int AiTurn = 0;
+            Card[] cCard = new Card[2];
+            Random randomWait = new Random();
             EventArgs e = new EventArgs();
-            foreach (Card c in AIMemory.ToList())
-            {
-                foreach (Card j in AIMemory.ToList())
-                {
-                    if (c.id == j.id && AIMemory.IndexOf(c) != AIMemory.IndexOf(j))
-                    {
-                        card_Click(c, e);
-                        card_Click(j, e);
-                        AIMemory.Remove(c);
-                        AIMemory.Remove(j);
-                    }
-                }
-            }
-
             Random computerRandom = new Random();
-            int cardIndex = computerRandom.Next(0, cards.Count);
 
-            while (cards[cardIndex].flipped && totalPoints != allPoints)
-            {
-                cardIndex = computerRandom.Next(0, cards.Count);
-            }
-            foreach (Card c in cards)
-            {
-                if (cardIndex == cards.IndexOf(c))
-                {
-                    card_Click(c, e);
-                }
-            }
             foreach (Card c in cards)
             {
                 c.Enabled = false;
             }
+
+            while (AiTurn < 2)
+            {
+                foreach (Player p in players)
+                {
+                    if (activePlayer.aiMemory.Count > 1)
+                    {
+                        foreach (Card c in p.aiMemory.ToList())
+                        {
+                            foreach (Card j in p.aiMemory.ToList())
+                            {
+                                if (c.id == j.id && p.aiMemory.IndexOf(c) != p.aiMemory.IndexOf(j))
+                                {
+                                    //delay(randomWait.Next(345, 1234));
+                                    //card_Click(c, e);
+                                    //delay(randomWait.Next(345, 1234));
+                                    //card_Click(j, e);
+                                    cCard[0] = c;
+                                    cCard[1] = j;
+
+
+
+                                    //p.aiMemory.Remove(c);
+                                    //p.aiMemory.Remove(j);
+
+
+                                    AiTurn = 2;
+                                    return cCard;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                if (AiTurn < 2)
+                {
+                    int cardIndex = computerRandom.Next(0, cards.Count);
+                    while (cards[cardIndex].flipped == true)
+                    {
+                        cardIndex = computerRandom.Next(0, cards.Count);
+                    }
+                    foreach (Card c in cards)
+                    {
+                        if (cardIndex == cards.IndexOf(c) && AiTurn == 0)
+                        {
+                            //delay(randomWait.Next(345, 1234));
+                            //card_Click(c, e);
+                            cCard[0] = c;
+                            activePlayer.aiMemory.Add(c);
+                            AiTurn = 1;
+
+                        }
+                        else if (cardIndex == cards.IndexOf(c) && AiTurn == 1)
+                        {
+                            if (cCard[0] != c)
+                            {
+                                //delay(randomWait.Next(345, 1234));
+                                //card_Click(c, e);
+                                cCard[1] = c;
+                                AiTurn = 2;
+
+
+                                activePlayer.aiMemory.Remove(cCard[0]);
+                                return cCard;
+
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+            return cCard;
         }
 
-        public void ComputerThinks_Tick(object sender, EventArgs e)
+        public void checkComp()
         {
-            ComputerThinks.Stop();
-            ComputerPlay();
+            Random randomWait = new Random();
+            EventArgs e = new EventArgs();
+            if (activePlayer.computer == true && totalPoints != allPoints)
+            {
+
+                AICards = ComputerPlay();
+                delay(randomWait.Next(250, 750));
+                card_Click(AICards[0], e);
+                delay(randomWait.Next(250, 750));
+                card_Click(AICards[1], e);
+
+            }
+
+
         }
 
         private void StartGame()
@@ -485,7 +527,6 @@ namespace JensMemory
             {
                 this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows + 5) * columns, 600);
             }
-
             //Nya kort instansieras och argument skickas med i för position på spelplanen
             for (int i = 0; i < columns; i++)
             {
@@ -495,23 +536,20 @@ namespace JensMemory
                     cards.Add(card);
                     this.pnlCardHolder.Controls.Add(card);
                 }
-
             }
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             allPoints = cards.Count() / 2;
             totalPoints = 0;
             activePlayer = playerTurn[0];
             updateGUI();
-            if (activePlayer.computer)
-            {
-                ComputerPlay();
-            }
+            duration = setDuration;
+            timerTurn.Start();
+            checkComp();
             foreach (Card card in cards)
             {
                 card.Enabled = true;
             }
-            duration = setDuration;
-            timerTurn.Start();
+            updateGUI();
         }
 
         private void splashTimer_Tick(object sender, EventArgs e)
@@ -534,24 +572,39 @@ namespace JensMemory
                 {
                     FlipBackCards();
                 }
-                NewTurn();
             }
         }
 
         private void FlipBackCards()
         {
             //Ändrar tillbaka bild till baksidan mm..
-            foreach (Card flippedcard in flippedCards)
+            foreach (Card flippedcard in flippedCards.ToList())
             {
+                // vid olida ändras kortens bild till baksida och listan töms
                 flippedcard.Image = coverVector[BG.coverChoice];
                 flippedcard.flipped = false;
+                foreach (Player p in players)
+                {
+                    if (p.aiMemory.Count < p.AILevel)
+                    {
+                        p.aiMemory.Add(flippedcard);
+                    }
+                    else
+                    {
+                        p.aiMemory.RemoveAt(0);
+                        p.aiMemory.Add(flippedcard);
+                    }
+                    flippedCards.Remove(flippedcard);
+                }
+
             }
             // Gör alla kort klickbara igen
             foreach (Card c in cards)
             {
                 c.Enabled = true;
             }
-            flippedCards.Clear();
+            updateGUI();
+            NewTurn();
 
         }
 
@@ -559,6 +612,17 @@ namespace JensMemory
         {
 
             exit.ShowDialog();
+        }
+
+        public void delay(int _delayTime)
+        {
+            bool bajs = true;
+            while (bajs == true)
+            {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(_delayTime);
+                bajs = false;
+            }
         }
     }
 }

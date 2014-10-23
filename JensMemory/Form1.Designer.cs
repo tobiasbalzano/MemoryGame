@@ -33,7 +33,6 @@
             this.splashBox = new System.Windows.Forms.PictureBox();
             this.timerCompare = new System.Windows.Forms.Timer(this.components);
             this.timerEndGame = new System.Windows.Forms.Timer(this.components);
-            this.ComputerThinks = new System.Windows.Forms.Timer(this.components);
             this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.timerTurn = new System.Windows.Forms.Timer(this.components);
             this.lblTimerTurn = new System.Windows.Forms.Label();
@@ -78,6 +77,7 @@
             // 
             this.pnlCardHolder.BackColor = System.Drawing.Color.Transparent;
             this.pnlCardHolder.Location = new System.Drawing.Point(240, 60);
+            this.pnlCardHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCardHolder.Name = "pnlCardHolder";
             this.pnlCardHolder.Size = new System.Drawing.Size(800, 600);
             this.pnlCardHolder.TabIndex = 0;
@@ -92,20 +92,10 @@
             this.splashBox.TabIndex = 6;
             this.splashBox.TabStop = false;
             // 
-            // timerCompare
-            // 
-            this.timerCompare.Interval = 1000;
-            this.timerCompare.Tick += new System.EventHandler(this.timerCompare_Tick);
-            // 
             // timerEndGame
             // 
             this.timerEndGame.Interval = 500;
             this.timerEndGame.Tick += new System.EventHandler(this.timerEndGame_Tick);
-            // 
-            // ComputerThinks
-            // 
-            this.ComputerThinks.Interval = 1000;
-            this.ComputerThinks.Tick += new System.EventHandler(this.ComputerThinks_Tick);
             // 
             // splashTimer
             // 
@@ -485,7 +475,6 @@
         private System.Windows.Forms.Panel pnlCardHolder;
         private System.Windows.Forms.Timer timerCompare;
         private System.Windows.Forms.Timer timerEndGame;
-        private System.Windows.Forms.Timer ComputerThinks;
         private System.Windows.Forms.Timer splashTimer;
         private System.Windows.Forms.PictureBox splashBox;
         private System.Windows.Forms.Timer timerTurn;

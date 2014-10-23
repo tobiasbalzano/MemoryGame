@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace JensMemory
 {
     // Vår klass för korten som ärver ur PictureBox
-    class Card : PictureBox
+    public class Card : PictureBox
     {
         // Delegat(metod som skickas som argument) vi begär en metod för klick-event som parameter
         // vid instansiering av nya kort
