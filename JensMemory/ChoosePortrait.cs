@@ -24,7 +24,7 @@ namespace JensMemory
         int click = 1;
         int i = 0;
         int amountOfPlayer;
-        List<int> Chosen = new List<int>(); //Lista med värde som visar valda silhouetter. 
+        List<int> Chosen = new List<int>(); //Lista med värde av silhouetter. 
         private static Image[] Choices = { Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S, Properties.Resources.trainer1S };
         private string[] TrainerName = { "Player1", "Player2", "Player3", "Player4", "Player5", "Player6" };
         private static Image[] Portraits = { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };

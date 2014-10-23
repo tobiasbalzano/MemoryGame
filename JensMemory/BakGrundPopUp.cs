@@ -49,9 +49,11 @@ namespace JensMemory
             coverChoice = choice;
             this.Close();
         }
-
+        
+        
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
+            // Väljer betänketiden från trackbaren och sedan skriver ut den.
             lbltimeChoice.Text = trackBar1.Value.ToString() + " seconds";
             GameWindow.setDuration = trackBar1.Value;
 
