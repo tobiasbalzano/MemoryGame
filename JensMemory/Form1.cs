@@ -164,6 +164,13 @@ namespace JensMemory
                 duration = setDuration; //startar om timer vid varje new turn
                 timerTurn.Start();
                 checkComp();
+                if (activePlayer.computer == false)
+                {
+                    foreach (Card c in cards)
+                    {
+                        c.Enabled = true;
+                    }
+                }
             }
         }
 
@@ -574,15 +581,11 @@ namespace JensMemory
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             allPoints = cards.Count() / 2;
             totalPoints = 0;
-            activePlayer = playerTurn[0];
-            updateGUI();
+            activePlayer = playerTurn[0];   
             duration = setDuration;
             timerTurn.Start();
+            updateGUI();
             checkComp();
-            foreach (Card card in cards)
-            {
-                card.Enabled = true;
-            }
             updateGUI();
         }
 
@@ -602,10 +605,6 @@ namespace JensMemory
             if (duration == 0)//Byter spelare när tiden räknat ner till 0.
             {
                 timerTurn.Stop();
-                foreach (Card c in cards)
-                {
-                    c.Enabled = false;
-                }
                 FlipBackCards();
             }
         }
@@ -635,10 +634,6 @@ namespace JensMemory
 
             }
             // Gör alla kort klickbara igen
-            foreach (Card c in cards)
-            {
-                c.Enabled = true;
-            }
             updateGUI();
             NewTurn();
         }
