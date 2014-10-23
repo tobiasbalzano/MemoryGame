@@ -40,7 +40,7 @@
             // 
             this.pbxWinner.Location = new System.Drawing.Point(108, 75);
             this.pbxWinner.Name = "pbxWinner";
-            this.pbxWinner.Size = new System.Drawing.Size(200, 200);
+            this.pbxWinner.Size = new System.Drawing.Size(300, 300);
             this.pbxWinner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxWinner.TabIndex = 3;
             this.pbxWinner.TabStop = false;
@@ -50,9 +50,9 @@
             this.lblEndGame.BackColor = System.Drawing.Color.Transparent;
             this.lblEndGame.Font = new System.Drawing.Font("Ketchum", 42F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndGame.ForeColor = System.Drawing.Color.Yellow;
-            this.lblEndGame.Location = new System.Drawing.Point(401, 75);
+            this.lblEndGame.Location = new System.Drawing.Point(414, 75);
             this.lblEndGame.Name = "lblEndGame";
-            this.lblEndGame.Size = new System.Drawing.Size(437, 200);
+            this.lblEndGame.Size = new System.Drawing.Size(417, 200);
             this.lblEndGame.TabIndex = 4;
             this.lblEndGame.Text = "Congratulations\r\nPlayer.Name!\r\nYou won!";
             // 
@@ -61,7 +61,7 @@
             this.btnStartOver.BackgroundImage = global::JensMemory.Properties.Resources.StartOver;
             this.btnStartOver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStartOver.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnStartOver.Location = new System.Drawing.Point(108, 333);
+            this.btnStartOver.Location = new System.Drawing.Point(156, 402);
             this.btnStartOver.Name = "btnStartOver";
             this.btnStartOver.Size = new System.Drawing.Size(250, 150);
             this.btnStartOver.TabIndex = 5;
@@ -73,7 +73,7 @@
             this.btnNewGame.BackgroundImage = global::JensMemory.Properties.Resources.new_game;
             this.btnNewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNewGame.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnNewGame.Location = new System.Drawing.Point(401, 333);
+            this.btnNewGame.Location = new System.Drawing.Point(449, 402);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(250, 150);
             this.btnNewGame.TabIndex = 6;
@@ -85,7 +85,7 @@
             this.btnExit.BackgroundImage = global::JensMemory.Properties.Resources.exit;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(327, 517);
+            this.btnExit.Location = new System.Drawing.Point(377, 615);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 50);
             this.btnExit.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
-            this.ClientSize = new System.Drawing.Size(850, 600);
+            this.ClientSize = new System.Drawing.Size(850, 720);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnStartOver);

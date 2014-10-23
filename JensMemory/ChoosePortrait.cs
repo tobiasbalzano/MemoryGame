@@ -66,7 +66,7 @@ namespace JensMemory
             }
             UpdateGUI();
         }
-              
+
         //Uppdaterar GUI efter varje knapptryck.
         private void UpdateGUI()
         {
@@ -86,10 +86,17 @@ namespace JensMemory
         {
             GameWindow.clickBackFX.Play();
             click++;
-            if (click % 2 == 0)
+            if (click % 3 == 2)
             {
-                Computer.Image = Properties.Resources.AIChoice;
+                Computer.Image = Properties.Resources.AILogo;
                 AI = true;
+                aiLevel = 5;
+            }
+            else if (click % 3 == 0)
+            {
+                Computer.Image = Properties.Resources.AILogoHard;
+                AI = true;
+                aiLevel = 11;
             }
             else
             {
@@ -97,19 +104,7 @@ namespace JensMemory
                 AI = false;
             }
         }
-        public void AIDifficulty_Click(object sender, EventArgs e)
-        {
-            PictureBox aiDifficulty = sender as PictureBox;
 
-            if(aiDifficulty.Image==null)
-            {
-                aiDifficulty.Image = Properties.Resources.choiceRing;
-            }
-            else
-            {
-                aiDifficulty.Image = null;
-            }
-        }
         //Knappen för att lägga till en spelare.
         private void Choose_Click(object sender, EventArgs e)
         {
@@ -154,22 +149,6 @@ namespace JensMemory
         private void ChooseCharacter_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = e.CloseReason == CloseReason.UserClosing;
-        }
-
-        private void pictureBoxEasy_Click(object sender, EventArgs e)
-        {
-            AIDifficulty_Click(sender, e);
-            aiLevel = 5;
-            pictureBoxEasy.BackgroundImage = Properties.Resources.boardSizeSmall;
-            pictureBoxHard.BackgroundImage = null;
-        }
-
-        private void pictureBoxHard_Click(object sender, EventArgs e)
-        {
-            AIDifficulty_Click(sender, e);
-            aiLevel = 11;
-            pictureBoxEasy.BackgroundImage = null;
-            pictureBoxHard.BackgroundImage = Properties.Resources.boardSizeLarge;                                             
         }
     }
 }

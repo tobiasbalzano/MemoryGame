@@ -268,6 +268,8 @@
     <None Include="Resources\boardSizeMid.png" />
     <None Include="Resources\boardSizeSmall.png" />
     <None Include="Resources\addButton.png" />
+    <None Include="Resources\AILogoHard.png" />
+    <None Include="Resources\AILogoNo.png" />
     <Content Include="Resources\card1.gif" />
     <Content Include="Resources\card2.gif" />
     <Content Include="Resources\card3.gif" />

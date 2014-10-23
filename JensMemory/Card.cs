@@ -28,7 +28,6 @@ namespace JensMemory
             Name = "card" + posX + "," + posY;
             Size = new System.Drawing.Size(size, size);
             TabIndex = 0;
-            Enabled = false;
             this.SizeMode = PictureBoxSizeMode.StretchImage;
             this.Click += new System.EventHandler(eventHandler); //lägger till klickmetoden
         }

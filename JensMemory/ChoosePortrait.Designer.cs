@@ -41,8 +41,6 @@
             this.Portrait = new System.Windows.Forms.PictureBox();
             this.LeftArrow = new System.Windows.Forms.PictureBox();
             this.lblChooseChar = new System.Windows.Forms.Label();
-            this.pictureBoxEasy = new System.Windows.Forms.PictureBox();
-            this.pictureBoxHard = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).BeginInit();
@@ -56,8 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEasy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHard)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -159,7 +155,7 @@
             // Computer
             // 
             this.Computer.BackColor = System.Drawing.Color.Transparent;
-            this.Computer.BackgroundImage = global::JensMemory.Properties.Resources.AILogo;
+            this.Computer.BackgroundImage = global::JensMemory.Properties.Resources.AILogoNo;
             this.Computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Computer.Location = new System.Drawing.Point(286, 434);
             this.Computer.Name = "Computer";
@@ -215,28 +211,6 @@
             this.lblChooseChar.TabIndex = 18;
             this.lblChooseChar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // pictureBoxEasy
-            // 
-            this.pictureBoxEasy.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeSmall;
-            this.pictureBoxEasy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEasy.Location = new System.Drawing.Point(206, 434);
-            this.pictureBoxEasy.Name = "pictureBoxEasy";
-            this.pictureBoxEasy.Size = new System.Drawing.Size(75, 28);
-            this.pictureBoxEasy.TabIndex = 19;
-            this.pictureBoxEasy.TabStop = false;
-            this.pictureBoxEasy.Click += new System.EventHandler(this.pictureBoxEasy_Click);
-            // 
-            // pictureBoxHard
-            // 
-            this.pictureBoxHard.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeLarge;
-            this.pictureBoxHard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxHard.Location = new System.Drawing.Point(206, 481);
-            this.pictureBoxHard.Name = "pictureBoxHard";
-            this.pictureBoxHard.Size = new System.Drawing.Size(75, 28);
-            this.pictureBoxHard.TabIndex = 21;
-            this.pictureBoxHard.TabStop = false;
-            this.pictureBoxHard.Click += new System.EventHandler(this.pictureBoxHard_Click);
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -256,8 +230,6 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
             this.ClientSize = new System.Drawing.Size(850, 720);
-            this.Controls.Add(this.pictureBoxHard);
-            this.Controls.Add(this.pictureBoxEasy);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblChooseChar);
             this.Controls.Add(this.btnPlay);
@@ -290,8 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEasy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,8 +281,6 @@
         private System.Windows.Forms.PictureBox Character6;
         private System.Windows.Forms.PictureBox btnPlay;
         private System.Windows.Forms.Label lblChooseChar;
-        private System.Windows.Forms.PictureBox pictureBoxEasy;
-        private System.Windows.Forms.PictureBox pictureBoxHard;
         private System.Windows.Forms.Label label1;
     }
 }
