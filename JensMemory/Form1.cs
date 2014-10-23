@@ -599,7 +599,7 @@ namespace JensMemory
             lblTimerTurn.Text = duration.ToString();
             duration--;
 
-            if (duration == -1)//Byter spelare när tiden räknat ner till 0.
+            if (duration == 0)//Byter spelare när tiden räknat ner till 0.
             {
                 timerTurn.Stop();
                 foreach (Card c in cards)
