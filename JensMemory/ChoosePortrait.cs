@@ -19,7 +19,7 @@ namespace JensMemory
             UpdateGUI();
             Portrait.BackgroundImage = Portraits[0];
         }
-
+        int aiLevel = 5;
         bool AI = false;
         int click = 1;
         int i = 0;
@@ -97,7 +97,19 @@ namespace JensMemory
                 AI = false;
             }
         }
-
+        public void AIDifficulty_Click(object sender, EventArgs e)
+        {
+            PictureBox aiDifficulty = sender as PictureBox;
+            
+            if(aiDifficulty.Image==null)
+            {
+                aiDifficulty.Image = Properties.Resources.choiceRing;
+            }
+            else
+            {
+                aiDifficulty.Image = null;
+            }
+        }
         //Knappen för att lägga till en spelare.
         private void Choose_Click(object sender, EventArgs e)
         {
@@ -110,7 +122,7 @@ namespace JensMemory
             {
                 if (amountOfPlayer <= EndRange)
                 {
-                    GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI); //Skapar en spelares namn, bild, människa eller AI.
+                    GameWindow.CreatePlayer(TrainerName[i], Portraits[i], AI, aiLevel); //Skapar en spelares namn, bild, människa eller AI.
                     Choices[amountOfPlayer] = Portraits[i]; //visar toma silhouetter för ej valda spelare.
                     Portraits[i] = Silhouettes[i]; //ändrar en tränares bild till silhouettes.
                     amountOfPlayer++;
@@ -140,6 +152,30 @@ namespace JensMemory
         private void ChooseCharacter_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = e.CloseReason == CloseReason.UserClosing;
+        }
+
+        private void pictureBoxEasy_Click(object sender, EventArgs e)
+        {
+            AIDifficulty_Click(sender, e);
+            aiLevel = 5;
+            pictureBoxHard.Image = null;
+            pictureBoxMedium.Image = null;
+        }
+
+        private void pictureBoxMedium_Click(object sender, EventArgs e)
+        {
+            AIDifficulty_Click(sender, e);
+            aiLevel = 8;
+            pictureBoxEasy.Image = null;
+            pictureBoxHard.Image = null;
+        }
+
+        private void pictureBoxHard_Click(object sender, EventArgs e)
+        {
+            AIDifficulty_Click(sender, e);
+            aiLevel = 11;
+            pictureBoxMedium.Image = null;
+            pictureBoxEasy.Image = null;                                               
         }
     }
 }

@@ -116,17 +116,20 @@ namespace JensMemory
                 // vid olida ändras kortens bild till baksida och listan töms
                 flippedcard.Image = coverVector[BG.coverChoice];
                 flippedcard.flipped = false;
-                
-                if (AIMemory.Count < 6)
+                foreach (Player p in players)
                 {
-                    AIMemory.Add(flippedcard);
+                    if (p.aiMemory.Count < p.AILevel)
+                    {
+                        p.aiMemory.Add(flippedcard);
+                    }
+                    else
+                    {
+                        p.aiMemory.RemoveAt(0);
+                        p.aiMemory.Add(flippedcard);
+                    }
+                    flippedCards.Remove(flippedcard);
                 }
-                else
-                {
-                    AIMemory.RemoveAt(0);
-                    AIMemory.Add(flippedcard);
-                }
-                flippedCards.Remove(flippedcard);
+
             }
             // Gör alla kort klickbara igen
             foreach (Card c in cards)
@@ -169,9 +172,9 @@ namespace JensMemory
 
         }
 
-        public static void CreatePlayer(string name, Image portrait, bool computer)
+        public static void CreatePlayer(string name, Image portrait, bool computer, int AILevel)
         {
-            Player player = new Player(name, portrait, computer);
+            Player player = new Player(name, portrait, computer, AILevel);
             players.Add(player);
             playerTurn.Add(player);
 
@@ -221,6 +224,7 @@ namespace JensMemory
             foreach (Player p in players)
             {
                 p.points = 0;
+                p.aiMemory.Clear();
                 //chooseTurn = rand.Next(0, players.Count);
             }
             randomizeIdInCardList(cards.Count);
@@ -301,11 +305,19 @@ namespace JensMemory
 
                 }
                 // Tömmer listan för jämförelse
+                foreach (Card c in flippedCards)
+                {
+                    foreach (Player p in players)
+                    {
+                        p.aiMemory.Remove(c);
+                    }
+                }
                 flippedCards.Clear();
 
                 // poäng delas ut
                 activePlayer.points++;
                 totalPoints++;
+
 
                 if (totalPoints == endGame)
                 {
@@ -345,27 +357,36 @@ namespace JensMemory
 
             while (AiTurn < 2)
             {
-                if (AIMemory.Count > 0)
+                foreach (Player p in players)
                 {
-                    foreach (Card c in AIMemory.ToList())
+                    if (activePlayer.aiMemory.Count > 1)
                     {
-                        foreach (Card j in AIMemory.ToList())
+                        foreach (Card c in p.aiMemory.ToList())
                         {
-                            if (c.id == j.id && AIMemory.IndexOf(c) != AIMemory.IndexOf(j))
+                            foreach (Card j in p.aiMemory.ToList())
                             {
-                                //delay(randomWait.Next(345, 1234));
-                                //card_Click(c, e);
-                                //delay(randomWait.Next(345, 1234));
-                                //card_Click(j, e);
-                                cCard[0] = c;
-                                cCard[1] = j;
-                                AIMemory.Remove(c);
-                                AIMemory.Remove(j);
-                                AiTurn = 2;
-                                return cCard;
+                                if (c.id == j.id && p.aiMemory.IndexOf(c) != p.aiMemory.IndexOf(j))
+                                {
+                                    //delay(randomWait.Next(345, 1234));
+                                    //card_Click(c, e);
+                                    //delay(randomWait.Next(345, 1234));
+                                    //card_Click(j, e);
+                                    cCard[0] = c;
+                                    cCard[1] = j;
+
+
+
+                                    //p.aiMemory.Remove(c);
+                                    //p.aiMemory.Remove(j);
+
+
+                                    AiTurn = 2;
+                                    return cCard;
+                                }
                             }
                         }
                     }
+
                 }
 
                 if (AiTurn < 2)
@@ -376,6 +397,7 @@ namespace JensMemory
                         cardIndex = computerRandom.Next(0, cards.Count);
                     }
 
+
                     foreach (Card c in cards)
                     {
                         if (cardIndex == cards.IndexOf(c) && AiTurn == 0)
@@ -383,8 +405,7 @@ namespace JensMemory
                             //delay(randomWait.Next(345, 1234));
                             //card_Click(c, e);
                             cCard[0] = c;
-
-                            AIMemory.Add(c);
+                            activePlayer.aiMemory.Add(c);
                             AiTurn = 1;
 
                         }
@@ -396,7 +417,11 @@ namespace JensMemory
                                 //card_Click(c, e);
                                 cCard[1] = c;
                                 AiTurn = 2;
+
+
+                                activePlayer.aiMemory.Remove(cCard[0]);
                                 return cCard;
+
                             }
                             else
                             {
@@ -416,13 +441,15 @@ namespace JensMemory
         {
             Random randomWait = new Random();
             EventArgs e = new EventArgs();
-            if (activePlayer.computer && totalPoints != endGame)
+            if (activePlayer.computer == true && totalPoints != endGame)
             {
+
                 AICards = ComputerPlay();
                 delay(randomWait.Next(250, 750));
                 card_Click(AICards[0], e);
                 delay(randomWait.Next(250, 750));
                 card_Click(AICards[1], e);
+
             }
 
 

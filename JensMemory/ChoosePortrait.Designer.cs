@@ -41,6 +41,9 @@
             this.Portrait = new System.Windows.Forms.PictureBox();
             this.LeftArrow = new System.Windows.Forms.PictureBox();
             this.lblChooseChar = new System.Windows.Forms.Label();
+            this.pictureBoxEasy = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMedium = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character5)).BeginInit();
@@ -53,6 +56,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEasy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedium)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHard)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -189,11 +195,41 @@
             this.lblChooseChar.TabIndex = 18;
             this.lblChooseChar.Text = "Choose Character";
             // 
+            // pictureBoxEasy
+            // 
+            this.pictureBoxEasy.Location = new System.Drawing.Point(394, 272);
+            this.pictureBoxEasy.Name = "pictureBoxEasy";
+            this.pictureBoxEasy.Size = new System.Drawing.Size(74, 28);
+            this.pictureBoxEasy.TabIndex = 19;
+            this.pictureBoxEasy.TabStop = false;
+            this.pictureBoxEasy.Click += new System.EventHandler(this.pictureBoxEasy_Click);
+            // 
+            // pictureBoxMedium
+            // 
+            this.pictureBoxMedium.Location = new System.Drawing.Point(394, 309);
+            this.pictureBoxMedium.Name = "pictureBoxMedium";
+            this.pictureBoxMedium.Size = new System.Drawing.Size(74, 28);
+            this.pictureBoxMedium.TabIndex = 20;
+            this.pictureBoxMedium.TabStop = false;
+            this.pictureBoxMedium.Click += new System.EventHandler(this.pictureBoxMedium_Click);
+            // 
+            // pictureBoxHard
+            // 
+            this.pictureBoxHard.Location = new System.Drawing.Point(394, 343);
+            this.pictureBoxHard.Name = "pictureBoxHard";
+            this.pictureBoxHard.Size = new System.Drawing.Size(74, 28);
+            this.pictureBoxHard.TabIndex = 21;
+            this.pictureBoxHard.TabStop = false;
+            this.pictureBoxHard.Click += new System.EventHandler(this.pictureBoxHard_Click);
+            // 
             // ChooseCharacter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 600);
+            this.Controls.Add(this.pictureBoxHard);
+            this.Controls.Add(this.pictureBoxMedium);
+            this.Controls.Add(this.pictureBoxEasy);
             this.Controls.Add(this.lblChooseChar);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.Character6);
@@ -226,6 +262,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEasy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMedium)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +285,8 @@
         private System.Windows.Forms.PictureBox Character6;
         private System.Windows.Forms.PictureBox btnPlay;
         private System.Windows.Forms.Label lblChooseChar;
+        private System.Windows.Forms.PictureBox pictureBoxEasy;
+        private System.Windows.Forms.PictureBox pictureBoxMedium;
+        private System.Windows.Forms.PictureBox pictureBoxHard;
     }
 }

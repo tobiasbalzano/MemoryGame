@@ -15,16 +15,18 @@ namespace JensMemory
         public bool turn { get; set; }
         public int id { get; set; }
         public Image potrait { get; set; }
-        //public int computerChoice1 { get; set; }  fråga adam
-        //public int computerChoice2 { get; set; }
         public bool computer;
+        public int AILevel = 5;
+        public List<Card> aiMemory = new List<Card>();
+        
 
         
-        public Player(string name,Image portrait, bool computer)
+        public Player(string name,Image portrait, bool computer, int AILevel)
         {
             this.name = name;
             this.computer=computer;
             this.potrait = portrait;
+            this.AILevel = AILevel;
             points = 0;
             turn = false;
 
