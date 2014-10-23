@@ -20,7 +20,7 @@ namespace JensMemory
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(4);
         }
     }
 }

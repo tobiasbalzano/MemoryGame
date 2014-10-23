@@ -160,16 +160,16 @@ namespace JensMemory
         {
             AIDifficulty_Click(sender, e);
             aiLevel = 5;
-            pictureBoxEasy.Image = null;
-            pictureBoxHard.Image = null;
+            pictureBoxEasy.BackgroundImage = Properties.Resources.boardSizeSmall;
+            pictureBoxHard.BackgroundImage = null;
         }
 
         private void pictureBoxHard_Click(object sender, EventArgs e)
         {
             AIDifficulty_Click(sender, e);
             aiLevel = 11;
-            pictureBoxEasy.Image = null;
-            pictureBoxHard.Image = null;                                             
+            pictureBoxEasy.BackgroundImage = null;
+            pictureBoxHard.BackgroundImage = Properties.Resources.boardSizeLarge;                                             
         }
     }
 }

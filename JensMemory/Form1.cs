@@ -558,6 +558,7 @@ namespace JensMemory
             }
             else
             {
+                this.pnlCardHolder.Location = new System.Drawing.Point(240, 60);
                 this.pnlCardHolder.Size = new System.Drawing.Size((600 / rows + 5) * columns, 600);
             }
             //Nya kort instansieras och argument skickas med i för position på spelplanen
@@ -601,10 +602,11 @@ namespace JensMemory
             if (duration == -1)//Byter spelare när tiden räknat ner till 0.
             {
                 timerTurn.Stop();
-                if (flippedCards.Count == 1)
+                foreach (Card c in cards)
                 {
-                    FlipBackCards();
+                    c.Enabled = false;
                 }
+                FlipBackCards();
             }
         }
 
@@ -645,6 +647,7 @@ namespace JensMemory
         {
             timerTurn.Enabled = false;
             totalPoints = allPoints;
+            
             exit.Show();
         }
 

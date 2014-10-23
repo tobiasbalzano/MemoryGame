@@ -217,18 +217,22 @@
             // 
             // pictureBoxEasy
             // 
-            this.pictureBoxEasy.Location = new System.Drawing.Point(206, 433);
+            this.pictureBoxEasy.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeSmall;
+            this.pictureBoxEasy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEasy.Location = new System.Drawing.Point(206, 434);
             this.pictureBoxEasy.Name = "pictureBoxEasy";
-            this.pictureBoxEasy.Size = new System.Drawing.Size(74, 28);
+            this.pictureBoxEasy.Size = new System.Drawing.Size(75, 28);
             this.pictureBoxEasy.TabIndex = 19;
             this.pictureBoxEasy.TabStop = false;
             this.pictureBoxEasy.Click += new System.EventHandler(this.pictureBoxEasy_Click);
             // 
             // pictureBoxHard
             // 
+            this.pictureBoxHard.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeLarge;
+            this.pictureBoxHard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxHard.Location = new System.Drawing.Point(206, 481);
             this.pictureBoxHard.Name = "pictureBoxHard";
-            this.pictureBoxHard.Size = new System.Drawing.Size(74, 28);
+            this.pictureBoxHard.Size = new System.Drawing.Size(75, 28);
             this.pictureBoxHard.TabIndex = 21;
             this.pictureBoxHard.TabStop = false;
             this.pictureBoxHard.Click += new System.EventHandler(this.pictureBoxHard_Click);
