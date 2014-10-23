@@ -34,6 +34,7 @@
             this.BG3 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.pigctureBoxAdvance = new System.Windows.Forms.PictureBox();
+            this.lbltimeChoice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).BeginInit();
@@ -88,6 +89,8 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbltimeChoice);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.BG3);
             this.Controls.Add(this.pigctureBoxAdvance);
@@ -113,5 +116,6 @@
         private System.Windows.Forms.PictureBox BG1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.PictureBox pigctureBoxAdvance;
+        private System.Windows.Forms.Label lbltimeChoice;
     }
 }

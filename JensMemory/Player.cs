@@ -23,11 +23,10 @@ namespace JensMemory
         public Player(string name,Image portrait, bool computer)
         {
             this.name = name;
-            this.computer=computer;
+            this.computer = computer;
             this.potrait = portrait;
             points = 0;
             turn = false;
-
         }
     }
 }

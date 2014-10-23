@@ -13,25 +13,24 @@ namespace JensMemory
     public partial class EndGame : Form
     {
         bool win;
-        
+
         public EndGame(bool _win)
         {
             win = _win;
 
             InitializeComponent();
 
-            if (win)
+            if (win)//skriver ut vem som vann.
             {
                 pbxWinner.Image = GameWindow.winnerList[0].potrait;
                 lblEndGame.Text = "Congratulations\n" + GameWindow.winnerList[0].name + "!\nYou won!";
             }
             else
             {
+                //skriver ut om det blir lika.
                 pbxWinner.Image = Properties.Resources.newpokemon;
                 lblEndGame.Text = "Draw!\nNobody wins!";
             }
         }
-
-
     }
 }

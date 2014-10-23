@@ -22,6 +22,8 @@ namespace JensMemory
             BG2.Size = new System.Drawing.Size(150, 150);
             BG3.Location = new System.Drawing.Point(BG3.Location.X+25, BG3.Location.Y+25);
             BG3.Size = new System.Drawing.Size(150, 150);
+            GameWindow.setDuration = trackBar1.Value;
+
         }
 
         //Där det används samma kod, är det bättre att använda en funktion.
@@ -66,6 +68,15 @@ namespace JensMemory
         private void pictureBoxAdvance_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            // Väljer betänketiden från trackbaren och sedan skriver ut den.
+            lbltimeChoice.Text = trackBar1.Value.ToString() + " seconds";
+            GameWindow.setDuration = trackBar1.Value;
+
         }
 
 
