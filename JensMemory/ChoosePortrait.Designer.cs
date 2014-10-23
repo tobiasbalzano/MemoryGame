@@ -204,7 +204,7 @@
             // 
             this.lblChooseChar.BackColor = System.Drawing.Color.Transparent;
             this.lblChooseChar.Font = new System.Drawing.Font("Ketchum", 64F);
-            this.lblChooseChar.ForeColor = System.Drawing.Color.Yellow;
+            this.lblChooseChar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblChooseChar.Location = new System.Drawing.Point(108, 80);
             this.lblChooseChar.Name = "lblChooseChar";
             this.lblChooseChar.Size = new System.Drawing.Size(604, 96);
@@ -215,7 +215,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ketchum", 60F);
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.label1.Location = new System.Drawing.Point(104, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(604, 93);

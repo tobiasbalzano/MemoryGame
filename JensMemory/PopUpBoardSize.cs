@@ -41,7 +41,7 @@ namespace JensMemory
             GameWindow.clickForwardFX.Play();
             boardArray = smallBoards;
             activeDimensions = smallDimensions;
-            bgPanel.BackColor = Color.Lime;
+            //bgPanel.BackColor = Color.Lime;
             updateGui();
         }
 
@@ -50,7 +50,7 @@ namespace JensMemory
             GameWindow.clickForwardFX.Play();
             boardArray = mediumBoards;
             activeDimensions = mediumDimensions;
-            bgPanel.BackColor = Color.Orange;
+            //bgPanel.BackColor = Color.Orange;
             updateGui();
         }
 
@@ -59,7 +59,7 @@ namespace JensMemory
             GameWindow.clickForwardFX.Play();
             boardArray = largeBoards;
             activeDimensions = largeDimensions;
-            bgPanel.BackColor = Color.Red;
+            //bgPanel.BackColor = Color.Red;
             updateGui();
         }
 
@@ -77,7 +77,7 @@ namespace JensMemory
         {
             GameWindow.clickBackFX.Play();
             choice = 0;
-            choice1Btn.Image = Properties.Resources.choiceRing;
+            choice1Btn.Image = Properties.Resources.AIChoice;
             choice2Btn.Image = null;
             choice3Btn.Image = null;
             confirmBtn.Enabled = true;
@@ -87,7 +87,7 @@ namespace JensMemory
         {
             GameWindow.clickBackFX.Play();
             choice = 1;
-            choice2Btn.Image = Properties.Resources.choiceRing;
+            choice2Btn.Image = Properties.Resources.AIChoice;
             choice1Btn.Image = null;
             choice3Btn.Image = null;
             confirmBtn.Enabled = true;
@@ -97,7 +97,7 @@ namespace JensMemory
         {
             GameWindow.clickBackFX.Play();
             choice = 2;
-            choice3Btn.Image = Properties.Resources.choiceRing;
+            choice3Btn.Image = Properties.Resources.AIChoice;
             choice2Btn.Image = null;
             choice1Btn.Image = null;
             confirmBtn.Enabled = true;

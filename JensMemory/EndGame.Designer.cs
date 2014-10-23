@@ -49,7 +49,7 @@
             // 
             this.lblEndGame.BackColor = System.Drawing.Color.Transparent;
             this.lblEndGame.Font = new System.Drawing.Font("Ketchum", 42F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndGame.ForeColor = System.Drawing.Color.Yellow;
+            this.lblEndGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblEndGame.Location = new System.Drawing.Point(414, 75);
             this.lblEndGame.Name = "lblEndGame";
             this.lblEndGame.Size = new System.Drawing.Size(417, 200);

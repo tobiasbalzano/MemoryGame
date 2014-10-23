@@ -35,7 +35,7 @@
             this.choice1Btn = new System.Windows.Forms.PictureBox();
             this.pbMedBtn = new System.Windows.Forms.PictureBox();
             this.pbSmallBtn = new System.Windows.Forms.PictureBox();
-            this.bgPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.choice2Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.confirmBtn)).BeginInit();
@@ -43,15 +43,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.choice1Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).BeginInit();
-            this.bgPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // choice3Btn
             // 
             this.choice3Btn.BackColor = System.Drawing.Color.Transparent;
-            this.choice3Btn.Location = new System.Drawing.Point(17, 295);
+            this.choice3Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.choice3Btn.Location = new System.Drawing.Point(620, 383);
             this.choice3Btn.Name = "choice3Btn";
-            this.choice3Btn.Size = new System.Drawing.Size(167, 134);
+            this.choice3Btn.Size = new System.Drawing.Size(180, 180);
             this.choice3Btn.TabIndex = 0;
             this.choice3Btn.TabStop = false;
             this.choice3Btn.Click += new System.EventHandler(this.choice3Btn_Click);
@@ -59,9 +59,10 @@
             // choice2Btn
             // 
             this.choice2Btn.BackColor = System.Drawing.Color.Transparent;
-            this.choice2Btn.Location = new System.Drawing.Point(17, 155);
+            this.choice2Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.choice2Btn.Location = new System.Drawing.Point(335, 383);
             this.choice2Btn.Name = "choice2Btn";
-            this.choice2Btn.Size = new System.Drawing.Size(167, 134);
+            this.choice2Btn.Size = new System.Drawing.Size(180, 180);
             this.choice2Btn.TabIndex = 0;
             this.choice2Btn.TabStop = false;
             this.choice2Btn.Click += new System.EventHandler(this.choice2Btn_Click);
@@ -84,9 +85,9 @@
             this.pbLargeBtn.BackColor = System.Drawing.Color.Transparent;
             this.pbLargeBtn.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeLarge;
             this.pbLargeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLargeBtn.Location = new System.Drawing.Point(87, 381);
+            this.pbLargeBtn.Location = new System.Drawing.Point(620, 263);
             this.pbLargeBtn.Name = "pbLargeBtn";
-            this.pbLargeBtn.Size = new System.Drawing.Size(221, 134);
+            this.pbLargeBtn.Size = new System.Drawing.Size(180, 81);
             this.pbLargeBtn.TabIndex = 0;
             this.pbLargeBtn.TabStop = false;
             this.pbLargeBtn.Click += new System.EventHandler(this.pbLargeBtn_Click);
@@ -94,9 +95,10 @@
             // choice1Btn
             // 
             this.choice1Btn.BackColor = System.Drawing.Color.Transparent;
-            this.choice1Btn.Location = new System.Drawing.Point(17, 15);
+            this.choice1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.choice1Btn.Location = new System.Drawing.Point(65, 383);
             this.choice1Btn.Name = "choice1Btn";
-            this.choice1Btn.Size = new System.Drawing.Size(167, 134);
+            this.choice1Btn.Size = new System.Drawing.Size(180, 180);
             this.choice1Btn.TabIndex = 0;
             this.choice1Btn.TabStop = false;
             this.choice1Btn.Click += new System.EventHandler(this.choice1Btn_Click);
@@ -106,9 +108,9 @@
             this.pbMedBtn.BackColor = System.Drawing.Color.Transparent;
             this.pbMedBtn.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeMid;
             this.pbMedBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMedBtn.Location = new System.Drawing.Point(87, 241);
+            this.pbMedBtn.Location = new System.Drawing.Point(335, 263);
             this.pbMedBtn.Name = "pbMedBtn";
-            this.pbMedBtn.Size = new System.Drawing.Size(221, 134);
+            this.pbMedBtn.Size = new System.Drawing.Size(180, 81);
             this.pbMedBtn.TabIndex = 0;
             this.pbMedBtn.TabStop = false;
             this.pbMedBtn.Click += new System.EventHandler(this.pbMedBtn_Click);
@@ -118,23 +120,24 @@
             this.pbSmallBtn.BackColor = System.Drawing.Color.Transparent;
             this.pbSmallBtn.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeSmall;
             this.pbSmallBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSmallBtn.Location = new System.Drawing.Point(87, 101);
+            this.pbSmallBtn.Location = new System.Drawing.Point(65, 263);
             this.pbSmallBtn.Name = "pbSmallBtn";
-            this.pbSmallBtn.Size = new System.Drawing.Size(221, 134);
+            this.pbSmallBtn.Size = new System.Drawing.Size(180, 81);
             this.pbSmallBtn.TabIndex = 0;
             this.pbSmallBtn.TabStop = false;
             this.pbSmallBtn.Click += new System.EventHandler(this.pbSmallBtn_Click);
             // 
-            // bgPanel
+            // label1
             // 
-            this.bgPanel.BackColor = System.Drawing.Color.Transparent;
-            this.bgPanel.Controls.Add(this.choice3Btn);
-            this.bgPanel.Controls.Add(this.choice2Btn);
-            this.bgPanel.Controls.Add(this.choice1Btn);
-            this.bgPanel.Location = new System.Drawing.Point(555, 86);
-            this.bgPanel.Name = "bgPanel";
-            this.bgPanel.Size = new System.Drawing.Size(201, 445);
-            this.bgPanel.TabIndex = 1;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Ketchum", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
+            this.label1.Location = new System.Drawing.Point(50, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(750, 97);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Select board size";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // PopUpBoardSize
             // 
@@ -143,8 +146,11 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
             this.ClientSize = new System.Drawing.Size(850, 720);
-            this.Controls.Add(this.bgPanel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.choice3Btn);
             this.Controls.Add(this.confirmBtn);
+            this.Controls.Add(this.choice2Btn);
+            this.Controls.Add(this.choice1Btn);
             this.Controls.Add(this.pbLargeBtn);
             this.Controls.Add(this.pbMedBtn);
             this.Controls.Add(this.pbSmallBtn);
@@ -161,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.choice1Btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).EndInit();
-            this.bgPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -175,6 +180,6 @@
         private System.Windows.Forms.PictureBox choice2Btn;
         private System.Windows.Forms.PictureBox choice3Btn;
         private System.Windows.Forms.PictureBox confirmBtn;
-        private System.Windows.Forms.Panel bgPanel;
+        private System.Windows.Forms.Label label1;
     }
 }

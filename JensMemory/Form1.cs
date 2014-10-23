@@ -640,7 +640,7 @@ namespace JensMemory
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            timerTurn.Enabled = false;
+            //timerTurn.Enabled = false;
             totalPoints = allPoints;
             creditSong.Play();
             exit.Show();

@@ -84,7 +84,7 @@
             // splashBox
             // 
             this.splashBox.Image = global::JensMemory.Properties.Resources.pokemonSplash;
-            this.splashBox.Location = new System.Drawing.Point(0, 0);
+            this.splashBox.Location = new System.Drawing.Point(1271, 74);
             this.splashBox.Margin = new System.Windows.Forms.Padding(0);
             this.splashBox.Name = "splashBox";
             this.splashBox.Size = new System.Drawing.Size(1280, 720);
@@ -132,7 +132,7 @@
             // 
             this.lblNameP1.BackColor = System.Drawing.Color.Transparent;
             this.lblNameP1.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameP1.ForeColor = System.Drawing.Color.Yellow;
+            this.lblNameP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP1.Location = new System.Drawing.Point(1141, 71);
             this.lblNameP1.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameP1.Name = "lblNameP1";
@@ -143,7 +143,7 @@
             // 
             this.lblp1Score.BackColor = System.Drawing.Color.Transparent;
             this.lblp1Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblp1Score.ForeColor = System.Drawing.Color.Yellow;
+            this.lblp1Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp1Score.Location = new System.Drawing.Point(1148, 135);
             this.lblp1Score.Margin = new System.Windows.Forms.Padding(0);
             this.lblp1Score.Name = "lblp1Score";
@@ -156,7 +156,7 @@
             this.lblP1ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP1ScoreN.BackColor = System.Drawing.Color.Transparent;
             this.lblP1ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP1ScoreN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblP1ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP1ScoreN.Location = new System.Drawing.Point(1214, 118);
             this.lblP1ScoreN.Margin = new System.Windows.Forms.Padding(0);
             this.lblP1ScoreN.Name = "lblP1ScoreN";
@@ -168,7 +168,7 @@
             // 
             this.lblNameP2.BackColor = System.Drawing.Color.Transparent;
             this.lblNameP2.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameP2.ForeColor = System.Drawing.Color.Yellow;
+            this.lblNameP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP2.Location = new System.Drawing.Point(1141, 172);
             this.lblNameP2.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameP2.Name = "lblNameP2";
@@ -179,7 +179,7 @@
             // 
             this.lblp2Score.BackColor = System.Drawing.Color.Transparent;
             this.lblp2Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblp2Score.ForeColor = System.Drawing.Color.Yellow;
+            this.lblp2Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp2Score.Location = new System.Drawing.Point(1148, 236);
             this.lblp2Score.Margin = new System.Windows.Forms.Padding(0);
             this.lblp2Score.Name = "lblp2Score";
@@ -192,7 +192,7 @@
             this.lblP2ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP2ScoreN.BackColor = System.Drawing.Color.Transparent;
             this.lblP2ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP2ScoreN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblP2ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP2ScoreN.Location = new System.Drawing.Point(1214, 219);
             this.lblP2ScoreN.Margin = new System.Windows.Forms.Padding(0);
             this.lblP2ScoreN.Name = "lblP2ScoreN";
@@ -214,7 +214,7 @@
             // 
             this.lblNameP3.BackColor = System.Drawing.Color.Transparent;
             this.lblNameP3.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameP3.ForeColor = System.Drawing.Color.Yellow;
+            this.lblNameP3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP3.Location = new System.Drawing.Point(1141, 273);
             this.lblNameP3.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameP3.Name = "lblNameP3";
@@ -225,7 +225,7 @@
             // 
             this.lblp3Score.BackColor = System.Drawing.Color.Transparent;
             this.lblp3Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblp3Score.ForeColor = System.Drawing.Color.Yellow;
+            this.lblp3Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp3Score.Location = new System.Drawing.Point(1148, 337);
             this.lblp3Score.Margin = new System.Windows.Forms.Padding(0);
             this.lblp3Score.Name = "lblp3Score";
@@ -238,7 +238,7 @@
             this.lblP3ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP3ScoreN.BackColor = System.Drawing.Color.Transparent;
             this.lblP3ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP3ScoreN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblP3ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP3ScoreN.Location = new System.Drawing.Point(1214, 320);
             this.lblP3ScoreN.Margin = new System.Windows.Forms.Padding(0);
             this.lblP3ScoreN.Name = "lblP3ScoreN";
@@ -260,7 +260,7 @@
             // 
             this.lblNameP4.BackColor = System.Drawing.Color.Transparent;
             this.lblNameP4.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameP4.ForeColor = System.Drawing.Color.Yellow;
+            this.lblNameP4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP4.Location = new System.Drawing.Point(1141, 374);
             this.lblNameP4.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameP4.Name = "lblNameP4";
@@ -271,7 +271,7 @@
             // 
             this.lblp4Score.BackColor = System.Drawing.Color.Transparent;
             this.lblp4Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblp4Score.ForeColor = System.Drawing.Color.Yellow;
+            this.lblp4Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp4Score.Location = new System.Drawing.Point(1148, 438);
             this.lblp4Score.Margin = new System.Windows.Forms.Padding(0);
             this.lblp4Score.Name = "lblp4Score";
@@ -284,7 +284,7 @@
             this.lblP4ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP4ScoreN.BackColor = System.Drawing.Color.Transparent;
             this.lblP4ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP4ScoreN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblP4ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP4ScoreN.Location = new System.Drawing.Point(1214, 421);
             this.lblP4ScoreN.Margin = new System.Windows.Forms.Padding(0);
             this.lblP4ScoreN.Name = "lblP4ScoreN";
@@ -306,7 +306,7 @@
             // 
             this.lblNameP5.BackColor = System.Drawing.Color.Transparent;
             this.lblNameP5.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameP5.ForeColor = System.Drawing.Color.Yellow;
+            this.lblNameP5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP5.Location = new System.Drawing.Point(1141, 475);
             this.lblNameP5.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameP5.Name = "lblNameP5";
@@ -317,7 +317,7 @@
             // 
             this.lblp5Score.BackColor = System.Drawing.Color.Transparent;
             this.lblp5Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblp5Score.ForeColor = System.Drawing.Color.Yellow;
+            this.lblp5Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp5Score.Location = new System.Drawing.Point(1148, 539);
             this.lblp5Score.Margin = new System.Windows.Forms.Padding(0);
             this.lblp5Score.Name = "lblp5Score";
@@ -330,7 +330,7 @@
             this.lblP5ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP5ScoreN.BackColor = System.Drawing.Color.Transparent;
             this.lblP5ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP5ScoreN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblP5ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP5ScoreN.Location = new System.Drawing.Point(1214, 522);
             this.lblP5ScoreN.Margin = new System.Windows.Forms.Padding(0);
             this.lblP5ScoreN.Name = "lblP5ScoreN";
@@ -352,7 +352,7 @@
             // 
             this.lblNameP6.BackColor = System.Drawing.Color.Transparent;
             this.lblNameP6.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameP6.ForeColor = System.Drawing.Color.Yellow;
+            this.lblNameP6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP6.Location = new System.Drawing.Point(1141, 576);
             this.lblNameP6.Margin = new System.Windows.Forms.Padding(0);
             this.lblNameP6.Name = "lblNameP6";
@@ -363,7 +363,7 @@
             // 
             this.lblp6Score.BackColor = System.Drawing.Color.Transparent;
             this.lblp6Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblp6Score.ForeColor = System.Drawing.Color.Yellow;
+            this.lblp6Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp6Score.Location = new System.Drawing.Point(1148, 640);
             this.lblp6Score.Margin = new System.Windows.Forms.Padding(0);
             this.lblp6Score.Name = "lblp6Score";
@@ -376,7 +376,7 @@
             this.lblP6ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblP6ScoreN.BackColor = System.Drawing.Color.Transparent;
             this.lblP6ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP6ScoreN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblP6ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP6ScoreN.Location = new System.Drawing.Point(1214, 623);
             this.lblP6ScoreN.Margin = new System.Windows.Forms.Padding(0);
             this.lblP6ScoreN.Name = "lblP6ScoreN";
