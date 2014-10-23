@@ -45,7 +45,7 @@ namespace JensMemory
                                       Properties.Resources.pic54, Properties.Resources.pic55,
                                       Properties.Resources.pic56, Properties.Resources.pic57,
                                       Properties.Resources.pic58, Properties.Resources.pic59};
-        
+
 
 
         // bildvektor för omslag/baksida. kommer hålla 3st olika för VG
@@ -88,7 +88,7 @@ namespace JensMemory
         int duration;
 
         public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
-        
+
         public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
         {
             InitializeComponent();
@@ -212,7 +212,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
-                Application.Exit();
+                exit.Show();
             }
 
 
@@ -479,6 +479,6 @@ namespace JensMemory
             }
             flippedCards.Clear();
 
+        }
     }
-}
 }
