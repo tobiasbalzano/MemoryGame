@@ -77,8 +77,23 @@ namespace JensMemory
         //int chooseTurn;
         Player activePlayer;
         int totalPoints;
+
+        #region //Alla ljud
+        public static SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
+        public static SoundPlayer clickForwardFX = new SoundPlayer(Properties.Resources.ClickForward);
+        public static SoundPlayer clickBackFX = new SoundPlayer(Properties.Resources.ClickBack);
+        public static SoundPlayer clickBigFX = new SoundPlayer(Properties.Resources.ClickBig);
+        public static SoundPlayer clickNextFX = new SoundPlayer(Properties.Resources.NextFx);
+        public static SoundPlayer gameBoardFX = new SoundPlayer(Properties.Resources.GameWindow);
+        public static SoundPlayer cardFlipFX = new SoundPlayer(Properties.Resources.CardFlip);
+        public static SoundPlayer flipBackFX = new SoundPlayer(Properties.Resources.CardFlipBack);
+        public static SoundPlayer pointsFX = new SoundPlayer(Properties.Resources.PairPoint);
+        public static SoundPlayer winFX = new SoundPlayer(Properties.Resources.WinSound);
+        public static SoundPlayer loseDrawFX = new SoundPlayer(Properties.Resources.CompWinDraw);
+        public static SoundPlayer creditSong = new SoundPlayer(Properties.Resources.PThemeS);
+        #endregion
+
         public int allPoints;
-        SoundPlayer splashSound = new SoundPlayer(Properties.Resources.pokemonSplash1);
         ChooseCharacter CHAR;
         BakGrundPopUp BG;
         PopUpBoardSize boardSize;
@@ -94,6 +109,17 @@ namespace JensMemory
         {
             InitializeComponent();
             splashSound.Play();
+            clickForwardFX.Load();
+            clickBackFX.Load();
+            clickBigFX.Load();
+            clickNextFX.Load();
+            gameBoardFX.Load();
+            cardFlipFX.Load();
+            flipBackFX.Load();
+            pointsFX.Load();
+            winFX.Load();
+            loseDrawFX.Load();
+            creditSong.Load();
             splashTimer.Enabled = true;
             updatePortraits = true;
         }
@@ -284,6 +310,7 @@ namespace JensMemory
             }
             else if (result == DialogResult.Cancel)
             {
+                creditSong.Play();
                 exit.ShowDialog();
             }
         }
@@ -341,6 +368,7 @@ namespace JensMemory
 
         private void flipCards(Card card)
         {
+            cardFlipFX.Play();
             if (card.flipped == false)
             {
                 // kortet vänds och byter bild samt läggs till i lista för att jämföras
@@ -383,6 +411,7 @@ namespace JensMemory
                 // poäng delas ut
                 activePlayer.points++;
                 totalPoints++;
+                pointsFX.Play();
 
                 if (totalPoints == allPoints)
                 {
@@ -518,6 +547,7 @@ namespace JensMemory
 
         private void StartGame()
         {
+            gameBoardFX.Play();
             if (columns == rows)
             {
                 this.pnlCardHolder.Size = new System.Drawing.Size(600, 600);
@@ -577,6 +607,7 @@ namespace JensMemory
 
         private void FlipBackCards()
         {
+            flipBackFX.Play();
             //Ändrar tillbaka bild till baksidan mm..
             foreach (Card flippedcard in flippedCards.ToList())
             {
@@ -610,8 +641,9 @@ namespace JensMemory
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-            exit.ShowDialog();
+            timerTurn.Enabled = false;
+            totalPoints = allPoints;
+            exit.Show();
         }
 
         public void delay(int _delayTime)

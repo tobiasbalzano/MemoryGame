@@ -60,7 +60,7 @@ namespace JensMemory
             BG3.Size = new System.Drawing.Size(200, 200);
         }
 
-        void SetCover(int choice) 
+        void SetCover(int choice)
         {
             coverChoice = choice;
         }
@@ -69,8 +69,8 @@ namespace JensMemory
         {
             this.Close();
         }
-
-
+        
+        
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             // Väljer betänketiden från trackbaren och sedan skriver ut den.

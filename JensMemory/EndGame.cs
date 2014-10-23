@@ -22,15 +22,32 @@ namespace JensMemory
 
             if (win)//skriver ut vem som vann.
             {
+                GameWindow.winFX.Play();
                 pbxWinner.Image = GameWindow.winnerList[0].potrait;
                 lblEndGame.Text = "Congratulations\n" + GameWindow.winnerList[0].name + "!\nYou won!";
             }
             else
             {
+                GameWindow.loseDrawFX.Play();
                 //skriver ut om det blir lika.
                 pbxWinner.Image = Properties.Resources.newpokemon;
                 lblEndGame.Text = "Draw!\nNobody wins!";
             }
+        }
+
+        private void btnStartOver_Click(object sender, EventArgs e)
+        {
+            GameWindow.clickForwardFX.Play();
+        }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            GameWindow.clickForwardFX.Play();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            GameWindow.clickBigFX.Play();
         }
     }
 }

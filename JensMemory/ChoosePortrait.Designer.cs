@@ -205,7 +205,6 @@
             this.Portrait.Size = new System.Drawing.Size(247, 248);
             this.Portrait.TabIndex = 1;
             this.Portrait.TabStop = false;
-            this.Portrait.Click += new System.EventHandler(this.Portrait_Click);
             // 
             // LeftArrow
             // 
@@ -289,7 +288,6 @@
             this.Text = "ChooseCharacter";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChooseCharacter_FormClosing);
-            this.Load += new System.EventHandler(this.ChooseCharacter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character5)).EndInit();

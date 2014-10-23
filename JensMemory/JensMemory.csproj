@@ -166,6 +166,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\WinSound.wav" />
+    <None Include="Resources\PThemeS.wav" />
+    <None Include="Resources\PairPoint.wav" />
+    <None Include="Resources\NextFx.wav" />
+    <None Include="Resources\GameWindow.wav" />
     <None Include="Resources\newpokemon2.png" />
     <None Include="Resources\newpokemon.png" />
     <None Include="Resources\newpokeball.png" />
@@ -274,6 +279,12 @@
     <None Include="Resources\Character.jpg" />
     <None Include="Resources\ChooseButton.jpg" />
     <None Include="Resources\choiceRing.png" />
+    <None Include="Resources\ClickForward.wav" />
+    <None Include="Resources\CompWinDraw.wav" />
+    <None Include="Resources\CardFlip.wav" />
+    <None Include="Resources\CardFlipBack.wav" />
+    <None Include="Resources\ClickBack.wav" />
+    <None Include="Resources\ClickBig.wav" />
     <Content Include="Resources\cover.gif" />
     <None Include="Resources\trainer6S.png" />
     <None Include="Resources\trainer6.png" />

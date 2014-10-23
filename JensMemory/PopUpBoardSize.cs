@@ -38,6 +38,7 @@ namespace JensMemory
         }
         private void pbSmallBtn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickForwardFX.Play();
             boardArray = smallBoards;
             activeDimensions = smallDimensions;
             bgPanel.BackColor = Color.Lime;
@@ -46,6 +47,7 @@ namespace JensMemory
 
         private void pbMedBtn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickForwardFX.Play();
             boardArray = mediumBoards;
             activeDimensions = mediumDimensions;
             bgPanel.BackColor = Color.Orange;
@@ -54,6 +56,7 @@ namespace JensMemory
 
         private void pbLargeBtn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickForwardFX.Play();
             boardArray = largeBoards;
             activeDimensions = largeDimensions;
             bgPanel.BackColor = Color.Red;
@@ -62,6 +65,7 @@ namespace JensMemory
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickNextFX.Play();
             sendDimensions = activeDimensions[choice];
             GameWindow.columns = sendDimensions.collumns;
             GameWindow.rows = sendDimensions.rows;
@@ -71,6 +75,7 @@ namespace JensMemory
 
         private void choice1Btn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickBackFX.Play();
             choice = 0;
             choice1Btn.Image = Properties.Resources.choiceRing;
             choice2Btn.Image = null;
@@ -80,6 +85,7 @@ namespace JensMemory
 
         private void choice2Btn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickBackFX.Play();
             choice = 1;
             choice2Btn.Image = Properties.Resources.choiceRing;
             choice1Btn.Image = null;
@@ -89,6 +95,7 @@ namespace JensMemory
 
         private void choice3Btn_Click(object sender, EventArgs e)
         {
+            GameWindow.clickBackFX.Play();
             choice = 2;
             choice3Btn.Image = Properties.Resources.choiceRing;
             choice2Btn.Image = null;

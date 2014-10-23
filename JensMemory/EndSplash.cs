@@ -13,14 +13,9 @@ namespace JensMemory
     public partial class EndSplash : Form
     {
         //Lägga till manus.
-        public EndSplash() 
+        public EndSplash()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
