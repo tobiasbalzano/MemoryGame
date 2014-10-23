@@ -155,13 +155,16 @@ namespace JensMemory
 
         public void NewTurn() //Metod för att byta spelarens tur
         {
-            playerTurn.RemoveAt(0);
-            playerTurn.Add(activePlayer);
-            activePlayer = playerTurn[0];
-            updateGUI();
-            duration = setDuration; //startar om timer vid varje new turn
-            timerTurn.Start();
-            checkComp();
+            if (totalPoints != allPoints)
+            {
+                playerTurn.RemoveAt(0);
+                playerTurn.Add(activePlayer);
+                activePlayer = playerTurn[0];
+                updateGUI();
+                duration = setDuration; //startar om timer vid varje new turn
+                timerTurn.Start();
+                checkComp();
+            }
         }
 
         private void initializeGame()//Metoden för att starta om hela spelet från och med efter splash screen
@@ -636,7 +639,6 @@ namespace JensMemory
             }
             updateGUI();
             NewTurn();
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

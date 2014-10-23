@@ -160,14 +160,6 @@ namespace JensMemory
         {
             AIDifficulty_Click(sender, e);
             aiLevel = 5;
-            pictureBoxHard.Image = null;
-            pictureBoxMedium.Image = null;
-        }
-
-        private void pictureBoxMedium_Click(object sender, EventArgs e)
-        {
-            AIDifficulty_Click(sender, e);
-            aiLevel = 8;
             pictureBoxEasy.Image = null;
             pictureBoxHard.Image = null;
         }
@@ -176,8 +168,8 @@ namespace JensMemory
         {
             AIDifficulty_Click(sender, e);
             aiLevel = 11;
-            pictureBoxMedium.Image = null;
-            pictureBoxEasy.Image = null;                                               
+            pictureBoxEasy.Image = null;
+            pictureBoxHard.Image = null;                                             
         }
     }
 }
