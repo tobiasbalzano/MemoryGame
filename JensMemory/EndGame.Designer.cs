@@ -47,11 +47,12 @@
             // 
             // lblEndGame
             // 
-            this.lblEndGame.AutoSize = true;
-            this.lblEndGame.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndGame.Location = new System.Drawing.Point(353, 75);
+            this.lblEndGame.BackColor = System.Drawing.Color.Transparent;
+            this.lblEndGame.Font = new System.Drawing.Font("Ketchum", 42F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndGame.ForeColor = System.Drawing.Color.Yellow;
+            this.lblEndGame.Location = new System.Drawing.Point(401, 75);
             this.lblEndGame.Name = "lblEndGame";
-            this.lblEndGame.Size = new System.Drawing.Size(298, 135);
+            this.lblEndGame.Size = new System.Drawing.Size(437, 200);
             this.lblEndGame.TabIndex = 4;
             this.lblEndGame.Text = "Congratulations\r\nPlayer.Name!\r\nYou won!";
             // 
@@ -95,7 +96,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.BackColor = System.Drawing.Color.Fuchsia;
+            this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
+            this.ClientSize = new System.Drawing.Size(850, 600);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnStartOver);
@@ -105,9 +108,9 @@
             this.Name = "EndGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EndGame";
+            this.TransparencyKey = System.Drawing.Color.Fuchsia;
             ((System.ComponentModel.ISupportInitialize)(this.pbxWinner)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -653,12 +653,12 @@ namespace JensMemory
 
         public void delay(int _delayTime)
         {
-            bool bajs = true;
-            while (bajs == true)
+            int increment = 0;
+            while (increment < _delayTime)
             {
                 Application.DoEvents();
-                System.Threading.Thread.Sleep(_delayTime);
-                bajs = false;
+                System.Threading.Thread.Sleep(1);
+                increment++;
             }
         }
     }
