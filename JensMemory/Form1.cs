@@ -335,6 +335,8 @@ namespace JensMemory
                 p.aiMemory.Clear();
                 //chooseTurn = rand.Next(0, players.Count);
             }
+
+            winnerList.Clear();
             randomizeIdInCardList(cards.Count);
             foreach (Card c in cards)
             {
