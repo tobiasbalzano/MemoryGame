@@ -34,10 +34,12 @@
             this.BG3 = new System.Windows.Forms.PictureBox();
             this.pigctureBoxAdvance = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.exitBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BG1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pigctureBoxAdvance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
             this.SuspendLayout();
             // 
             // BG1
@@ -83,12 +85,22 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.label1.Name = "label1";
             // 
+            // exitBox
+            // 
+            this.exitBox.BackColor = System.Drawing.Color.Transparent;
+            this.exitBox.Image = global::JensMemory.Properties.Resources.closeWindowButton;
+            resources.ApplyResources(this.exitBox, "exitBox");
+            this.exitBox.Name = "exitBox";
+            this.exitBox.TabStop = false;
+            this.exitBox.Click += new System.EventHandler(this.exitBox_Click);
+            // 
             // BakGrundPopUp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
+            this.Controls.Add(this.exitBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BG3);
             this.Controls.Add(this.pigctureBoxAdvance);
@@ -102,6 +114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BG2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BG3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pigctureBoxAdvance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +126,6 @@
         private System.Windows.Forms.PictureBox BG1;
         private System.Windows.Forms.PictureBox pigctureBoxAdvance;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox exitBox;
     }
 }

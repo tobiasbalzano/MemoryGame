@@ -36,6 +36,7 @@
             this.pbMedBtn = new System.Windows.Forms.PictureBox();
             this.pbSmallBtn = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.exitBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.choice3Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.choice2Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.confirmBtn)).BeginInit();
@@ -43,6 +44,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.choice1Btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
             this.SuspendLayout();
             // 
             // choice3Btn
@@ -139,6 +141,18 @@
             this.label1.Text = "Select board size";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // exitBox
+            // 
+            this.exitBox.BackColor = System.Drawing.Color.Transparent;
+            this.exitBox.Image = global::JensMemory.Properties.Resources.closeWindowButton;
+            this.exitBox.Location = new System.Drawing.Point(785, 0);
+            this.exitBox.Margin = new System.Windows.Forms.Padding(0);
+            this.exitBox.Name = "exitBox";
+            this.exitBox.Size = new System.Drawing.Size(66, 64);
+            this.exitBox.TabIndex = 9;
+            this.exitBox.TabStop = false;
+            this.exitBox.Click += new System.EventHandler(this.exitBox_Click);
+            // 
             // PopUpBoardSize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +160,7 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
             this.ClientSize = new System.Drawing.Size(850, 720);
+            this.Controls.Add(this.exitBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.choice3Btn);
             this.Controls.Add(this.confirmBtn);
@@ -167,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.choice1Btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSmallBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +197,6 @@
         private System.Windows.Forms.PictureBox choice3Btn;
         private System.Windows.Forms.PictureBox confirmBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox exitBox;
     }
 }

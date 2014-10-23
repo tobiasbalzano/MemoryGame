@@ -121,11 +121,20 @@
   <data name="boardSz12x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boardSz12x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pic48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boardSizeSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boardSizeSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic46" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic46.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PThemeS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PThemeS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pic21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +148,17 @@
   <data name="pic24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PairPoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PairPoint.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="pic16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic27" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newpokemon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newpokemon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +166,20 @@
   <data name="mediumBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mediumBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CompWinDraw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CompWinDraw.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CardFlipBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CardFlipBack.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="new_game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-game.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="boardSz10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boardSz10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="popUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\popUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +187,14 @@
   <data name="pic10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newpokemon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newpokemon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic39" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trainer4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trainer4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AILogoHard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AILogoHard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boardSz6x5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boardSz6x5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,23 +214,35 @@
   <data name="pic53" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CardFlip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CardFlip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="pic34" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pic26" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AILogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AILogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pokemonSplashBlur1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pokemonSplashBlur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer1S" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer1S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MainBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pokemonSplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pokemonSplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NextFx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NextFx.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pic49" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,11 +253,14 @@
   <data name="pic23" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic43" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boardSz4x4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boardSz4x4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic29" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic29.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,20 +271,23 @@
   <data name="smallBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smallBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RightArrow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pic32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="largeBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\largeBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pic58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AILogoNo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AILogoNo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="trainer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boardSz4x4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boardSz4x4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LeftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LeftArrow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,17 +310,26 @@
   <data name="pic54" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic54.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="replayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\replayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boardSz8x8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boardSz8x8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClickBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClickBig.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pic36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="playBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playBoardButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="arrowLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,50 +343,62 @@
   <data name="pic17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GameWindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameWindow.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pic14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pic07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trainer3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trainer3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_game" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new-game.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pokemonSplashBlur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pokemonSplashBlur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer5S" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer5S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="exitButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClickForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClickForward.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pic28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer3S" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer3S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boardSizeMid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boardSizeMid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic58" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightArrow.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trainer4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic55" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic55.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pic30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -340,8 +409,11 @@
   <data name="PC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PC.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boardSz8x8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boardSz8x8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pic05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic47" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,6 +427,9 @@
   <data name="pic42" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -364,17 +439,20 @@
   <data name="pic15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic28" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic38" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nextButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nextButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boardSz8x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boardSz8x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boardSizeLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boardSizeLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer2S" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer2S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -382,17 +460,29 @@
   <data name="StartOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartOver.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ClickBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClickBack.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Character" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Character.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trainer6S" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trainer6S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic07" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nextButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emptySilhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emptySilhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pic37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boardSz5x4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boardSz5x4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newpokeball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newpokeball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -400,109 +490,22 @@
   <data name="pokemonSplash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pokemonSplash.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pic09" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pic37" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pic03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exitButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exitButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MainBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MainBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="popUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\popUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AIChoice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AIChoice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AILogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AILogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrowLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrowLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrowRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boardSizeLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boardSizeLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boardSizeMid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boardSizeMid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boardSizeSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boardSizeSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="emptySilhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emptySilhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pokemonSplashBlur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pokemonSplashBlur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pokemonSplashBlur1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pokemonSplashBlur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newpokeball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newpokeball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newpokemon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newpokemon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newpokemon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newpokemon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CardFlip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CardFlip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CardFlipBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CardFlipBack.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ClickBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClickBack.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ClickBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClickBig.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ClickForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClickForward.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CompWinDraw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CompWinDraw.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GameWindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameWindow.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="NextFx" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NextFx.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PairPoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PairPoint.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PThemeS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PThemeS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WinSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AILogoHard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AILogoHard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AILogoNo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AILogoNo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="replayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\replayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="closeWindowButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closeWindowButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

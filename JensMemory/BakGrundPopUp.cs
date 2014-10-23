@@ -72,6 +72,12 @@ namespace JensMemory
             this.Close();
         }
 
+        private void exitBox_Click(object sender, EventArgs e)
+        {
+            GameWindow.creditSong.Play();
+            GameWindow.exit.ShowDialog();
+        }
+
 
     }
 }

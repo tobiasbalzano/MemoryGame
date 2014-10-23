@@ -113,6 +113,12 @@ namespace JensMemory
         {
             e.Cancel = e.CloseReason == CloseReason.UserClosing;
         }
+
+        private void exitBox_Click(object sender, EventArgs e)
+        {
+            GameWindow.creditSong.Play();
+            GameWindow.exit.ShowDialog();
+        }
     }
     public class dimensions
     {

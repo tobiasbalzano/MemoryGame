@@ -97,7 +97,7 @@ namespace JensMemory
         ChooseCharacter CHAR;
         BakGrundPopUp BG;
         PopUpBoardSize boardSize;
-        EndSplash exit = new EndSplash();
+        public static EndSplash exit = new EndSplash();
         EndGame endGame;
         public static int setDuration;
         int duration;

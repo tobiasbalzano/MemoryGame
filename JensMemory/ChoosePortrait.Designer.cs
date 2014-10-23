@@ -42,6 +42,7 @@
             this.LeftArrow = new System.Windows.Forms.PictureBox();
             this.lblChooseChar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.exitBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Character5)).BeginInit();
@@ -54,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -223,6 +225,18 @@
             this.label1.Text = "Play As:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // exitBox
+            // 
+            this.exitBox.BackColor = System.Drawing.Color.Transparent;
+            this.exitBox.Image = global::JensMemory.Properties.Resources.closeWindowButton;
+            this.exitBox.Location = new System.Drawing.Point(785, 0);
+            this.exitBox.Margin = new System.Windows.Forms.Padding(0);
+            this.exitBox.Name = "exitBox";
+            this.exitBox.Size = new System.Drawing.Size(66, 64);
+            this.exitBox.TabIndex = 19;
+            this.exitBox.TabStop = false;
+            this.exitBox.Click += new System.EventHandler(this.exitBox_Click);
+            // 
             // ChooseCharacter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +244,7 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.popUp;
             this.ClientSize = new System.Drawing.Size(850, 720);
+            this.Controls.Add(this.exitBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblChooseChar);
             this.Controls.Add(this.btnPlay);
@@ -262,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RightArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Portrait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,5 +298,6 @@
         private System.Windows.Forms.PictureBox btnPlay;
         private System.Windows.Forms.Label lblChooseChar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox exitBox;
     }
 }

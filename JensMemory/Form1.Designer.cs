@@ -86,7 +86,7 @@
             // splashBox
             // 
             this.splashBox.Image = global::JensMemory.Properties.Resources.pokemonSplash;
-            this.splashBox.Location = new System.Drawing.Point(1271, 74);
+            this.splashBox.Location = new System.Drawing.Point(0, 0);
             this.splashBox.Margin = new System.Windows.Forms.Padding(0);
             this.splashBox.Name = "splashBox";
             this.splashBox.Size = new System.Drawing.Size(1280, 720);
@@ -111,7 +111,7 @@
             // exitBox
             // 
             this.exitBox.BackColor = System.Drawing.Color.Transparent;
-            this.exitBox.Image = global::JensMemory.Properties.Resources.exitButton;
+            this.exitBox.Image = global::JensMemory.Properties.Resources.closeWindowButton;
             this.exitBox.Location = new System.Drawing.Point(1214, 0);
             this.exitBox.Margin = new System.Windows.Forms.Padding(0);
             this.exitBox.Name = "exitBox";
@@ -435,10 +435,10 @@
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.MainBG;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.splashBox);
             this.Controls.Add(this.pictureBoxTurn);
             this.Controls.Add(this.lblTurnAnnounce);
             this.Controls.Add(this.lblPlayerTurn);
-            this.Controls.Add(this.splashBox);
             this.Controls.Add(this.pictureBoxP6);
             this.Controls.Add(this.lblP6ScoreN);
             this.Controls.Add(this.pictureBoxP5);
