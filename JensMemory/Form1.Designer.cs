@@ -35,7 +35,6 @@
             this.timerEndGame = new System.Windows.Forms.Timer(this.components);
             this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.timerTurn = new System.Windows.Forms.Timer(this.components);
-            this.lblTimerTurn = new System.Windows.Forms.Label();
             this.exitBox = new System.Windows.Forms.PictureBox();
             this.pictureBoxP1 = new System.Windows.Forms.PictureBox();
             this.lblNameP1 = new System.Windows.Forms.Label();
@@ -106,17 +105,6 @@
             // 
             this.timerTurn.Interval = 1000;
             this.timerTurn.Tick += new System.EventHandler(this.timerTurn_Tick);
-            // 
-            // lblTimerTurn
-            // 
-            this.lblTimerTurn.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimerTurn.Font = new System.Drawing.Font("Ketchum", 65F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblTimerTurn.ForeColor = System.Drawing.Color.Yellow;
-            this.lblTimerTurn.Location = new System.Drawing.Point(64, 189);
-            this.lblTimerTurn.Name = "lblTimerTurn";
-            this.lblTimerTurn.Size = new System.Drawing.Size(123, 95);
-            this.lblTimerTurn.TabIndex = 7;
-            this.lblTimerTurn.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // exitBox
             // 
@@ -450,7 +438,6 @@
             this.Controls.Add(this.lblp1Score);
             this.Controls.Add(this.lblNameP1);
             this.Controls.Add(this.exitBox);
-            this.Controls.Add(this.lblTimerTurn);
             this.Controls.Add(this.pnlCardHolder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GameWindow";
@@ -478,7 +465,6 @@
         private System.Windows.Forms.Timer splashTimer;
         private System.Windows.Forms.PictureBox splashBox;
         private System.Windows.Forms.Timer timerTurn;
-        private System.Windows.Forms.Label lblTimerTurn;
         private System.Windows.Forms.PictureBox exitBox;
         private System.Windows.Forms.PictureBox pictureBoxP1;
         private System.Windows.Forms.Label lblNameP1;

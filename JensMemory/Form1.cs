@@ -161,8 +161,8 @@ namespace JensMemory
                 playerTurn.Add(activePlayer);
                 activePlayer = playerTurn[0];
                 updateGUI();
-                duration = setDuration; //startar om timer vid varje new turn
-                timerTurn.Start();
+                //duration = setDuration; //startar om timer vid varje new turn
+                //timerTurn.Start();
                 checkComp();
                 if (activePlayer.computer == false)
                 {
@@ -194,7 +194,7 @@ namespace JensMemory
         {
             lblP1ScoreN.Text = players[0].points.ToString();
             lblP2ScoreN.Text = players[1].points.ToString();
-            lblTimerTurn.Text = duration.ToString();
+            //lblTimerTurn.Text = duration.ToString();
             #region Update correct number of gui-elements
             if (updatePortraits == true)
             {
@@ -582,8 +582,8 @@ namespace JensMemory
             allPoints = cards.Count() / 2;
             totalPoints = 0;
             activePlayer = playerTurn[0];   
-            duration = setDuration;
-            timerTurn.Start();
+            //duration = setDuration;
+            //timerTurn.Start();
             updateGUI();
             checkComp();
             updateGUI();
@@ -595,11 +595,11 @@ namespace JensMemory
             splashBox.Visible = false;
             initializeGame();
         }
-
+        //removed timer from this release as it's not working as intended
         private void timerTurn_Tick(object sender, EventArgs e)
         {
             //Skriver ut betänkertiden i sekunder och räknar tiden neråt.
-            lblTimerTurn.Text = duration.ToString();
+            //lblTimerTurn.Text = duration.ToString();
             duration--;
 
             if (duration == 0)//Byter spelare när tiden räknat ner till 0.
@@ -642,7 +642,7 @@ namespace JensMemory
         {
             timerTurn.Enabled = false;
             totalPoints = allPoints;
-            
+            creditSong.Play();
             exit.Show();
         }
 
