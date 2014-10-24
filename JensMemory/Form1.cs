@@ -571,6 +571,7 @@ namespace JensMemory
         private void splashTimer_Tick(object sender, EventArgs e)
         {
             splashTimer.Enabled = false;
+            splashTimer.Stop();
             splashBox.Visible = false;
             initializeGame();
         }
@@ -619,12 +620,13 @@ namespace JensMemory
 
         public void delay(int _delayTime)
         {
+            //await Task.Delay(_delayTime);
             int increment = 0;
             while (increment < _delayTime)
             {
                 Application.DoEvents();
-                System.Threading.Thread.Sleep(1);
-                increment += 2;
+                System.Threading.Thread.Sleep(30);
+                increment+=30;
             }
         }
 

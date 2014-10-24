@@ -77,7 +77,7 @@
             // pnlCardHolder
             // 
             this.pnlCardHolder.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCardHolder.Location = new System.Drawing.Point(240, 60);
+            this.pnlCardHolder.Location = new System.Drawing.Point(237, 62);
             this.pnlCardHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCardHolder.Name = "pnlCardHolder";
             this.pnlCardHolder.Size = new System.Drawing.Size(800, 600);
@@ -85,6 +85,7 @@
             // 
             // splashBox
             // 
+            this.splashBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.splashBox.Image = global::JensMemory.Properties.Resources.pokemonSplash;
             this.splashBox.Location = new System.Drawing.Point(0, 0);
             this.splashBox.Margin = new System.Windows.Forms.Padding(0);
@@ -117,7 +118,7 @@
             // 
             // pictureBoxP1
             // 
-            this.pictureBoxP1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxP1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxP1.Location = new System.Drawing.Point(1050, 74);
             this.pictureBoxP1.Name = "pictureBoxP1";
@@ -127,7 +128,7 @@
             // 
             // lblNameP1
             // 
-            this.lblNameP1.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblNameP1.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP1.Location = new System.Drawing.Point(1141, 71);
@@ -138,7 +139,7 @@
             // 
             // lblp1Score
             // 
-            this.lblp1Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblp1Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblp1Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblp1Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp1Score.Location = new System.Drawing.Point(1148, 135);
@@ -151,7 +152,7 @@
             // lblP1ScoreN
             // 
             this.lblP1ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblP1ScoreN.BackColor = System.Drawing.Color.Transparent;
+            this.lblP1ScoreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblP1ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP1ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP1ScoreN.Location = new System.Drawing.Point(1214, 118);
@@ -163,7 +164,7 @@
             // 
             // lblNameP2
             // 
-            this.lblNameP2.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblNameP2.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP2.Location = new System.Drawing.Point(1141, 172);
@@ -174,7 +175,7 @@
             // 
             // lblp2Score
             // 
-            this.lblp2Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblp2Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblp2Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblp2Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp2Score.Location = new System.Drawing.Point(1148, 236);
@@ -187,7 +188,7 @@
             // lblP2ScoreN
             // 
             this.lblP2ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblP2ScoreN.BackColor = System.Drawing.Color.Transparent;
+            this.lblP2ScoreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblP2ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP2ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP2ScoreN.Location = new System.Drawing.Point(1214, 219);
@@ -199,7 +200,7 @@
             // 
             // pictureBoxP2
             // 
-            this.pictureBoxP2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxP2.Location = new System.Drawing.Point(1050, 175);
             this.pictureBoxP2.Name = "pictureBoxP2";
@@ -209,7 +210,7 @@
             // 
             // lblNameP3
             // 
-            this.lblNameP3.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblNameP3.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameP3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP3.Location = new System.Drawing.Point(1141, 273);
@@ -220,7 +221,7 @@
             // 
             // lblp3Score
             // 
-            this.lblp3Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblp3Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblp3Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblp3Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp3Score.Location = new System.Drawing.Point(1148, 337);
@@ -233,7 +234,7 @@
             // lblP3ScoreN
             // 
             this.lblP3ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblP3ScoreN.BackColor = System.Drawing.Color.Transparent;
+            this.lblP3ScoreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblP3ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP3ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP3ScoreN.Location = new System.Drawing.Point(1214, 320);
@@ -245,7 +246,7 @@
             // 
             // pictureBoxP3
             // 
-            this.pictureBoxP3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxP3.Location = new System.Drawing.Point(1050, 276);
             this.pictureBoxP3.Name = "pictureBoxP3";
@@ -255,7 +256,7 @@
             // 
             // lblNameP4
             // 
-            this.lblNameP4.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblNameP4.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameP4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP4.Location = new System.Drawing.Point(1141, 374);
@@ -266,7 +267,7 @@
             // 
             // lblp4Score
             // 
-            this.lblp4Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblp4Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblp4Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblp4Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp4Score.Location = new System.Drawing.Point(1148, 438);
@@ -279,7 +280,7 @@
             // lblP4ScoreN
             // 
             this.lblP4ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblP4ScoreN.BackColor = System.Drawing.Color.Transparent;
+            this.lblP4ScoreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblP4ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP4ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP4ScoreN.Location = new System.Drawing.Point(1214, 421);
@@ -291,7 +292,7 @@
             // 
             // pictureBoxP4
             // 
-            this.pictureBoxP4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxP4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxP4.Location = new System.Drawing.Point(1050, 377);
             this.pictureBoxP4.Name = "pictureBoxP4";
@@ -301,7 +302,7 @@
             // 
             // lblNameP5
             // 
-            this.lblNameP5.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameP5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblNameP5.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameP5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP5.Location = new System.Drawing.Point(1141, 475);
@@ -312,7 +313,7 @@
             // 
             // lblp5Score
             // 
-            this.lblp5Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblp5Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblp5Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblp5Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp5Score.Location = new System.Drawing.Point(1148, 539);
@@ -325,7 +326,7 @@
             // lblP5ScoreN
             // 
             this.lblP5ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblP5ScoreN.BackColor = System.Drawing.Color.Transparent;
+            this.lblP5ScoreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblP5ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP5ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP5ScoreN.Location = new System.Drawing.Point(1214, 522);
@@ -337,7 +338,7 @@
             // 
             // pictureBoxP5
             // 
-            this.pictureBoxP5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxP5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxP5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxP5.Location = new System.Drawing.Point(1050, 478);
             this.pictureBoxP5.Name = "pictureBoxP5";
@@ -347,7 +348,7 @@
             // 
             // lblNameP6
             // 
-            this.lblNameP6.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameP6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblNameP6.Font = new System.Drawing.Font("Ketchum", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameP6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblNameP6.Location = new System.Drawing.Point(1141, 576);
@@ -358,7 +359,7 @@
             // 
             // lblp6Score
             // 
-            this.lblp6Score.BackColor = System.Drawing.Color.Transparent;
+            this.lblp6Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblp6Score.Font = new System.Drawing.Font("Ketchum", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblp6Score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblp6Score.Location = new System.Drawing.Point(1148, 640);
@@ -371,7 +372,7 @@
             // lblP6ScoreN
             // 
             this.lblP6ScoreN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblP6ScoreN.BackColor = System.Drawing.Color.Transparent;
+            this.lblP6ScoreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblP6ScoreN.Font = new System.Drawing.Font("Ketchum", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblP6ScoreN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblP6ScoreN.Location = new System.Drawing.Point(1214, 623);
@@ -383,7 +384,7 @@
             // 
             // pictureBoxP6
             // 
-            this.pictureBoxP6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxP6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxP6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxP6.Location = new System.Drawing.Point(1050, 579);
             this.pictureBoxP6.Name = "pictureBoxP6";
@@ -393,7 +394,7 @@
             // 
             // pictureBoxTurn
             // 
-            this.pictureBoxTurn.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxTurn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pictureBoxTurn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxTurn.Location = new System.Drawing.Point(12, 135);
             this.pictureBoxTurn.Name = "pictureBoxTurn";
@@ -425,8 +426,8 @@
             // 
             // GameWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Fuchsia;
             this.BackgroundImage = global::JensMemory.Properties.Resources.MainBG;
             this.ClientSize = new System.Drawing.Size(1280, 720);
@@ -460,6 +461,7 @@
             this.Controls.Add(this.lblNameP1);
             this.Controls.Add(this.exitBox);
             this.Controls.Add(this.pnlCardHolder);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GameWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

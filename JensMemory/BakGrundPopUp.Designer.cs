@@ -44,7 +44,7 @@
             // 
             // BG1
             // 
-            this.BG1.BackColor = System.Drawing.Color.Transparent;
+            this.BG1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.BG1.BackgroundImage = global::JensMemory.Properties.Resources.newpokeball;
             resources.ApplyResources(this.BG1, "BG1");
             this.BG1.Name = "BG1";
@@ -53,7 +53,7 @@
             // 
             // BG2
             // 
-            this.BG2.BackColor = System.Drawing.Color.Transparent;
+            this.BG2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.BG2.BackgroundImage = global::JensMemory.Properties.Resources.newpokemon;
             resources.ApplyResources(this.BG2, "BG2");
             this.BG2.Name = "BG2";
@@ -62,7 +62,7 @@
             // 
             // BG3
             // 
-            this.BG3.BackColor = System.Drawing.Color.Transparent;
+            this.BG3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.BG3.BackgroundImage = global::JensMemory.Properties.Resources.newpokemon2;
             resources.ApplyResources(this.BG3, "BG3");
             this.BG3.Name = "BG3";
@@ -71,7 +71,7 @@
             // 
             // pigctureBoxAdvance
             // 
-            this.pigctureBoxAdvance.BackColor = System.Drawing.Color.Transparent;
+            this.pigctureBoxAdvance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pigctureBoxAdvance.BackgroundImage = global::JensMemory.Properties.Resources.playBoardButton;
             resources.ApplyResources(this.pigctureBoxAdvance, "pigctureBoxAdvance");
             this.pigctureBoxAdvance.Name = "pigctureBoxAdvance";
@@ -80,7 +80,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.label1.Name = "label1";

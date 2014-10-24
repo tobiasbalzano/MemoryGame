@@ -60,7 +60,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.btnPlay.BackgroundImage = global::JensMemory.Properties.Resources.nextButton;
             this.btnPlay.Location = new System.Drawing.Point(348, 620);
             this.btnPlay.Name = "btnPlay";
@@ -71,7 +71,7 @@
             // 
             // Character6
             // 
-            this.Character6.BackColor = System.Drawing.Color.Transparent;
+            this.Character6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Character6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character6.Location = new System.Drawing.Point(608, 517);
             this.Character6.Margin = new System.Windows.Forms.Padding(0);
@@ -83,7 +83,7 @@
             // 
             // Character5
             // 
-            this.Character5.BackColor = System.Drawing.Color.Transparent;
+            this.Character5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Character5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character5.Location = new System.Drawing.Point(508, 517);
             this.Character5.Margin = new System.Windows.Forms.Padding(0);
@@ -95,7 +95,7 @@
             // 
             // Character4
             // 
-            this.Character4.BackColor = System.Drawing.Color.Transparent;
+            this.Character4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Character4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character4.Location = new System.Drawing.Point(408, 517);
             this.Character4.Margin = new System.Windows.Forms.Padding(0);
@@ -107,7 +107,7 @@
             // 
             // Character3
             // 
-            this.Character3.BackColor = System.Drawing.Color.Transparent;
+            this.Character3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Character3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character3.Location = new System.Drawing.Point(308, 517);
             this.Character3.Margin = new System.Windows.Forms.Padding(0);
@@ -119,7 +119,7 @@
             // 
             // Character2
             // 
-            this.Character2.BackColor = System.Drawing.Color.Transparent;
+            this.Character2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Character2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character2.Location = new System.Drawing.Point(208, 517);
             this.Character2.Margin = new System.Windows.Forms.Padding(0);
@@ -131,7 +131,7 @@
             // 
             // Character1
             // 
-            this.Character1.BackColor = System.Drawing.Color.Transparent;
+            this.Character1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Character1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Character1.Location = new System.Drawing.Point(108, 517);
             this.Character1.Margin = new System.Windows.Forms.Padding(0);
@@ -143,7 +143,7 @@
             // 
             // Choose
             // 
-            this.Choose.BackColor = System.Drawing.Color.Transparent;
+            this.Choose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Choose.BackgroundImage = global::JensMemory.Properties.Resources.addButton;
             this.Choose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Choose.Location = new System.Drawing.Point(355, 434);
@@ -156,7 +156,7 @@
             // 
             // Computer
             // 
-            this.Computer.BackColor = System.Drawing.Color.Transparent;
+            this.Computer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Computer.BackgroundImage = global::JensMemory.Properties.Resources.AILogoNo;
             this.Computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Computer.Location = new System.Drawing.Point(286, 434);
@@ -168,7 +168,7 @@
             // 
             // RightArrow
             // 
-            this.RightArrow.BackColor = System.Drawing.Color.Transparent;
+            this.RightArrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.RightArrow.BackgroundImage = global::JensMemory.Properties.Resources.arrowRight;
             this.RightArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RightArrow.Location = new System.Drawing.Point(537, 258);
@@ -181,7 +181,7 @@
             // 
             // Portrait
             // 
-            this.Portrait.BackColor = System.Drawing.Color.Transparent;
+            this.Portrait.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.Portrait.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Portrait.InitialImage = null;
             this.Portrait.Location = new System.Drawing.Point(287, 179);
@@ -192,7 +192,7 @@
             // 
             // LeftArrow
             // 
-            this.LeftArrow.BackColor = System.Drawing.Color.Transparent;
+            this.LeftArrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.LeftArrow.BackgroundImage = global::JensMemory.Properties.Resources.arrowLeft;
             this.LeftArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LeftArrow.Location = new System.Drawing.Point(110, 258);

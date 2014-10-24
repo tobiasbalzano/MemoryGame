@@ -28,6 +28,7 @@ namespace JensMemory
             TabIndex = 0;
             this.SizeMode = PictureBoxSizeMode.StretchImage;
             this.Click += new System.EventHandler(eventHandler); //lägger till klickmetoden
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
         }
     }
 }

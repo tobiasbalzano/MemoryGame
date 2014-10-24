@@ -49,7 +49,7 @@
             // 
             // choice3Btn
             // 
-            this.choice3Btn.BackColor = System.Drawing.Color.Transparent;
+            this.choice3Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.choice3Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.choice3Btn.Location = new System.Drawing.Point(620, 383);
             this.choice3Btn.Name = "choice3Btn";
@@ -60,7 +60,7 @@
             // 
             // choice2Btn
             // 
-            this.choice2Btn.BackColor = System.Drawing.Color.Transparent;
+            this.choice2Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.choice2Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.choice2Btn.Location = new System.Drawing.Point(335, 383);
             this.choice2Btn.Name = "choice2Btn";
@@ -71,7 +71,7 @@
             // 
             // confirmBtn
             // 
-            this.confirmBtn.BackColor = System.Drawing.Color.Transparent;
+            this.confirmBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.confirmBtn.BackgroundImage = global::JensMemory.Properties.Resources.nextButton;
             this.confirmBtn.Enabled = false;
             this.confirmBtn.Location = new System.Drawing.Point(348, 620);
@@ -84,7 +84,7 @@
             // 
             // pbLargeBtn
             // 
-            this.pbLargeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pbLargeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pbLargeBtn.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeLarge;
             this.pbLargeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLargeBtn.Location = new System.Drawing.Point(620, 263);
@@ -96,7 +96,7 @@
             // 
             // choice1Btn
             // 
-            this.choice1Btn.BackColor = System.Drawing.Color.Transparent;
+            this.choice1Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.choice1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.choice1Btn.Location = new System.Drawing.Point(65, 383);
             this.choice1Btn.Name = "choice1Btn";
@@ -107,7 +107,7 @@
             // 
             // pbMedBtn
             // 
-            this.pbMedBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pbMedBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pbMedBtn.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeMid;
             this.pbMedBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMedBtn.Location = new System.Drawing.Point(335, 263);
@@ -119,7 +119,7 @@
             // 
             // pbSmallBtn
             // 
-            this.pbSmallBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pbSmallBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pbSmallBtn.BackgroundImage = global::JensMemory.Properties.Resources.boardSizeSmall;
             this.pbSmallBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbSmallBtn.Location = new System.Drawing.Point(65, 263);

@@ -39,7 +39,7 @@
             // 
             // pbxWinner
             // 
-            this.pbxWinner.BackColor = System.Drawing.Color.Transparent;
+            this.pbxWinner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.pbxWinner.Location = new System.Drawing.Point(108, 75);
             this.pbxWinner.Name = "pbxWinner";
             this.pbxWinner.Size = new System.Drawing.Size(300, 300);
@@ -49,7 +49,7 @@
             // 
             // lblEndGame
             // 
-            this.lblEndGame.BackColor = System.Drawing.Color.Transparent;
+            this.lblEndGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(107)))), ((int)(((byte)(179)))));
             this.lblEndGame.Font = new System.Drawing.Font("Ketchum", 42F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(203)))), ((int)(((byte)(5)))));
             this.lblEndGame.Location = new System.Drawing.Point(414, 75);
