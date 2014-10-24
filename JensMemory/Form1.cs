@@ -624,7 +624,7 @@ namespace JensMemory
             {
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(1);
-                increment += 2;
+                increment += 6;
             }
         }
 
