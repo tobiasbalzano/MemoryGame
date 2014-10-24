@@ -18,11 +18,10 @@ namespace JensMemory
             InitializeComponent();
             BG1.Location = new System.Drawing.Point(BG1.Location.X, BG1.Location.Y);
             BG1.Size = new System.Drawing.Size(200, 200);
-            BG2.Location = new System.Drawing.Point(BG2.Location.X+25, BG2.Location.Y+25);
+            BG2.Location = new System.Drawing.Point(BG2.Location.X + 25, BG2.Location.Y + 25);
             BG2.Size = new System.Drawing.Size(150, 150);
-            BG3.Location = new System.Drawing.Point(BG3.Location.X+25, BG3.Location.Y+25);
+            BG3.Location = new System.Drawing.Point(BG3.Location.X + 25, BG3.Location.Y + 25);
             BG3.Size = new System.Drawing.Size(150, 150);
-
         }
 
         //Där det används samma kod, är det bättre att använda en funktion.
@@ -30,11 +29,11 @@ namespace JensMemory
         {
             SetCover(0);
             GameWindow.clickNextFX.Play();
-            BG1.Location = new System.Drawing.Point(22,250);
+            BG1.Location = new System.Drawing.Point(22, 250);
             BG1.Size = new System.Drawing.Size(200, 200);
-            BG2.Location = new System.Drawing.Point(325+25, 250+25);
+            BG2.Location = new System.Drawing.Point(325 + 25, 250 + 25);
             BG2.Size = new System.Drawing.Size(150, 150);
-            BG3.Location = new System.Drawing.Point(628+25, 250+25);
+            BG3.Location = new System.Drawing.Point(628 + 25, 250 + 25);
             BG3.Size = new System.Drawing.Size(150, 150);
         }
 
@@ -42,11 +41,11 @@ namespace JensMemory
         {
             SetCover(1);
             GameWindow.clickNextFX.Play();
-            BG1.Location = new System.Drawing.Point(22+25, 250+25);
+            BG1.Location = new System.Drawing.Point(22 + 25, 250 + 25);
             BG1.Size = new System.Drawing.Size(150, 150);
             BG2.Location = new System.Drawing.Point(325, 250);
             BG2.Size = new System.Drawing.Size(200, 200);
-            BG3.Location = new System.Drawing.Point(628+25, 250+25);
+            BG3.Location = new System.Drawing.Point(628 + 25, 250 + 25);
             BG3.Size = new System.Drawing.Size(150, 150);
         }
 
@@ -54,9 +53,9 @@ namespace JensMemory
         {
             SetCover(2);
             GameWindow.clickNextFX.Play();
-            BG1.Location = new System.Drawing.Point(22+25, 250+25);
+            BG1.Location = new System.Drawing.Point(22 + 25, 250 + 25);
             BG1.Size = new System.Drawing.Size(150, 150);
-            BG2.Location = new System.Drawing.Point(325+25, 250+25);
+            BG2.Location = new System.Drawing.Point(325 + 25, 250 + 25);
             BG2.Size = new System.Drawing.Size(150, 150);
             BG3.Location = new System.Drawing.Point(628, 250);
             BG3.Size = new System.Drawing.Size(200, 200);
@@ -77,7 +76,5 @@ namespace JensMemory
             GameWindow.creditSong.Play();
             GameWindow.exit.ShowDialog();
         }
-
-
     }
 }

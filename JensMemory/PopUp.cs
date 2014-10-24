@@ -16,7 +16,6 @@ namespace JensMemory
         {
             InitializeComponent();
             lblGiveName.Text = "Write player name \nAnd click add:";
-
         }
 
         private void btnCreatePlayer_Click(object sender, EventArgs e)
@@ -34,7 +33,6 @@ namespace JensMemory
                 tbxName.Text = "";
                 lblGiveName.Text = "Write player name " + (GameWindow.players.Count + 1) + "\nAnd click add:";
                 this.ActiveControl = tbxName;
-
             }
             else
             {
@@ -44,10 +42,7 @@ namespace JensMemory
             if (GameWindow.players.Count > 1)
             {
                 btnDone.DialogResult = DialogResult.OK;
-
             }
-
-
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -56,14 +51,6 @@ namespace JensMemory
             {
                 lblGiveName.Text = "Add at least 2 players";
             }
-
         }
-
-        private void PopUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

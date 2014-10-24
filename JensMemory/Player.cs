@@ -18,10 +18,8 @@ namespace JensMemory
         public bool computer;
         public int AILevel = 5;
         public List<Card> aiMemory = new List<Card>();
-        
 
-        
-        public Player(string name,Image portrait, bool computer, int AILevel)
+        public Player(string name, Image portrait, bool computer, int AILevel)
         {
             this.name = name;
             this.computer = computer;

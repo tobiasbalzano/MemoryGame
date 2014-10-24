@@ -17,8 +17,6 @@ namespace JensMemory
         public int id;
         public bool flipped;
         // props för bredd och höjd. Kommer senare anpassas beroende på användarens val av spelplan
-      
-
         //Konstruktor för nya kort. tar 3st parametrar. 
         public Card(int posX, int posY, int size, cardEvent eventHandler)
         {

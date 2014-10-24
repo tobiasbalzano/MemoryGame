@@ -96,7 +96,6 @@
             this.Name = "PopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Användare";
-            this.Load += new System.EventHandler(this.PopUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

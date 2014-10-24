@@ -12,7 +12,6 @@ namespace JensMemory
 {
     public partial class EndSplash : Form
     {
-        //Lägga till manus.
         public EndSplash()
         {
             InitializeComponent();

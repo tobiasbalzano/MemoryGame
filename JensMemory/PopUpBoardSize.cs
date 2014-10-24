@@ -50,7 +50,6 @@ namespace JensMemory
             GameWindow.clickForwardFX.Play();
             boardArray = mediumBoards;
             activeDimensions = mediumDimensions;
-            //bgPanel.BackColor = Color.Orange;
             updateGui();
         }
 
@@ -59,7 +58,6 @@ namespace JensMemory
             GameWindow.clickForwardFX.Play();
             boardArray = largeBoards;
             activeDimensions = largeDimensions;
-            //bgPanel.BackColor = Color.Red;
             updateGui();
         }
 
@@ -130,6 +128,5 @@ namespace JensMemory
             collumns = _collumns;
             rows = _rows;
         }
-
     }
 }

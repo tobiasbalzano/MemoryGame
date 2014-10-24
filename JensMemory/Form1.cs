@@ -103,9 +103,9 @@ namespace JensMemory
         int duration;
         bool updatePortraits;
 
-        public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren skall sedan sätta dessa själv
+        public static int columns, rows;  //intar som håller värde för spelplanens storlek. Användaren kan välja
 
-        public GameWindow() //Konstruktor för spelfönstret. Här ligger nu oxå kod för att rita upp spelplanen
+        public GameWindow() //Konstruktor för spelfönstret plus laddning av ljud
         {
             InitializeComponent();
             splashSound.Play();
@@ -144,7 +144,7 @@ namespace JensMemory
             }
         }
 
-        private void card_Click(object sender, EventArgs e) // Metoden som skall köras när man klickar på korten
+        private void card_Click(object sender, EventArgs e) // Metoden som körs när korten klickas
         {
             // Vi castar om object sender till Card sender så att kompilatorn känner att
             // avsändaren av klick-eventet är av typen Card : PictureBox
@@ -152,7 +152,7 @@ namespace JensMemory
             flipCards(card);
         }
 
-        public void NewTurn() //Metod för att byta spelarens tur
+        public void NewTurn() //Metod för att byta till nästa spelare i turordning
         {
             if (totalPoints != allPoints)
             {
@@ -160,9 +160,8 @@ namespace JensMemory
                 playerTurn.Add(activePlayer);
                 activePlayer = playerTurn[0];
                 updateGUI();
-                //duration = setDuration; //startar om timer vid varje new turn
-                //timerTurn.Start();
                 checkComp();
+
                 if (activePlayer.computer == false)
                 {
                     foreach (Card c in cards)
@@ -173,7 +172,7 @@ namespace JensMemory
             }
         }
 
-        private void initializeGame()//Metoden för att starta om hela spelet från och med efter splash screen
+        private void initializeGame()//Metoden för att starta om hela spelet förutom splashscreen
         {
             cards = new List<Card>();
             players = new List<Player>();
@@ -300,18 +299,18 @@ namespace JensMemory
             playerTurn.Add(player);
         }
 
-        private void timerEndGame_Tick(object sender, EventArgs e)//3 olika alternativ - börja om samma spel, starta om hela spelet,stänga spelet
+        private void timerEndGame_Tick(object sender, EventArgs e)//3 olika alternativ - omspel, nytt spel, stäng
         {
             bool win = WhoWon();
             timerEndGame.Stop();
             endGame = new EndGame(win);
             DialogResult result = endGame.ShowDialog();
 
-            if (result == DialogResult.Retry)
+            if (result == DialogResult.Retry) //omspel
             {
                 PlayAgain();
             }
-            else if (result == DialogResult.OK)
+            else if (result == DialogResult.OK) //Nytt spel
             {
                 foreach (Card c in cards)
                 {
@@ -321,14 +320,14 @@ namespace JensMemory
 
                 initializeGame();
             }
-            else if (result == DialogResult.Cancel)
+            else if (result == DialogResult.Cancel) //Stäng
             {
                 creditSong.Play();
                 exit.ShowDialog();
             }
         }
 
-        public void PlayAgain()
+        public void PlayAgain() //Metod för omspel med samma inställningar
         {
             foreach (Player p in players)
             {
@@ -407,11 +406,9 @@ namespace JensMemory
             if (flippedCards[0].id == flippedCards[1].id)
             {
                 // gör korten klickbara igen
-
                 foreach (Card c in cards)
                 {
                     c.Enabled = true;
-
                 }
                 // Tömmer listan för jämförelse
                 foreach (Card c in flippedCards)
@@ -437,14 +434,14 @@ namespace JensMemory
                 duration = setDuration;
                 //poäng skrivs ut
                 updateGUI();
-                delay(500);
+                delay(2000);
                 checkComp();
             }
             else
             {
                 //timerCompare.Enabled = true;
                 //timerCompare.Start();
-                delay(500);
+                delay(2000);
                 FlipBackCards();
             }
         }
@@ -474,18 +471,8 @@ namespace JensMemory
                             {
                                 if (c.id == j.id && p.aiMemory.IndexOf(c) != p.aiMemory.IndexOf(j))
                                 {
-                                    //delay(randomWait.Next(345, 1234));
-                                    //card_Click(c, e);
-                                    //delay(randomWait.Next(345, 1234));
-                                    //card_Click(j, e);
                                     cCard[0] = c;
                                     cCard[1] = j;
-
-
-
-                                    //p.aiMemory.Remove(c);
-                                    //p.aiMemory.Remove(j);
-
 
                                     AiTurn = 2;
                                     return cCard;
@@ -507,8 +494,6 @@ namespace JensMemory
                     {
                         if (cardIndex == cards.IndexOf(c) && AiTurn == 0)
                         {
-                            //delay(randomWait.Next(345, 1234));
-                            //card_Click(c, e);
                             cCard[0] = c;
                             activePlayer.aiMemory.Add(c);
                             AiTurn = 1;
@@ -518,26 +503,19 @@ namespace JensMemory
                         {
                             if (cCard[0] != c)
                             {
-                                //delay(randomWait.Next(345, 1234));
-                                //card_Click(c, e);
                                 cCard[1] = c;
                                 AiTurn = 2;
 
-
                                 activePlayer.aiMemory.Remove(cCard[0]);
                                 return cCard;
-
                             }
                             else
                             {
                                 break;
                             }
-
                         }
                     }
                 }
-
-
             }
             return cCard;
         }
@@ -550,14 +528,11 @@ namespace JensMemory
             {
 
                 AICards = ComputerPlay();
-                delay(randomWait.Next(250, 750));
+                delay(randomWait.Next(750, 2000));
                 card_Click(AICards[0], e);
-                delay(randomWait.Next(250, 750));
+                delay(randomWait.Next(500, 2000));
                 card_Click(AICards[1], e);
-
             }
-
-
         }
 
         private void StartGame()
@@ -587,9 +562,7 @@ namespace JensMemory
             randomizeIdInCardList(rows * columns); //konstruktorn ropar på metod för att blanda kortens id
             allPoints = cards.Count() / 2;
             totalPoints = 0;
-            activePlayer = playerTurn[0];   
-            //duration = setDuration;
-            //timerTurn.Start();
+            activePlayer = playerTurn[0];
             updateGUI();
             checkComp();
             updateGUI();
@@ -601,19 +574,20 @@ namespace JensMemory
             splashBox.Visible = false;
             initializeGame();
         }
-        //removed timer from this release as it's not working as intended
-        private void timerTurn_Tick(object sender, EventArgs e)
-        {
-            //Skriver ut betänkertiden i sekunder och räknar tiden neråt.
-            //lblTimerTurn.Text = duration.ToString();
-            duration--;
 
-            if (duration == 0)//Byter spelare när tiden räknat ner till 0.
-            {
-                timerTurn.Stop();
-                FlipBackCards();
-            }
-        }
+        //removed timer from this release as it's not working as intended
+        //private void timerTurn_Tick(object sender, EventArgs e)
+        //{
+        //    //Skriver ut betänkertiden i sekunder och räknar tiden neråt.
+        //    //lblTimerTurn.Text = duration.ToString();
+        //    duration--;
+
+        //    if (duration == 0)//Byter spelare när tiden räknat ner till 0.
+        //    {
+        //        timerTurn.Stop();
+        //        FlipBackCards();
+        //    }
+        //}
 
         private void FlipBackCards()
         {
@@ -637,18 +611,10 @@ namespace JensMemory
                     }
                     flippedCards.Remove(flippedcard);
                 }
-
             }
             // Gör alla kort klickbara igen
             updateGUI();
             NewTurn();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            totalPoints = allPoints;
-            creditSong.Play();
-            exit.ShowDialog(); 
         }
 
         public void delay(int _delayTime)
@@ -660,6 +626,13 @@ namespace JensMemory
                 System.Threading.Thread.Sleep(1);
                 increment += 5;
             }
+        }
+
+        private void exitBox_Click(object sender, EventArgs e)
+        {
+            totalPoints = allPoints;
+            creditSong.Play();
+            exit.ShowDialog();
         }
     }
 }

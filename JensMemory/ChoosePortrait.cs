@@ -12,7 +12,6 @@ namespace JensMemory
 {
     public partial class ChooseCharacter : Form
     {
-
         bool AI = false;
         int click = 1;
         int i = 0;
@@ -27,7 +26,6 @@ namespace JensMemory
 
         public ChooseCharacter()
         {
-
             InitializeComponent();
             Choices = new Image[] { Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette, Properties.Resources.emptySilhouette };
             Portraits = new Image[] { Properties.Resources.trainer1, Properties.Resources.trainer2, Properties.Resources.trainer3, Properties.Resources.trainer4, Properties.Resources.trainer5, Properties.Resources.trainer6 };
@@ -50,8 +48,7 @@ namespace JensMemory
             }
             UpdateGUI();
         }
-
-
+        
         //Höger knappen.
         private void RightArrow_Click(object sender, EventArgs e)
         {
@@ -139,10 +136,6 @@ namespace JensMemory
             {
                 this.FormClosing -= new FormClosingEventHandler(this.ChooseCharacter_FormClosing);
                 this.Close();
-            }
-            else
-            {
-
             }
         }
         //Gör att man inte kan stänga ner formen/sidan.
