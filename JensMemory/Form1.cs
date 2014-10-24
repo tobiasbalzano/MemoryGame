@@ -528,9 +528,9 @@ namespace JensMemory
             {
 
                 AICards = ComputerPlay();
-                delay(randomWait.Next(750, 2000));
+                delay(randomWait.Next(300, 1300));
                 card_Click(AICards[0], e);
-                delay(randomWait.Next(500, 2000));
+                delay(randomWait.Next(700, 2000));
                 card_Click(AICards[1], e);
             }
         }
@@ -624,7 +624,7 @@ namespace JensMemory
             {
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(1);
-                increment += 5;
+                increment += 2;
             }
         }
 
